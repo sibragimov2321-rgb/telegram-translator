@@ -44,6 +44,9 @@ TOKEN: Final = os.getenv("TELEGRAM_BOT_TOKEN", "")
 MODEL: Final = os.getenv("TRANSLATION_MODEL", "gpt-5.6-sol")
 TRANSCRIBE_MODEL: Final = os.getenv("OPENAI_TRANSCRIBE_MODEL", "gpt-4o-mini-transcribe")
 DB_PATH: Final = Path(os.getenv("DATABASE_PATH", str(Path(__file__).with_name("translator.sqlite3"))))
+BOOTSTRAP_ADMIN_IDS: Final = tuple(
+    int(value) for value in os.getenv("BOOTSTRAP_ADMIN_IDS", "").split(",") if value.strip().isdigit()
+)
 # The connection can be slow on some networks; do not fail a translation after
 # the short default connection timeout.
 client = AsyncOpenAI(
@@ -150,6 +153,8 @@ def init_db() -> None:
             "INSERT OR IGNORE INTO admins (user_id) "
             "SELECT owner_id FROM business_accounts WHERE connected = 1"
         )
+        for user_id in BOOTSTRAP_ADMIN_IDS:
+            conn.execute("INSERT OR IGNORE INTO admins (user_id) VALUES (?)", (user_id,))
         columns = {row[1] for row in conn.execute("PRAGMA table_info(admins)")}
         if "display_name" not in columns:
             conn.execute("ALTER TABLE admins ADD COLUMN display_name TEXT NOT NULL DEFAULT ''")
