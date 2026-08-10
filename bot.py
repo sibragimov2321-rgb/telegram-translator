@@ -106,6 +106,7 @@ TURKMEN_RUSSIAN_PHRASES: Final = {
 
 
 def db() -> sqlite3.Connection:
+    DB_PATH.parent.mkdir(parents=True, exist_ok=True)
     connection = sqlite3.connect(DB_PATH)
     connection.row_factory = sqlite3.Row
     return connection
