@@ -383,6 +383,25 @@ async def translate_text(text: str, target: str, tone: str = "clear") -> str:
     return result
 
 
+async def translate_manual_chat(text: str, selected_language: str, tone: str = "clear") -> str:
+    """Translate Russian outward, but bring every other language back to Russian."""
+    normalized = " ".join(text.casefold().strip(" .,!?:;…").split())
+    if normalized in TURKMEN_RUSSIAN_PHRASES:
+        return TURKMEN_RUSSIAN_PHRASES[normalized]
+    response = await client.responses.create(
+        model=MODEL,
+        instructions=(
+            "You translate short chat messages naturally and clearly. Detect the input language. "
+            f"If the input is Russian, translate it into {selected_language}. "
+            "If the input is any language other than Russian, translate it into Russian. "
+            "Keep names, numbers, links, emojis, and informal everyday wording. "
+            "Return only the translation, without labels or explanations."
+        ),
+        input=text,
+    )
+    return response.output_text.strip()
+
+
 async def translate_incoming(text: str, target: str, known_language: str = "") -> tuple[str, str]:
     """Detect language and translate in one model request to minimize latency."""
     normalized = text.casefold().strip(" .,!?:;…")
@@ -559,7 +578,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         return
     clear_reply_flow(context)
     await update.effective_message.reply_text(
-        "Выберите язык перевода. Затем просто пишите сообщения по-русски — я переведу их.",
+        "Выберите язык. Русский текст переведу на него, а текст на другом языке — на русский.",
         reply_markup=MAIN_KEYBOARD,
     )
     await show_cold_picker(update.effective_message)
@@ -918,7 +937,7 @@ async def callback(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         context.user_data["cold_draft_language"] = LANGUAGES[language_key]
         await query.answer()
         await query.message.reply_text(
-            f"Напишите сообщение по-русски. Я переведу его на {LANGUAGES[language_key]}."
+            f"Готово. Русский текст переведу на {LANGUAGES[language_key]}, а текст на другом языке — на русский."
         )
         return
     if data.startswith("adminrm:"):
@@ -1174,7 +1193,7 @@ async def private_text(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
     if draft_language := context.user_data.get("cold_draft_language"):
         try:
             await message.chat.send_action(ChatAction.TYPING)
-            translated = await translate_text(message.text, draft_language, settings(update.effective_user.id)["tone"])
+            translated = await translate_manual_chat(message.text, draft_language, settings(update.effective_user.id)["tone"])
             target_url = context.user_data.get("cold_target_url")
             keyboard = (
                 InlineKeyboardMarkup([[InlineKeyboardButton("💬 Открыть чат и отправить", url=target_url)]])
