@@ -21,6 +21,7 @@ from telegram import (
     KeyboardButton,
     KeyboardButtonRequestUsers,
     ReplyKeyboardMarkup,
+    ReplyKeyboardRemove,
     Update,
 )
 from telegram.constants import ChatAction
@@ -82,11 +83,17 @@ MAIN_KEYBOARD = ReplyKeyboardMarkup(
     resize_keyboard=True,
 )
 
+# Keep the chat clean: the only regular interaction is choosing a language.
+MAIN_KEYBOARD = ReplyKeyboardRemove()
+
 # One entry point for both incoming-text translation and composing a message.
 MAIN_KEYBOARD = ReplyKeyboardMarkup(
     [["⚙️ Панель управления", "🌐 Перевести текст"], ["🎙 Перевести голос", "ℹ️ Как пользоваться"], ["❌ Отмена"]],
     resize_keyboard=True,
 )
+
+# Final keyboard configuration for production: no bottom menu.
+MAIN_KEYBOARD = ReplyKeyboardRemove()
 
 
 @dataclass(frozen=True)
@@ -544,6 +551,18 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         , reply_markup=MAIN_KEYBOARD
     )
     await show_panel(update.effective_message, update.effective_user.id)
+
+
+async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
+    """Minimal workflow: choose a destination language, then type in Russian."""
+    if not await require_admin(update):
+        return
+    clear_reply_flow(context)
+    await update.effective_message.reply_text(
+        "Выберите язык перевода. Затем просто пишите сообщения по-русски — я переведу их.",
+        reply_markup=MAIN_KEYBOARD,
+    )
+    await show_cold_picker(update.effective_message)
 
 
 async def panel(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
