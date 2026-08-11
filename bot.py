@@ -82,6 +82,12 @@ MAIN_KEYBOARD = ReplyKeyboardMarkup(
     resize_keyboard=True,
 )
 
+# One entry point for both incoming-text translation and composing a message.
+MAIN_KEYBOARD = ReplyKeyboardMarkup(
+    [["⚙️ Панель управления", "🌐 Перевести текст"], ["🎙 Перевести голос", "ℹ️ Как пользоваться"], ["❌ Отмена"]],
+    resize_keyboard=True,
+)
+
 
 @dataclass(frozen=True)
 class PendingReply:
@@ -407,7 +413,7 @@ def panel_markup() -> InlineKeyboardMarkup:
             [InlineKeyboardButton("🌐 Язык входящих", callback_data="panel:language"), InlineKeyboardButton("✨ Стиль ответа", callback_data="panel:tone")],
             [InlineKeyboardButton("💬 Быстрые ответы", callback_data="panel:templates"), InlineKeyboardButton("📊 Статистика", callback_data="panel:stats")],
             [InlineKeyboardButton("💬 Начать беседу", callback_data="panel:conversations")],
-            [InlineKeyboardButton("📝 Холодное сообщение", callback_data="panel:cold")],
+            [InlineKeyboardButton("🌐 Перевести текст", callback_data="panel:translate")],
             [InlineKeyboardButton("👤 Добавить администратора", callback_data="panel:addadmin"), InlineKeyboardButton("👥 Администраторы", callback_data="panel:admins")],
             [InlineKeyboardButton("⏸ Вкл./выкл. перевод", callback_data="panel:toggle")],
         ]
@@ -444,6 +450,23 @@ def cold_start_markup() -> InlineKeyboardMarkup:
             [InlineKeyboardButton("⬅️ Назад", callback_data="panel:home")],
         ]
     )
+
+
+def translate_start_markup() -> InlineKeyboardMarkup:
+    return InlineKeyboardMarkup(
+        [
+            [InlineKeyboardButton("📩 Мне прислали текст", callback_data="translate:incoming")],
+            [InlineKeyboardButton("✍️ Я хочу написать клиенту", callback_data="translate:outgoing")],
+            [InlineKeyboardButton("⬅️ Назад", callback_data="panel:home")],
+        ]
+    )
+
+
+async def show_translate_start(message, edit: bool = False) -> None:
+    if edit:
+        await message.edit_text("Что хотите перевести?", reply_markup=translate_start_markup())
+    else:
+        await message.reply_text("Что хотите перевести?", reply_markup=translate_start_markup())
 
 
 def parse_telegram_target(value: str) -> str | None:
@@ -738,6 +761,17 @@ async def callback(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         await query.answer()
         await query.message.reply_text(f"Напишите ответ для «{pending.customer_name}» по-русски. Я переведу его на {pending.language}.")
         return
+    if data == "translate:incoming":
+        clear_reply_flow(context)
+        context.user_data["manual_translate"] = True
+        await query.answer()
+        await query.message.reply_text("Отправьте текст — я переведу его на русский.", reply_markup=MAIN_KEYBOARD)
+        return
+    if data == "translate:outgoing":
+        clear_reply_flow(context)
+        await query.answer()
+        await show_cold_picker(query.message)
+        return
     if data.startswith("template:"):
         await query.answer()
         await send_pending_reply(query.message, context, TEMPLATES[data.removeprefix("template:")])
@@ -917,9 +951,9 @@ async def callback(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             buttons.append([InlineKeyboardButton(f"💬 {client_row['name']} — {client_row['language']}", callback_data=f"conv:{token}")])
         buttons.append([InlineKeyboardButton("⬅️ Назад", callback_data="panel:home")])
         await query.message.edit_text("Выберите человека для беседы:", reply_markup=InlineKeyboardMarkup(buttons))
-    elif action == "cold":
+    elif action in {"cold", "translate"}:
         clear_reply_flow(context)
-        await show_cold_start(query.message, edit=True)
+        await show_translate_start(query.message, edit=True)
     elif action == "addadmin":
         keyboard = ReplyKeyboardMarkup(
             [[KeyboardButton(
@@ -1045,6 +1079,10 @@ async def private_text(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
     if not message or not message.text:
         return
     if not await require_admin(update):
+        return
+    if message.text == "🌐 Перевести текст":
+        clear_reply_flow(context)
+        await show_translate_start(message)
         return
     if message.text == "⚙️ Панель управления":
         await show_panel(message, update.effective_user.id)
