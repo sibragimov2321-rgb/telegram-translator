@@ -94,6 +94,7 @@ MAIN_KEYBOARD = ReplyKeyboardMarkup(
 
 # Final keyboard configuration for production: no bottom menu.
 MAIN_KEYBOARD = ReplyKeyboardRemove()
+DIALOGS_KEYBOARD = ReplyKeyboardMarkup([["💬 Диалоги"]], resize_keyboard=True)
 
 
 @dataclass(frozen=True)
@@ -531,6 +532,24 @@ async def show_panel(message, user_id: int, edit: bool = False) -> None:
         await message.reply_text(panel_text(user_id), reply_markup=panel_markup())
 
 
+async def show_dialogs(message, user_id: int) -> None:
+    """Open recent clients from the permanent bottom button."""
+    clients = recent_clients(user_id)
+    if not clients:
+        await message.reply_text("Пока нет диалогов. Когда клиент напишет вам, он появится здесь.")
+        return
+    buttons = []
+    for client_row in clients:
+        token = secrets.token_urlsafe(8)
+        conversation_choices[token] = PendingReply(
+            client_row["connection_id"], client_row["chat_id"], client_row["language"], client_row["name"], user_id
+        )
+        buttons.append([InlineKeyboardButton(
+            f"💬 {client_row['name']} — {client_row['language']}", callback_data=f"conv:{token}"
+        )])
+    await message.reply_text("💬 Последние диалоги:", reply_markup=InlineKeyboardMarkup(buttons))
+
+
 async def show_admins(message, edit: bool = False) -> None:
     rows = all_admins()
     lines = ["👥 Администраторы\n"]
@@ -579,7 +598,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     clear_reply_flow(context)
     await update.effective_message.reply_text(
         "Выберите язык. Русский текст переведу на него, а текст на другом языке — на русский.",
-        reply_markup=MAIN_KEYBOARD,
+        reply_markup=DIALOGS_KEYBOARD,
     )
     await show_cold_picker(update.effective_message)
 
@@ -1117,6 +1136,9 @@ async def private_text(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
     if not message or not message.text:
         return
     if not await require_admin(update):
+        return
+    if message.text == "💬 Диалоги":
+        await show_dialogs(message, update.effective_user.id)
         return
     if message.text == "🌐 Перевести текст":
         clear_reply_flow(context)
