@@ -1259,6 +1259,9 @@ def tts_markup(token: str) -> InlineKeyboardMarkup:
 async def remember_russian_tts(owner_id: int, text: str) -> str:
     token = secrets.token_urlsafe(12)
     tts_cache[token] = (owner_id, text[:4096])
+    # Short-lived process cache only: keep memory bounded and never persist voice text.
+    while len(tts_cache) > 100:
+        tts_cache.pop(next(iter(tts_cache)))
     return token
 
 
