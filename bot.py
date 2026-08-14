@@ -2,7 +2,6 @@
 
 import asyncio
 import logging
-import io
 import os
 import re
 import secrets
@@ -48,11 +47,6 @@ logging.getLogger("openai").setLevel(logging.WARNING)
 TOKEN: Final = os.getenv("TELEGRAM_BOT_TOKEN", "")
 # Text translation prioritizes meaning and multilingual quality over the lowest cost.
 MODEL: Final = os.getenv("TRANSLATION_MODEL", "gpt-5.6-sol")
-TRANSCRIBE_MODEL: Final = os.getenv("OPENAI_TRANSCRIBE_MODEL", "gpt-4o-mini-transcribe")
-TTS_MODEL: Final = os.getenv("OPENAI_TTS_MODEL", "gpt-4o-mini-tts")
-TTS_VOICE: Final = os.getenv("OPENAI_TTS_VOICE", "marin")
-MAX_VOICE_SECONDS: Final = 300
-MAX_VOICE_BYTES: Final = 20 * 1024 * 1024
 DB_PATH: Final = Path(os.getenv("DATABASE_PATH", str(Path(__file__).with_name("translator.sqlite3"))))
 BOOTSTRAP_ADMIN_IDS: Final = tuple(
     int(value) for value in os.getenv("BOOTSTRAP_ADMIN_IDS", "").split(",") if value.strip().isdigit()
@@ -122,8 +116,6 @@ class PendingReply:
 # connections and statistics are stored permanently in SQLite.
 pending_replies: dict[str, PendingReply] = {}
 conversation_choices: dict[str, PendingReply] = {}
-tts_cache: dict[str, tuple[int, str]] = {}
-tts_in_progress: set[str] = set()
 TURKMEN_RUSSIAN_PHRASES: Final = {
     "bolya": "Хорошо.",
     "bolýa": "Хорошо.",
@@ -726,14 +718,13 @@ def clear_reply_flow(context: ContextTypes.DEFAULT_TYPE) -> None:
         "cold_target_url",
         "waiting_cold_target",
         "manual_translate",
-        "manual_voice_translate",
     ):
         context.user_data.pop(key, None)
 
 
 def clear_cold_flow(context: ContextTypes.DEFAULT_TYPE) -> None:
     """Remove draft-only states before replying to a real client."""
-    for key in ("cold_draft_language", "cold_target_url", "waiting_cold_target", "manual_translate", "manual_voice_translate"):
+    for key in ("cold_draft_language", "cold_target_url", "waiting_cold_target", "manual_translate"):
         context.user_data.pop(key, None)
 
 
@@ -913,40 +904,6 @@ async def callback(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     if not is_admin(user_id):
         await query.answer("Доступ закрыт.", show_alert=True)
         return
-    if data.startswith("tts:"):
-        token = data.removeprefix("tts:")
-        cached = tts_cache.get(token)
-        if not cached or cached[0] != user_id:
-            await query.answer("Озвучка больше недоступна. Отправьте голосовое ещё раз.", show_alert=True)
-            return
-        if token in tts_in_progress:
-            await query.answer("Озвучка уже готовится…")
-            return
-        tts_in_progress.add(token)
-        try:
-            await query.answer("Готовлю озвучку…")
-            response = await client.audio.speech.create(
-                model=TTS_MODEL,
-                voice=TTS_VOICE,
-                input=cached[1],
-                instructions=(
-                    "Speak naturally in Russian, like a normal person sending a Telegram voice message. "
-                    "Calm, clear, conversational, medium speed. Do not sound like a narrator or advertisement."
-                ),
-                response_format="opus",
-            )
-            audio = io.BytesIO(response.read())
-            audio.name = "russian-translation.ogg"
-            await query.message.reply_voice(
-                voice=audio,
-                caption="🔊 Озвучка создана ИИ",
-            )
-        except Exception:
-            logger.exception("Could not create Russian TTS")
-            await query.message.reply_text("Не удалось создать озвучку. Попробуйте ещё раз.")
-        finally:
-            tts_in_progress.discard(token)
-        return
     if data.startswith("reply:"):
         token = data.removeprefix("reply:")
         pending = pending_replies.get(token)
@@ -1099,7 +1056,6 @@ async def callback(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         context.user_data.pop("pending_reply", None)
         context.user_data.pop("active_conversation", None)
         context.user_data.pop("manual_translate", None)
-        context.user_data.pop("manual_voice_translate", None)
         context.user_data["cold_draft_language"] = LANGUAGES[language_key]
         await query.answer()
         await query.message.reply_text(
@@ -1227,130 +1183,6 @@ async def add_selected_admin(update: Update, context: ContextTypes.DEFAULT_TYPE)
     )
 
 
-async def transcribe_voice_message(message, context: ContextTypes.DEFAULT_TYPE) -> str:
-    media = message.voice or message.audio
-    if not media:
-        raise RuntimeError("Audio message is missing")
-    if getattr(media, "duration", 0) > MAX_VOICE_SECONDS:
-        raise ValueError("Голосовое слишком длинное. Отправьте запись до 5 минут.")
-    if getattr(media, "file_size", 0) > MAX_VOICE_BYTES:
-        raise ValueError("Аудиофайл слишком большой. Отправьте запись до 20 МБ.")
-    telegram_file = await context.bot.get_file(media.file_id)
-    audio = io.BytesIO(bytes(await telegram_file.download_as_bytearray()))
-    audio.name = "voice.ogg" if message.voice else "audio.mp3"
-    response = await client.audio.transcriptions.create(
-        model=TRANSCRIBE_MODEL,
-        file=audio,
-        prompt=(
-            "Transcribe accurately. The speech may be Russian, Turkmen, Tajik, Kyrgyz, Uzbek, English, "
-            "Spanish, or German. Preserve informal spoken wording and names."
-        ),
-    )
-    text = getattr(response, "text", str(response)).strip()
-    if not text:
-        raise RuntimeError("Empty transcription")
-    return text
-
-
-def tts_markup(token: str) -> InlineKeyboardMarkup:
-    return InlineKeyboardMarkup([[InlineKeyboardButton("🔊 Озвучить по-русски", callback_data=f"tts:{token}")]])
-
-
-async def remember_russian_tts(owner_id: int, text: str) -> str:
-    token = secrets.token_urlsafe(12)
-    tts_cache[token] = (owner_id, text[:4096])
-    # Short-lived process cache only: keep memory bounded and never persist voice text.
-    while len(tts_cache) > 100:
-        tts_cache.pop(next(iter(tts_cache)))
-    return token
-
-
-async def receive_business_voice(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    message = update.business_message
-    if not message or not (message.voice or message.audio) or message.sender_business_bot or not message.business_connection_id:
-        return
-    progress = None
-    try:
-        owner_id, inbox_id = await get_business_account(message.business_connection_id, context)
-        if message.from_user and message.from_user.id == owner_id:
-            return
-        progress = await context.bot.send_message(chat_id=inbox_id, text="🎧 Распознаю голосовое...")
-        transcript = await transcribe_voice_message(message, context)
-        history = recent_translation_history(owner_id, message.chat_id)
-        source, translated = await translate_incoming(transcript, "Русский", history=history)
-        save_translation_history(owner_id, message.chat_id, "incoming", transcript)
-        sender = message.from_user.full_name if message.from_user else "Клиент"
-        save_client(owner_id, message.business_connection_id, message.chat_id, sender, source)
-        token = secrets.token_urlsafe(18)
-        pending_replies[token] = PendingReply(message.business_connection_id, message.chat_id, source, sender, owner_id)
-        tts_token = await remember_russian_tts(owner_id, translated)
-        buttons = [[InlineKeyboardButton("🔊 Озвучить по-русски", callback_data=f"tts:{tts_token}")],
-                   [InlineKeyboardButton("✍️ Ответить по-русски", callback_data=f"reply:{token}")],
-                   [InlineKeyboardButton("🌐 Изменить язык", callback_data=f"replang:{token}")]]
-        await progress.edit_text(
-            f"🎤 Голосовое от: {sender}\nЯзык: {source}\n\n📝 Оригинал:\n{transcript}\n\n🇷🇺 Перевод:\n{translated}",
-            reply_markup=InlineKeyboardMarkup(buttons),
-        )
-        increment(owner_id, "incoming_count")
-    except ValueError as error:
-        if progress:
-            await progress.edit_text(str(error))
-    except Exception:
-        logger.exception("Could not process business voice message")
-        if progress:
-            await progress.edit_text("Не удалось распознать это голосовое. Попробуйте отправить его ещё раз.")
-
-
-async def private_voice(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
-    message = update.effective_message
-    if not message or not (message.voice or message.audio) or not await require_admin(update):
-        return
-    progress = None
-    try:
-        progress = await message.reply_text("🎧 Распознаю голосовое...")
-        transcript = await transcribe_voice_message(message, context)
-        user_id = update.effective_user.id
-        if context.user_data.pop("manual_voice_translate", None):
-            source, translated = await translate_incoming(
-                transcript, "Русский", history=recent_translation_history(user_id, user_id)
-            )
-            save_translation_history(user_id, user_id, "incoming", transcript)
-            token = await remember_russian_tts(user_id, translated)
-            await progress.edit_text(
-                f"🎤 Язык: {source}\n\n📝 Оригинал:\n{transcript}\n\n🇷🇺 Перевод:\n{translated}",
-                reply_markup=tts_markup(token),
-            )
-            return
-        if context.user_data.get("pending_reply"):
-            await progress.edit_text(f"🎙 Распознано:\n{transcript}")
-            await send_pending_reply(message, context, transcript)
-            return
-        if context.user_data.get("active_conversation"):
-            await progress.edit_text(f"🎙 Распознано:\n{transcript}")
-            await send_active_message(message, context, transcript)
-            return
-        source, translated = await translate_incoming(
-            transcript, "Русский", history=recent_translation_history(user_id, user_id)
-        )
-        save_translation_history(user_id, user_id, "incoming", transcript)
-        token = await remember_russian_tts(user_id, translated)
-        await progress.edit_text(
-            f"🎤 Язык: {source}\n\n📝 Оригинал:\n{transcript}\n\n🇷🇺 Перевод:\n{translated}",
-            reply_markup=tts_markup(token),
-        )
-    except ValueError as error:
-        if progress:
-            await progress.edit_text(str(error))
-        else:
-            await message.reply_text(str(error))
-    except Exception:
-        logger.exception("Voice translation failed")
-        if progress:
-            await progress.edit_text("Не удалось распознать голосовое. Попробуйте отправить запись ещё раз.")
-        else:
-            await message.reply_text("Не удалось распознать голосовое. Попробуйте отправить запись ещё раз.")
-
-
 async def private_text(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     message = update.effective_message
     if not message or not message.text:
@@ -1374,16 +1206,6 @@ async def private_text(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
         context.user_data["manual_translate"] = True
         await message.reply_text("Отправьте текст — я переведу его на русский.", reply_markup=MAIN_KEYBOARD)
         return
-    if message.text == "🎙 Перевести голос":
-        context.user_data.pop("pending_reply", None)
-        context.user_data.pop("active_conversation", None)
-        context.user_data.pop("cold_draft_language", None)
-        context.user_data["manual_voice_translate"] = True
-        await message.reply_text(
-            "Отправьте сюда голосовое сообщение — я распознаю речь и переведу её на русский.",
-            reply_markup=MAIN_KEYBOARD,
-        )
-        return
     if message.text == "📝 Холодное сообщение":
         clear_reply_flow(context)
         await show_cold_picker(message)
@@ -1404,7 +1226,6 @@ async def private_text(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
         context.user_data.pop("cold_target_url", None)
         context.user_data.pop("waiting_cold_target", None)
         context.user_data.pop("manual_translate", None)
-        context.user_data.pop("manual_voice_translate", None)
         await message.reply_text("Подготовка ответа отменена.", reply_markup=MAIN_KEYBOARD)
         return
     if (
@@ -1502,18 +1323,9 @@ def main() -> None:
     app.add_handler(CommandHandler("cold", cold))
     app.add_handler(BusinessConnectionHandler(remember_business_connection))
     app.add_handler(MessageHandler(filters.UpdateType.BUSINESS_MESSAGES & filters.TEXT, receive_business_message))
-    app.add_handler(
-        MessageHandler(
-            filters.UpdateType.BUSINESS_MESSAGES & (filters.VOICE | filters.AUDIO),
-            receive_business_voice,
-        )
-    )
     app.add_handler(CallbackQueryHandler(settings_callback, pattern=r"^(lang|tone):"))
     app.add_handler(CallbackQueryHandler(callback))
     app.add_handler(MessageHandler(filters.StatusUpdate.USERS_SHARED, add_selected_admin))
-    app.add_handler(
-        MessageHandler((filters.VOICE | filters.AUDIO) & ~filters.UpdateType.BUSINESS_MESSAGES, private_voice)
-    )
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, private_text))
     logger.info("Bot started with model %s", MODEL)
     app.run_polling(allowed_updates=Update.ALL_TYPES)
