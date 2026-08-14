@@ -855,7 +855,7 @@ async def send_pending_reply(message, context: ContextTypes.DEFAULT_TYPE, russia
         await message.reply_text(business_send_error_text(error))
     except Exception as error:
         logger.exception("Could not send business reply")
-        await message.reply_text(business_send_error_text(error))
+        await message.reply_text("Не удалось подготовить перевод. Попробуйте ещё раз через минуту.")
 
 
 async def send_active_message(message, context: ContextTypes.DEFAULT_TYPE, russian_text: str) -> None:
@@ -883,7 +883,7 @@ async def send_active_message(message, context: ContextTypes.DEFAULT_TYPE, russi
         await message.reply_text(business_send_error_text(error))
     except Exception as error:
         logger.exception("Could not send active conversation message")
-        await message.reply_text(business_send_error_text(error))
+        await message.reply_text("Не удалось подготовить перевод. Попробуйте ещё раз через минуту.")
 
 
 async def callback(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
