@@ -82,8 +82,12 @@ class TranslationContextTests(unittest.TestCase):
             self.assertNotIn("overly correct", instructions)
         turkmen_instructions = bot.translation_instruction("Türkmençe (туркменский)", "casual")
         self.assertIn("Never use Cyrillic or diacritic letters", turkmen_instructions)
-        self.assertEqual("salam, cay gowy", bot.plain_turkmen_latin("salam, cäy gowy"))
+        self.assertEqual("salam cay gowy", bot.plain_turkmen_latin("salam, cäy gowy."))
         self.assertEqual("Seyle", bot.plain_turkmen_latin("Şeýle"))
+        self.assertEqual(
+            "sayta https://example.com/path giriw 2.5 USDT",
+            bot.plain_turkmen_latin("sayta https://example.com/path, giriw 2.5 USDT."),
+        )
 
     def test_manual_language_selection_is_explicit_despite_old_context(self):
         fake_responses = FakeResponses()

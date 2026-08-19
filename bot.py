@@ -398,6 +398,8 @@ def translation_instruction(target: str, tone: str = "clear") -> str:
         language_note = (
             " For Turkmen, use plain everyday Latin chat typing only: a, b, c, d, e, f, g, h, i, j, k, l, m, n, "
             "o, p, r, s, t, u, w, y, z. Never use Cyrillic or diacritic letters such as ä, ç, ň, ö, ş, ü, ý, ž. "
+            "Do not use commas or full stops in ordinary chat text. Keep punctuation inside links, usernames, numbers "
+            "and promo codes unchanged. "
             "For informal source messages, use familiar everyday Turkmen chat wording "
             "and widely understood local slang when it preserves the exact meaning and tone. Never invent slang, use Turkish "
             "substitutions, or make business messages rude or unclear."
@@ -428,12 +430,22 @@ def translation_instruction(target: str, tone: str = "clear") -> str:
 
 
 def plain_turkmen_latin(text: str) -> str:
-    """Match the plain Latin spelling commonly used in Telegram Turkmen chats."""
-    return text.translate(str.maketrans({
+    """Match the plain, punctuation-light Latin spelling used in Turkmen Telegram chats."""
+    text = text.translate(str.maketrans({
         "ä": "a", "Ä": "A", "ç": "c", "Ç": "C", "ň": "n", "Ň": "N",
         "ö": "o", "Ö": "O", "ş": "s", "Ş": "S", "ü": "u", "Ü": "U",
         "ý": "y", "Ý": "Y", "ž": "j", "Ž": "J",
     }))
+    protected: list[str] = []
+
+    def protect(match: re.Match[str]) -> str:
+        protected.append(match.group(0))
+        return f"\uFFF0{len(protected) - 1}\uFFF1"
+
+    # Do not damage links, @usernames, decimals, or other structured values.
+    text = re.sub(r"https?://[^\s,]+|www\.[^\s,]+|@\w+|\b\d+(?:[.,]\d+)+\b", protect, text)
+    text = text.replace(",", "").replace(".", "")
+    return re.sub(r"\uFFF0(\d+)\uFFF1", lambda match: protected[int(match.group(1))], text)
 
 
 async def translate_text(
@@ -478,7 +490,8 @@ async def translate_manual_chat(
     turkmen_note = (
         " If the selected output language is Türkmençe, write every Turkmen word only with plain Latin chat letters "
         "without ä, ç, ň, ö, ş, ü, ý or ž; never use Cyrillic for Turkmen. For informal text, use familiar everyday "
-        "Turkmen chat wording or widely understood local slang only when it preserves the source meaning and tone."
+        "Turkmen chat wording or widely understood local slang only when it preserves the source meaning and tone. "
+        "Do not use commas or full stops in ordinary chat text, but leave links, usernames, numbers and promo codes unchanged."
         if selected_language.startswith("Türkmençe")
         else ""
     )
