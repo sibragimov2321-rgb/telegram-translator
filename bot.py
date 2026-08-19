@@ -937,10 +937,15 @@ async def callback(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
         if not pending or pending.owner_id != user_id or language_key not in LANGUAGES:
             await query.answer("Этот запрос уже недоступен.", show_alert=True)
             return
-        pending_replies[token] = PendingReply(
+        selected = PendingReply(
             pending.connection_id, pending.customer_chat_id, LANGUAGES[language_key],
             pending.customer_name, pending.owner_id,
         )
+        pending_replies[token] = selected
+        # The language picker is also an explicit reply action. Never leave an
+        # older pinned conversation active, otherwise it may send in its old language.
+        context.user_data.pop("active_conversation", None)
+        context.user_data["pending_reply"] = token
         await query.answer("Язык изменён")
         await query.message.reply_text(
             f"Язык ответа: {LANGUAGES[language_key]}. Теперь нажмите «Ответить по-русски» "
@@ -1014,14 +1019,15 @@ async def callback(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
             await query.answer("Этот выбор уже недоступен.", show_alert=True)
             return
         new_language = LANGUAGES[language_key]
-        conversation_choices[token] = PendingReply(
+        selected = PendingReply(
             active.connection_id, active.customer_chat_id, new_language, active.customer_name, active.owner_id
         )
+        conversation_choices[token] = selected
         set_client_language(active.owner_id, active.connection_id, active.customer_chat_id, new_language)
         context.user_data.pop("waiting_cold_target", None)
         context.user_data.pop("cold_target_url", None)
         context.user_data.pop("cold_draft_language", None)
-        context.user_data["active_conversation"] = active
+        context.user_data["active_conversation"] = selected
         await query.answer("Язык выбран")
         await query.message.reply_text(
             f"💬 Беседа с «{active.customer_name}» открыта. Пишите сообщения по-русски — "
