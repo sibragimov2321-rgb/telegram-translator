@@ -398,7 +398,9 @@ def translation_instruction(target: str, tone: str = "clear") -> str:
         language_note = (
             " For Turkmen, use only the modern standard Turkmen Latin alphabet: "
             "a ä b ç d e f g h i j ž k l m n ň o ö p r s ş t u ü w y ý z. "
-            "Never write Turkmen words in Cyrillic. Use natural Turkmen chat wording, not Turkish substitutions or literary phrasing."
+            "Never write Turkmen words in Cyrillic. For informal source messages, use familiar everyday Turkmen chat wording "
+            "and widely understood local slang when it preserves the exact meaning and tone. Never invent slang, use Turkish "
+            "substitutions, or make business messages rude or unclear."
         )
     tone_text = {
         "brief": "Keep the translation concise when the source is concise.",
@@ -464,7 +466,8 @@ async def translate_manual_chat(
         return TURKMEN_RUSSIAN_PHRASES[normalized]
     turkmen_note = (
         " If the selected output language is Türkmençe, write every Turkmen word only in the standard Latin alphabet "
-        "(including ä, ç, ň, ö, ş, ü, w, ý, ž); never use Cyrillic for Turkmen."
+        "(including ä, ç, ň, ö, ş, ü, w, ý, ž); never use Cyrillic for Turkmen. For informal text, use familiar everyday "
+        "Turkmen chat wording or widely understood local slang only when it preserves the source meaning and tone."
         if selected_language.startswith("Türkmençe")
         else ""
     )
