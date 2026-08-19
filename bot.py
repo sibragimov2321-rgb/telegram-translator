@@ -547,7 +547,10 @@ async def translate_incoming(
         language = "English"
     if language.strip().lower() in {"unknown", "undetermined", "unrecognized"} and known_language:
         language = known_language
-    return language.strip(), translated.strip()
+    result = translated.strip()
+    if target.startswith("Türkmençe"):
+        result = plain_turkmen_latin(result)
+    return language.strip(), result
 
 
 def panel_markup() -> InlineKeyboardMarkup:
