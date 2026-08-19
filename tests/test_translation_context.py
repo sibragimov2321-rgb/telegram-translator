@@ -80,6 +80,9 @@ class TranslationContextTests(unittest.TestCase):
             self.assertIn("never let prior context override", instructions)
             self.assertNotIn("Do not deliberately fix", instructions)
             self.assertNotIn("overly correct", instructions)
+        turkmen_instructions = bot.translation_instruction("Türkmençe (туркменский)", "casual")
+        self.assertIn("Never write Turkmen words in Cyrillic", turkmen_instructions)
+        self.assertIn("ä, ç, ň, ö, ş, ü, w, y, ý, z", turkmen_instructions)
 
     def test_manual_language_selection_is_explicit_despite_old_context(self):
         fake_responses = FakeResponses()
