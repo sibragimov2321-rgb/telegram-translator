@@ -93,6 +93,8 @@ class TranslationContextTests(unittest.TestCase):
         )
         with self.assertRaises(RuntimeError):
             bot.strict_turkmen_output("Салам брат")
+        self.assertTrue(bot.is_turkmen_language("Turkmen"))
+        self.assertTrue(bot.is_turkmen_language("Türkmençe (туркменский)"))
         self.assertEqual(
             "sayta https://example.com/path giriw 2.5 USDT",
             bot.plain_turkmen_latin("sayta https://example.com/path, giriw 2.5 USDT."),
@@ -126,6 +128,12 @@ class TranslationContextTests(unittest.TestCase):
             self.assertEqual(
                 expected,
                 asyncio.run(bot.translate_text("Привет брат как дела?", "Türkmençe (туркменский)")),
+            )
+
+            bot.client = SimpleNamespace(responses=FakeResponses(source_result))
+            self.assertEqual(
+                expected,
+                asyncio.run(bot.translate_text("Привет брат как дела?", "Turkmen")),
             )
 
             bot.client = SimpleNamespace(responses=FakeResponses(source_result))
