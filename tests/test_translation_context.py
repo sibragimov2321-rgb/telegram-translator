@@ -11,12 +11,13 @@ import bot
 
 
 class FakeResponses:
-    def __init__(self):
+    def __init__(self, output_text="what about tomorrow"):
         self.calls = []
+        self.output_text = output_text
 
     async def create(self, **kwargs):
         self.calls.append(kwargs)
-        return SimpleNamespace(output_text="what about tomorrow")
+        return SimpleNamespace(output_text=self.output_text)
 
 
 class TranslationContextTests(unittest.TestCase):
@@ -81,9 +82,17 @@ class TranslationContextTests(unittest.TestCase):
             self.assertNotIn("Do not deliberately fix", instructions)
             self.assertNotIn("overly correct", instructions)
         turkmen_instructions = bot.translation_instruction("Türkmençe (туркменский)", "casual")
-        self.assertIn("Never use Cyrillic or diacritic letters", turkmen_instructions)
+        self.assertIn(bot.TURKMEN_OUTPUT_RULES, turkmen_instructions)
+        self.assertIn("Never use Cyrillic", turkmen_instructions)
+        self.assertIn("Do not use full stops, commas, question marks", turkmen_instructions)
         self.assertEqual("salam cay gowy", bot.plain_turkmen_latin("salam, cäy gowy."))
         self.assertEqual("Seyle", bot.plain_turkmen_latin("Şeýle"))
+        self.assertEqual(
+            "Salam brat nahili yagdaylaryn",
+            bot.strict_turkmen_output("Salam, brat, nähili ýagdaýlaryň?"),
+        )
+        with self.assertRaises(RuntimeError):
+            bot.strict_turkmen_output("Салам брат")
         self.assertEqual(
             "sayta https://example.com/path giriw 2.5 USDT",
             bot.plain_turkmen_latin("sayta https://example.com/path, giriw 2.5 USDT."),
@@ -107,6 +116,32 @@ class TranslationContextTests(unittest.TestCase):
         instructions = fake_responses.calls[0]["instructions"]
         self.assertIn("Türkmençe (туркменский)", instructions)
         self.assertIn("must never override a clear current message", instructions)
+
+    def test_all_turkmen_translation_paths_apply_strict_chat_output(self):
+        source_result = "Salam, brat, nähili ýagdaýlaryň?"
+        expected = "Salam brat nahili yagdaylaryn"
+        previous_client = bot.client
+        try:
+            bot.client = SimpleNamespace(responses=FakeResponses(source_result))
+            self.assertEqual(
+                expected,
+                asyncio.run(bot.translate_text("Привет брат как дела?", "Türkmençe (туркменский)")),
+            )
+
+            bot.client = SimpleNamespace(responses=FakeResponses(source_result))
+            self.assertEqual(
+                expected,
+                asyncio.run(bot.translate_manual_chat("Привет брат как дела?", "Türkmençe (туркменский)")),
+            )
+
+            bot.client = SimpleNamespace(responses=FakeResponses("Russian\n" + source_result))
+            language, translated = asyncio.run(
+                bot.translate_incoming("Привет брат как дела?", "Türkmençe (туркменский)")
+            )
+            self.assertEqual("Russian", language)
+            self.assertEqual(expected, translated)
+        finally:
+            bot.client = previous_client
 
 
 if __name__ == "__main__":
