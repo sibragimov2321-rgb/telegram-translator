@@ -46,8 +46,21 @@ logging.getLogger("httpx").setLevel(logging.WARNING)
 logging.getLogger("openai").setLevel(logging.WARNING)
 
 TOKEN: Final = os.getenv("TELEGRAM_BOT_TOKEN", "")
-# Text translation prioritizes meaning and multilingual quality over the lowest cost.
-MODEL: Final = os.getenv("TRANSLATION_MODEL", "gpt-5.6-sol")
+OPENROUTER_API_KEY: Final = os.getenv("OPENROUTER_API_KEY", "")
+OPENAI_API_KEY: Final = os.getenv("OPENAI_API_KEY", "")
+AI_API_KEY: Final = OPENROUTER_API_KEY or OPENAI_API_KEY
+AI_PROVIDER: Final = "OpenRouter" if OPENROUTER_API_KEY else "OpenAI"
+AI_BASE_URL: Final = os.getenv(
+    "AI_BASE_URL",
+    "https://openrouter.ai/api/v1" if OPENROUTER_API_KEY else "https://api.openai.com/v1",
+)
+# OpenRouter model IDs include the provider prefix. Keep OPENAI_MODEL as a
+# backwards-compatible alias for older local installations.
+MODEL: Final = (
+    os.getenv("TRANSLATION_MODEL")
+    or os.getenv("OPENAI_MODEL")
+    or ("openai/gpt-4.1-mini" if OPENROUTER_API_KEY else "gpt-4.1-mini")
+)
 DB_PATH: Final = Path(os.getenv("DATABASE_PATH", str(Path(__file__).with_name("translator.sqlite3"))))
 BOOTSTRAP_ADMIN_IDS: Final = tuple(
     int(value) for value in os.getenv("BOOTSTRAP_ADMIN_IDS", "").split(",") if value.strip().isdigit()
@@ -55,6 +68,8 @@ BOOTSTRAP_ADMIN_IDS: Final = tuple(
 # The connection can be slow on some networks; do not fail a translation after
 # the short default connection timeout.
 client = AsyncOpenAI(
+    api_key=AI_API_KEY,
+    base_url=AI_BASE_URL,
     timeout=httpx.Timeout(90.0, connect=30.0, read=90.0, write=30.0, pool=30.0),
     max_retries=3,
 )
@@ -1407,8 +1422,10 @@ async def setup_commands(app: Application) -> None:
 
 
 def main() -> None:
-    if not TOKEN or not os.getenv("OPENAI_API_KEY"):
-        raise RuntimeError("Fill TELEGRAM_BOT_TOKEN and OPENAI_API_KEY in .env.")
+    if not TOKEN or not AI_API_KEY:
+        raise RuntimeError(
+            "Fill TELEGRAM_BOT_TOKEN and either OPENROUTER_API_KEY or OPENAI_API_KEY in .env."
+        )
     init_db()
     app = Application.builder().token(TOKEN).post_init(setup_commands).build()
     app.add_handler(CommandHandler("start", start))
@@ -1421,7 +1438,7 @@ def main() -> None:
     app.add_handler(CallbackQueryHandler(callback))
     app.add_handler(MessageHandler(filters.StatusUpdate.USERS_SHARED, add_selected_admin))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, private_text))
-    logger.info("Bot started with model %s", MODEL)
+    logger.info("Bot started with provider %s and model %s", AI_PROVIDER, MODEL)
     app.run_polling(allowed_updates=Update.ALL_TYPES)
 
 

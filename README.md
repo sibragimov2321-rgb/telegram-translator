@@ -16,7 +16,7 @@ inbox flow is the fastest way to keep the customer chat clean.
 ## Setup
 
 1. Create a bot with [@BotFather](https://t.me/BotFather) and copy its token.
-2. Create an OpenAI API key at [OpenAI](https://platform.openai.com/api-keys).
+2. Create an API key at [OpenRouter](https://openrouter.ai/settings/keys).
 3. Copy `.env.example` to `.env`, then insert both keys.
 4. Run in PowerShell:
 
@@ -38,12 +38,16 @@ Keep `.env` private. Do not commit it or send its contents to anyone.
 
 1. Создайте проект и сервис из этого репозитория в Railway.
 2. В разделе **Variables** добавьте значения из вашего локального `.env`:
-   `TELEGRAM_BOT_TOKEN`, `OPENAI_API_KEY`, `TRANSLATION_MODEL`.
+   `TELEGRAM_BOT_TOKEN`, `OPENROUTER_API_KEY`, `TRANSLATION_MODEL`.
+   Recommended model: `openai/gpt-4.1-mini`.
 3. Добавьте также `DATABASE_PATH=/data/translator.sqlite3`.
 4. В разделе **Volumes** создайте том и укажите путь подключения `/data`.
 5. Railway сам обнаружит `Dockerfile`, соберёт проект и будет запускать `python bot.py` постоянно.
 
 Ключи нельзя добавлять в GitHub или в файлы проекта. В Railway они хранятся в Variables.
+
+Если `OPENROUTER_API_KEY` не задан, бот продолжит использовать `OPENAI_API_KEY`
+как резервный вариант. Для OpenRouter адрес API выбирается автоматически.
 
 ## Notes
 
