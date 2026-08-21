@@ -108,7 +108,8 @@ TURKMEN_OUTPUT_RULES: Final = (
     "Latin letters. Never use Cyrillic. Never use Turkmen or Turkish letters with marks, including ä, ç, ň, ö, "
     "ş, ü, ý or ž; write their plain chat equivalents instead. Do not use full stops, commas, question marks, "
     "exclamation marks or other complex punctuation in ordinary text. Keep protected data such as links, "
-    "@usernames, phone numbers, numbers and promo codes unchanged. Preserve the exact source meaning first, then "
+    "@usernames, phone numbers, numbers, percentages and promo codes unchanged. Always preserve the percent sign "
+    "when it belongs to a number, for example 8%, 2% or 35%. Preserve the exact source meaning first, then "
     "write naturally like an ordinary person in Telegram. Do not sound literary or overly formal. Keep short "
     "messages short. Add no explanations, labels or extra information. Example: 'Привет брат как дела?' must be "
     "translated in the style 'Salam brat nadip yagsymy', never 'Salam, brat, nähili ýagdaýlaryň?'."
@@ -465,7 +466,8 @@ def plain_turkmen_latin(text: str) -> str:
 
     # Do not damage links, @usernames, decimals, phone numbers, or promo codes.
     text = re.sub(
-        r"https?://[^\s,]+|www\.[^\s,]+|@\w+|\+?\d[\d() -]{5,}\d|\b\d+(?:[.,]\d+)+\b|"
+        r"https?://[^\s,]+|www\.[^\s,]+|@\w+|\+?\d[\d() -]{5,}\d|\b\d+(?:[.,]\d+)?\s*%|"
+        r"\b\d+(?:[.,]\d+)+\b|"
         r"\b(?=[A-Za-z0-9_-]*[A-Za-z])(?=[A-Za-z0-9_-]*\d)[A-Za-z0-9_-]+\b",
         protect,
         text,

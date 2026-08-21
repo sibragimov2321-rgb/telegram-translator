@@ -99,6 +99,12 @@ class TranslationContextTests(unittest.TestCase):
             "sayta https://example.com/path giriw 2.5 USDT",
             bot.plain_turkmen_latin("sayta https://example.com/path, giriw 2.5 USDT."),
         )
+        self.assertEqual(
+            "depozitden 8% we pul cykarmagyndan 2% promokoddan 35% alarsynyz",
+            bot.plain_turkmen_latin(
+                "depozitden 8%, we pul çykarmagyndan 2%. promokoddan 35% alarsyňyz."
+            ),
+        )
 
     def test_manual_language_selection_is_explicit_despite_old_context(self):
         fake_responses = FakeResponses()
