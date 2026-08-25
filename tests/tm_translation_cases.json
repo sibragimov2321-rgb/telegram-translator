@@ -1,0 +1,2252 @@
+[
+  {
+    "id": "base-001",
+    "direction": "ru_to_tm",
+    "source": "привет",
+    "reference": "salam",
+    "style": "casual",
+    "category": "one_word"
+  },
+  {
+    "id": "base-002",
+    "direction": "ru_to_tm",
+    "source": "привет брат как дела",
+    "reference": "salam brat nadip yagsymy",
+    "style": "slang",
+    "category": "slang"
+  },
+  {
+    "id": "base-003",
+    "direction": "ru_to_tm",
+    "source": "как дела",
+    "reference": "nadip yagsymy",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-004",
+    "direction": "ru_to_tm",
+    "source": "все хорошо",
+    "reference": "hemme zat gowy",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-005",
+    "direction": "ru_to_tm",
+    "source": "да хорошо",
+    "reference": "howwa gowy",
+    "style": "very_casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-006",
+    "direction": "ru_to_tm",
+    "source": "ладно",
+    "reference": "bolya",
+    "style": "very_casual",
+    "category": "one_word"
+  },
+  {
+    "id": "base-007",
+    "direction": "ru_to_tm",
+    "source": "нет",
+    "reference": "yok",
+    "style": "very_casual",
+    "category": "one_word"
+  },
+  {
+    "id": "base-008",
+    "direction": "ru_to_tm",
+    "source": "да",
+    "reference": "howwa",
+    "style": "very_casual",
+    "category": "one_word"
+  },
+  {
+    "id": "base-009",
+    "direction": "ru_to_tm",
+    "source": "кто это",
+    "reference": "bu kim",
+    "style": "very_casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-010",
+    "direction": "ru_to_tm",
+    "source": "ты где",
+    "reference": "sen nirede",
+    "style": "very_casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-011",
+    "direction": "ru_to_tm",
+    "source": "что случилось",
+    "reference": "name boldy",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-012",
+    "direction": "ru_to_tm",
+    "source": "не понял",
+    "reference": "dusunmedim",
+    "style": "very_casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-013",
+    "direction": "ru_to_tm",
+    "source": "напиши еще раз",
+    "reference": "yene bir gezek yaz",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-014",
+    "direction": "ru_to_tm",
+    "source": "сейчас проверю",
+    "reference": "hazir barlaryn",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-015",
+    "direction": "ru_to_tm",
+    "source": "завтра будет",
+    "reference": "ertir bolar",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-016",
+    "direction": "ru_to_tm",
+    "source": "сегодня не получится",
+    "reference": "su gun bolmaz",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-017",
+    "direction": "ru_to_tm",
+    "source": "подожди немного",
+    "reference": "azajyk garaş",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-018",
+    "direction": "ru_to_tm",
+    "source": "спасибо брат",
+    "reference": "sagbol brat",
+    "style": "slang",
+    "category": "slang"
+  },
+  {
+    "id": "base-019",
+    "direction": "ru_to_tm",
+    "source": "не надо уже",
+    "reference": "indi gerek dal",
+    "style": "very_casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-020",
+    "direction": "ru_to_tm",
+    "source": "сколько",
+    "reference": "nace",
+    "style": "very_casual",
+    "category": "questions"
+  },
+  {
+    "id": "base-021",
+    "direction": "ru_to_tm",
+    "source": "сколько будет",
+    "reference": "nace bolar",
+    "style": "casual",
+    "category": "questions"
+  },
+  {
+    "id": "base-022",
+    "direction": "ru_to_tm",
+    "source": "когда будет",
+    "reference": "hacan bolar",
+    "style": "casual",
+    "category": "questions"
+  },
+  {
+    "id": "base-023",
+    "direction": "ru_to_tm",
+    "source": "почему не отвечаешь",
+    "reference": "name ucin jogap berenok",
+    "style": "casual",
+    "category": "questions"
+  },
+  {
+    "id": "base-024",
+    "direction": "ru_to_tm",
+    "source": "ответь когда сможешь",
+    "reference": "wagtyn bolanda jogap ber",
+    "style": "casual",
+    "category": "questions"
+  },
+  {
+    "id": "base-025",
+    "direction": "ru_to_tm",
+    "source": "отправь сюда",
+    "reference": "suna ugrat",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-026",
+    "direction": "ru_to_tm",
+    "source": "скинь скрин",
+    "reference": "skrin ugrat",
+    "style": "very_casual",
+    "category": "screenshots"
+  },
+  {
+    "id": "base-027",
+    "direction": "ru_to_tm",
+    "source": "отправь ссылку",
+    "reference": "ssylkany ugrat",
+    "style": "casual",
+    "category": "Telegram"
+  },
+  {
+    "id": "base-028",
+    "direction": "ru_to_tm",
+    "source": "ссылка не открывается",
+    "reference": "ssylka acylanok",
+    "style": "casual",
+    "category": "Telegram"
+  },
+  {
+    "id": "base-029",
+    "direction": "ru_to_tm",
+    "source": "открой аккаунт",
+    "reference": "akkaunt ac",
+    "style": "very_casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-030",
+    "direction": "ru_to_tm",
+    "source": "это твой аккаунт",
+    "reference": "bu senin akkauntyn",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-031",
+    "direction": "ru_to_tm",
+    "source": "отправь ID аккаунта",
+    "reference": "akkauntyn ID sini ugrat",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-032",
+    "direction": "ru_to_tm",
+    "source": "пополни баланс",
+    "reference": "balansy doldur",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-033",
+    "direction": "ru_to_tm",
+    "source": "выведи деньги",
+    "reference": "puly cykar",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-034",
+    "direction": "ru_to_tm",
+    "source": "деньги пришли",
+    "reference": "pul geldimi",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-035",
+    "direction": "ru_to_tm",
+    "source": "деньги еще не пришли",
+    "reference": "pul entek gelenok",
+    "style": "casual",
+    "category": "casual"
+  },
+  {
+    "id": "base-036",
+    "direction": "ru_to_tm",
+    "source": "когда придут деньги",
+    "reference": "pul hacan geler",
+    "style": "casual",
+    "category": "questions"
+  },
+  {
+    "id": "base-037",
+    "direction": "ru_to_tm",
+    "source": "скинь 350 TMT",
+    "reference": "350 TMT ugrat",
+    "style": "very_casual",
+    "category": "money"
+  },
+  {
+    "id": "base-038",
+    "direction": "ru_to_tm",
+    "source": "переведи 20 USDT",
+    "reference": "20 USDT gecir",
+    "style": "casual",
+    "category": "money"
+  },
+  {
+    "id": "base-039",
+    "direction": "ru_to_tm",
+    "source": "комиссия 8%",
+    "reference": "komissiya 8%",
+    "style": "casual",
+    "category": "money"
+  },
+  {
+    "id": "base-040",
+    "direction": "ru_to_tm",
+    "source": "за вывод 2%",
+    "reference": "pul cykaranda 2%",
+    "style": "casual",
+    "category": "money"
+  },
+  {
+    "id": "base-041",
+    "direction": "ru_to_tm",
+    "source": "по промокоду получите 35%",
+    "reference": "promokod bilen 35% alarsynyz",
+    "style": "neutral",
+    "category": "money"
+  },
+  {
+    "id": "base-042",
+    "direction": "ru_to_tm",
+    "source": "какой процент",
+    "reference": "nace procent",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-043",
+    "direction": "ru_to_tm",
+    "source": "пришли реквизиты",
+    "reference": "rekvizitleri ugrat",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-044",
+    "direction": "ru_to_tm",
+    "source": "реквизиты правильные",
+    "reference": "rekvizitler dogrymy",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-045",
+    "direction": "ru_to_tm",
+    "source": "можно на эту карту",
+    "reference": "su karta bolarmy",
+    "style": "casual",
+    "category": "casual"
+  },
+  {
+    "id": "base-046",
+    "direction": "ru_to_tm",
+    "source": "напиши ему",
+    "reference": "ona yaz",
+    "style": "very_casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-047",
+    "direction": "ru_to_tm",
+    "source": "пусть сам напишет",
+    "reference": "ozi yazsyn",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-048",
+    "direction": "ru_to_tm",
+    "source": "они уже ушли",
+    "reference": "olar indi gitdiler",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-049",
+    "direction": "ru_to_tm",
+    "source": "я потом объясню",
+    "reference": "son dusundirerin",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-050",
+    "direction": "ru_to_tm",
+    "source": "ничего не меняй",
+    "reference": "hic zady uytgetme",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-051",
+    "direction": "ru_to_tm",
+    "source": "у меня нет доступа",
+    "reference": "mende dostup yok",
+    "style": "casual",
+    "category": "casual"
+  },
+  {
+    "id": "base-052",
+    "direction": "ru_to_tm",
+    "source": "проверь еще раз",
+    "reference": "yene bir gezek barla",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-053",
+    "direction": "ru_to_tm",
+    "source": "дай знать когда будет готово",
+    "reference": "tayyar bolanda habar ber",
+    "style": "casual",
+    "category": "questions"
+  },
+  {
+    "id": "base-054",
+    "direction": "ru_to_tm",
+    "source": "игрок выиграл",
+    "reference": "oyuncy utdy",
+    "style": "casual",
+    "category": "casino"
+  },
+  {
+    "id": "base-055",
+    "direction": "ru_to_tm",
+    "source": "если игрок выиграет",
+    "reference": "oyuncy utsa",
+    "style": "casual",
+    "category": "casino"
+  },
+  {
+    "id": "base-056",
+    "direction": "ru_to_tm",
+    "source": "когда игрок выиграет",
+    "reference": "oyuncy utanda",
+    "style": "casual",
+    "category": "casino"
+  },
+  {
+    "id": "base-057",
+    "direction": "ru_to_tm",
+    "source": "найди игроков",
+    "reference": "oyuncylary tap",
+    "style": "casual",
+    "category": "casino"
+  },
+  {
+    "id": "base-058",
+    "direction": "ru_to_tm",
+    "source": "есть знакомые которые играют",
+    "reference": "oynayan tanyslaryn barmy",
+    "style": "casual",
+    "category": "casual"
+  },
+  {
+    "id": "base-059",
+    "direction": "ru_to_tm",
+    "source": "хочу предложить вам работу",
+    "reference": "size is teklif etmek isleyan",
+    "style": "neutral",
+    "category": "casual"
+  },
+  {
+    "id": "base-060",
+    "direction": "ru_to_tm",
+    "source": "вы хотите стать агентом",
+    "reference": "agent bolmak isleyanizmi",
+    "style": "neutral",
+    "category": "casual"
+  },
+  {
+    "id": "base-061",
+    "direction": "ru_to_tm",
+    "source": "можете написать в Telegram",
+    "reference": "Telegramdan yazyp bilersiniz",
+    "style": "neutral",
+    "category": "Telegram"
+  },
+  {
+    "id": "base-062",
+    "direction": "ru_to_tm",
+    "source": "открой VPN",
+    "reference": "VPN ac",
+    "style": "very_casual",
+    "category": "Telegram"
+  },
+  {
+    "id": "base-063",
+    "direction": "ru_to_tm",
+    "source": "скинь @manager 25 USDT",
+    "reference": "@manager 25 USDT ugrat",
+    "style": "casual",
+    "category": "money"
+  },
+  {
+    "id": "base-064",
+    "direction": "ru_to_tm",
+    "source": "открой https://t.me/example",
+    "reference": "https://t.me/example ac",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-065",
+    "direction": "ru_to_tm",
+    "source": "ваш промокод A7K92",
+    "reference": "sizin promokodynyz A7K92",
+    "style": "neutral",
+    "category": "numbers"
+  },
+  {
+    "id": "base-066",
+    "direction": "ru_to_tm",
+    "source": "Здравствуйте можете объяснить подробнее",
+    "reference": "Salam has ginisleyin dusundirip bilersinizmi",
+    "style": "formal",
+    "category": "formal"
+  },
+  {
+    "id": "base-067",
+    "direction": "ru_to_tm",
+    "source": "Пожалуйста отправьте правильные реквизиты",
+    "reference": "Hayys dogry rekvizitleri ugradyn",
+    "style": "formal",
+    "category": "formal"
+  },
+  {
+    "id": "base-068",
+    "direction": "ru_to_tm",
+    "source": "Я проверю информацию и напишу вам",
+    "reference": "Maglumaty barlap size yazaryn",
+    "style": "neutral",
+    "category": "casual"
+  },
+  {
+    "id": "base-069",
+    "direction": "ru_to_tm",
+    "source": "Ваша заявка находится на проверке",
+    "reference": "Sizin arzanyz barlagda",
+    "style": "neutral",
+    "category": "casual"
+  },
+  {
+    "id": "base-070",
+    "direction": "ru_to_tm",
+    "source": "не переживай все будет хорошо",
+    "reference": "alada etme hemme zat gowy bolar",
+    "style": "casual",
+    "category": "casual"
+  },
+  {
+    "id": "base-071",
+    "direction": "tm_to_ru",
+    "source": "salam",
+    "reference": "привет",
+    "style": "casual",
+    "category": "one_word"
+  },
+  {
+    "id": "base-072",
+    "direction": "tm_to_ru",
+    "source": "salam brat nadip yagsymy",
+    "reference": "привет брат как дела",
+    "style": "slang",
+    "category": "slang"
+  },
+  {
+    "id": "base-073",
+    "direction": "tm_to_ru",
+    "source": "nadip yagsymy",
+    "reference": "как дела",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-074",
+    "direction": "tm_to_ru",
+    "source": "hemme zat gowy",
+    "reference": "все хорошо",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-075",
+    "direction": "tm_to_ru",
+    "source": "howwa gowy",
+    "reference": "да хорошо",
+    "style": "very_casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-076",
+    "direction": "tm_to_ru",
+    "source": "bolya",
+    "reference": "ладно",
+    "style": "very_casual",
+    "category": "one_word"
+  },
+  {
+    "id": "base-077",
+    "direction": "tm_to_ru",
+    "source": "yok",
+    "reference": "нет",
+    "style": "very_casual",
+    "category": "one_word"
+  },
+  {
+    "id": "base-078",
+    "direction": "tm_to_ru",
+    "source": "howwa",
+    "reference": "да",
+    "style": "very_casual",
+    "category": "one_word"
+  },
+  {
+    "id": "base-079",
+    "direction": "tm_to_ru",
+    "source": "bu kim",
+    "reference": "кто это",
+    "style": "very_casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-080",
+    "direction": "tm_to_ru",
+    "source": "sen nirede",
+    "reference": "ты где",
+    "style": "very_casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-081",
+    "direction": "tm_to_ru",
+    "source": "name boldy",
+    "reference": "что случилось",
+    "style": "casual",
+    "category": "questions"
+  },
+  {
+    "id": "base-082",
+    "direction": "tm_to_ru",
+    "source": "dusunmedim",
+    "reference": "не понял",
+    "style": "very_casual",
+    "category": "one_word"
+  },
+  {
+    "id": "base-083",
+    "direction": "tm_to_ru",
+    "source": "yene bir gezek yaz",
+    "reference": "напиши еще раз",
+    "style": "casual",
+    "category": "casual"
+  },
+  {
+    "id": "base-084",
+    "direction": "tm_to_ru",
+    "source": "hazir barlaryn",
+    "reference": "сейчас проверю",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-085",
+    "direction": "tm_to_ru",
+    "source": "ertir bolar",
+    "reference": "завтра будет",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-086",
+    "direction": "tm_to_ru",
+    "source": "su gun bolmaz",
+    "reference": "сегодня не получится",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-087",
+    "direction": "tm_to_ru",
+    "source": "azajyk garas",
+    "reference": "подожди немного",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-088",
+    "direction": "tm_to_ru",
+    "source": "sagbol brat",
+    "reference": "спасибо брат",
+    "style": "slang",
+    "category": "slang"
+  },
+  {
+    "id": "base-089",
+    "direction": "tm_to_ru",
+    "source": "indi gerek dal",
+    "reference": "уже не надо",
+    "style": "very_casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-090",
+    "direction": "tm_to_ru",
+    "source": "nace",
+    "reference": "сколько",
+    "style": "very_casual",
+    "category": "questions"
+  },
+  {
+    "id": "base-091",
+    "direction": "tm_to_ru",
+    "source": "nace bolar",
+    "reference": "сколько будет",
+    "style": "casual",
+    "category": "questions"
+  },
+  {
+    "id": "base-092",
+    "direction": "tm_to_ru",
+    "source": "hacan bolar",
+    "reference": "когда будет",
+    "style": "casual",
+    "category": "questions"
+  },
+  {
+    "id": "base-093",
+    "direction": "tm_to_ru",
+    "source": "name ucin jogap berenok",
+    "reference": "почему не отвечает",
+    "style": "casual",
+    "category": "questions"
+  },
+  {
+    "id": "base-094",
+    "direction": "tm_to_ru",
+    "source": "wagtyn bolanda jogap ber",
+    "reference": "ответь когда сможешь",
+    "style": "casual",
+    "category": "casual"
+  },
+  {
+    "id": "base-095",
+    "direction": "tm_to_ru",
+    "source": "suna ugrat",
+    "reference": "отправь сюда",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-096",
+    "direction": "tm_to_ru",
+    "source": "skrin ugrat",
+    "reference": "скинь скрин",
+    "style": "very_casual",
+    "category": "screenshots"
+  },
+  {
+    "id": "base-097",
+    "direction": "tm_to_ru",
+    "source": "ssylkany ugrat",
+    "reference": "отправь ссылку",
+    "style": "casual",
+    "category": "Telegram"
+  },
+  {
+    "id": "base-098",
+    "direction": "tm_to_ru",
+    "source": "ssylka acylanok",
+    "reference": "ссылка не открывается",
+    "style": "casual",
+    "category": "Telegram"
+  },
+  {
+    "id": "base-099",
+    "direction": "tm_to_ru",
+    "source": "akkaunt ac",
+    "reference": "открой аккаунт",
+    "style": "very_casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-100",
+    "direction": "tm_to_ru",
+    "source": "bu senin akkauntyn",
+    "reference": "это твой аккаунт",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-101",
+    "direction": "tm_to_ru",
+    "source": "akkauntyn ID sini ugrat",
+    "reference": "отправь ID аккаунта",
+    "style": "casual",
+    "category": "casual"
+  },
+  {
+    "id": "base-102",
+    "direction": "tm_to_ru",
+    "source": "balansy doldur",
+    "reference": "пополни баланс",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-103",
+    "direction": "tm_to_ru",
+    "source": "puly cykar",
+    "reference": "выведи деньги",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-104",
+    "direction": "tm_to_ru",
+    "source": "pul geldimi",
+    "reference": "деньги пришли",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-105",
+    "direction": "tm_to_ru",
+    "source": "pul entek gelenok",
+    "reference": "деньги еще не пришли",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-106",
+    "direction": "tm_to_ru",
+    "source": "pul hacan geler",
+    "reference": "когда придут деньги",
+    "style": "casual",
+    "category": "questions"
+  },
+  {
+    "id": "base-107",
+    "direction": "tm_to_ru",
+    "source": "350 TMT ugrat",
+    "reference": "скинь 350 TMT",
+    "style": "very_casual",
+    "category": "money"
+  },
+  {
+    "id": "base-108",
+    "direction": "tm_to_ru",
+    "source": "20 USDT gecir",
+    "reference": "переведи 20 USDT",
+    "style": "casual",
+    "category": "money"
+  },
+  {
+    "id": "base-109",
+    "direction": "tm_to_ru",
+    "source": "komissiya 8%",
+    "reference": "комиссия 8%",
+    "style": "casual",
+    "category": "money"
+  },
+  {
+    "id": "base-110",
+    "direction": "tm_to_ru",
+    "source": "pul cykaranda 2%",
+    "reference": "за вывод 2%",
+    "style": "casual",
+    "category": "money"
+  },
+  {
+    "id": "base-111",
+    "direction": "tm_to_ru",
+    "source": "promokod bilen 35% alarsynyz",
+    "reference": "по промокоду получите 35%",
+    "style": "neutral",
+    "category": "money"
+  },
+  {
+    "id": "base-112",
+    "direction": "tm_to_ru",
+    "source": "nace procent",
+    "reference": "какой процент",
+    "style": "casual",
+    "category": "questions"
+  },
+  {
+    "id": "base-113",
+    "direction": "tm_to_ru",
+    "source": "rekvizitleri ugrat",
+    "reference": "пришли реквизиты",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-114",
+    "direction": "tm_to_ru",
+    "source": "rekvizitler dogrymy",
+    "reference": "реквизиты правильные",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-115",
+    "direction": "tm_to_ru",
+    "source": "su karta bolarmy",
+    "reference": "можно на эту карту",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-116",
+    "direction": "tm_to_ru",
+    "source": "ona yaz",
+    "reference": "напиши ему",
+    "style": "very_casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-117",
+    "direction": "tm_to_ru",
+    "source": "ozi yazsyn",
+    "reference": "пусть сам напишет",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-118",
+    "direction": "tm_to_ru",
+    "source": "olar indi gitdiler",
+    "reference": "они уже ушли",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-119",
+    "direction": "tm_to_ru",
+    "source": "son dusundirerin",
+    "reference": "потом объясню",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-120",
+    "direction": "tm_to_ru",
+    "source": "hic zady uytgetme",
+    "reference": "ничего не меняй",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-121",
+    "direction": "tm_to_ru",
+    "source": "mende dostup yok",
+    "reference": "у меня нет доступа",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-122",
+    "direction": "tm_to_ru",
+    "source": "yene bir gezek barla",
+    "reference": "проверь еще раз",
+    "style": "casual",
+    "category": "casual"
+  },
+  {
+    "id": "base-123",
+    "direction": "tm_to_ru",
+    "source": "tayyar bolanda habar ber",
+    "reference": "дай знать когда будет готово",
+    "style": "casual",
+    "category": "casual"
+  },
+  {
+    "id": "base-124",
+    "direction": "tm_to_ru",
+    "source": "oyuncy utdy",
+    "reference": "игрок выиграл",
+    "style": "casual",
+    "category": "casino"
+  },
+  {
+    "id": "base-125",
+    "direction": "tm_to_ru",
+    "source": "oyuncy utsa",
+    "reference": "если игрок выиграет",
+    "style": "casual",
+    "category": "casino"
+  },
+  {
+    "id": "base-126",
+    "direction": "tm_to_ru",
+    "source": "oyuncy utanda",
+    "reference": "когда игрок выиграет",
+    "style": "casual",
+    "category": "casino"
+  },
+  {
+    "id": "base-127",
+    "direction": "tm_to_ru",
+    "source": "oyuncylary tap",
+    "reference": "найди игроков",
+    "style": "casual",
+    "category": "casino"
+  },
+  {
+    "id": "base-128",
+    "direction": "tm_to_ru",
+    "source": "oynayan tanyslaryn barmy",
+    "reference": "есть знакомые которые играют",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-129",
+    "direction": "tm_to_ru",
+    "source": "size is teklif etmek isleyan",
+    "reference": "хочу предложить вам работу",
+    "style": "neutral",
+    "category": "casual"
+  },
+  {
+    "id": "base-130",
+    "direction": "tm_to_ru",
+    "source": "agent bolmak isleyanizmi",
+    "reference": "хотите стать агентом",
+    "style": "neutral",
+    "category": "very_short"
+  },
+  {
+    "id": "base-131",
+    "direction": "tm_to_ru",
+    "source": "Telegramdan yazyp bilersiniz",
+    "reference": "можете написать в Telegram",
+    "style": "neutral",
+    "category": "Telegram"
+  },
+  {
+    "id": "base-132",
+    "direction": "tm_to_ru",
+    "source": "VPN ac",
+    "reference": "открой VPN",
+    "style": "very_casual",
+    "category": "Telegram"
+  },
+  {
+    "id": "base-133",
+    "direction": "tm_to_ru",
+    "source": "@manager 25 USDT ugrat",
+    "reference": "скинь @manager 25 USDT",
+    "style": "casual",
+    "category": "money"
+  },
+  {
+    "id": "base-134",
+    "direction": "tm_to_ru",
+    "source": "https://t.me/example ac",
+    "reference": "открой https://t.me/example",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-135",
+    "direction": "tm_to_ru",
+    "source": "sizin promokodynyz A7K92",
+    "reference": "ваш промокод A7K92",
+    "style": "neutral",
+    "category": "numbers"
+  },
+  {
+    "id": "base-136",
+    "direction": "tm_to_ru",
+    "source": "Salam has ginisleyin dusundirip bilersinizmi",
+    "reference": "Здравствуйте можете объяснить подробнее",
+    "style": "formal",
+    "category": "formal"
+  },
+  {
+    "id": "base-137",
+    "direction": "tm_to_ru",
+    "source": "Hayys dogry rekvizitleri ugradyn",
+    "reference": "Пожалуйста отправьте правильные реквизиты",
+    "style": "formal",
+    "category": "formal"
+  },
+  {
+    "id": "base-138",
+    "direction": "tm_to_ru",
+    "source": "Maglumaty barlap size yazaryn",
+    "reference": "Я проверю информацию и напишу вам",
+    "style": "neutral",
+    "category": "casual"
+  },
+  {
+    "id": "base-139",
+    "direction": "tm_to_ru",
+    "source": "Sizin arzanyz barlagda",
+    "reference": "Ваша заявка находится на проверке",
+    "style": "neutral",
+    "category": "very_short"
+  },
+  {
+    "id": "base-140",
+    "direction": "tm_to_ru",
+    "source": "alada etme hemme zat gowy bolar",
+    "reference": "не переживай все будет хорошо",
+    "style": "casual",
+    "category": "casual"
+  },
+  {
+    "id": "emoji-001",
+    "direction": "ru_to_tm",
+    "source": "привет 🙂",
+    "reference": "salam 🙂",
+    "style": "casual",
+    "category": "emoji"
+  },
+  {
+    "id": "emoji-002",
+    "direction": "ru_to_tm",
+    "source": "привет брат как дела 🙂",
+    "reference": "salam brat nadip yagsymy 🙂",
+    "style": "slang",
+    "category": "emoji"
+  },
+  {
+    "id": "emoji-003",
+    "direction": "ru_to_tm",
+    "source": "как дела 🙂",
+    "reference": "nadip yagsymy 🙂",
+    "style": "casual",
+    "category": "emoji"
+  },
+  {
+    "id": "emoji-004",
+    "direction": "ru_to_tm",
+    "source": "все хорошо 🙂",
+    "reference": "hemme zat gowy 🙂",
+    "style": "casual",
+    "category": "emoji"
+  },
+  {
+    "id": "emoji-005",
+    "direction": "ru_to_tm",
+    "source": "да хорошо 🙂",
+    "reference": "howwa gowy 🙂",
+    "style": "very_casual",
+    "category": "emoji"
+  },
+  {
+    "id": "emoji-006",
+    "direction": "ru_to_tm",
+    "source": "ладно 🙂",
+    "reference": "bolya 🙂",
+    "style": "very_casual",
+    "category": "emoji"
+  },
+  {
+    "id": "emoji-007",
+    "direction": "ru_to_tm",
+    "source": "нет 🙂",
+    "reference": "yok 🙂",
+    "style": "very_casual",
+    "category": "emoji"
+  },
+  {
+    "id": "emoji-008",
+    "direction": "ru_to_tm",
+    "source": "да 🙂",
+    "reference": "howwa 🙂",
+    "style": "very_casual",
+    "category": "emoji"
+  },
+  {
+    "id": "emoji-009",
+    "direction": "ru_to_tm",
+    "source": "кто это 🙂",
+    "reference": "bu kim 🙂",
+    "style": "very_casual",
+    "category": "emoji"
+  },
+  {
+    "id": "emoji-010",
+    "direction": "ru_to_tm",
+    "source": "ты где 🙂",
+    "reference": "sen nirede 🙂",
+    "style": "very_casual",
+    "category": "emoji"
+  },
+  {
+    "id": "emoji-011",
+    "direction": "ru_to_tm",
+    "source": "что случилось 🙂",
+    "reference": "name boldy 🙂",
+    "style": "casual",
+    "category": "emoji"
+  },
+  {
+    "id": "emoji-012",
+    "direction": "ru_to_tm",
+    "source": "не понял 🙂",
+    "reference": "dusunmedim 🙂",
+    "style": "very_casual",
+    "category": "emoji"
+  },
+  {
+    "id": "emoji-013",
+    "direction": "ru_to_tm",
+    "source": "напиши еще раз 🙂",
+    "reference": "yene bir gezek yaz 🙂",
+    "style": "casual",
+    "category": "emoji"
+  },
+  {
+    "id": "emoji-014",
+    "direction": "ru_to_tm",
+    "source": "сейчас проверю 🙂",
+    "reference": "hazir barlaryn 🙂",
+    "style": "casual",
+    "category": "emoji"
+  },
+  {
+    "id": "emoji-015",
+    "direction": "ru_to_tm",
+    "source": "завтра будет 🙂",
+    "reference": "ertir bolar 🙂",
+    "style": "casual",
+    "category": "emoji"
+  },
+  {
+    "id": "emoji-016",
+    "direction": "ru_to_tm",
+    "source": "сегодня не получится 🙂",
+    "reference": "su gun bolmaz 🙂",
+    "style": "casual",
+    "category": "emoji"
+  },
+  {
+    "id": "emoji-017",
+    "direction": "ru_to_tm",
+    "source": "подожди немного 🙂",
+    "reference": "azajyk garaş 🙂",
+    "style": "casual",
+    "category": "emoji"
+  },
+  {
+    "id": "emoji-018",
+    "direction": "ru_to_tm",
+    "source": "спасибо брат 🙂",
+    "reference": "sagbol brat 🙂",
+    "style": "slang",
+    "category": "emoji"
+  },
+  {
+    "id": "emoji-019",
+    "direction": "ru_to_tm",
+    "source": "не надо уже 🙂",
+    "reference": "indi gerek dal 🙂",
+    "style": "very_casual",
+    "category": "emoji"
+  },
+  {
+    "id": "emoji-020",
+    "direction": "ru_to_tm",
+    "source": "сколько 🙂",
+    "reference": "nace 🙂",
+    "style": "very_casual",
+    "category": "emoji"
+  },
+  {
+    "id": "emoji-021",
+    "direction": "ru_to_tm",
+    "source": "сколько будет 🙂",
+    "reference": "nace bolar 🙂",
+    "style": "casual",
+    "category": "emoji"
+  },
+  {
+    "id": "emoji-022",
+    "direction": "ru_to_tm",
+    "source": "когда будет 🙂",
+    "reference": "hacan bolar 🙂",
+    "style": "casual",
+    "category": "emoji"
+  },
+  {
+    "id": "emoji-023",
+    "direction": "ru_to_tm",
+    "source": "почему не отвечаешь 🙂",
+    "reference": "name ucin jogap berenok 🙂",
+    "style": "casual",
+    "category": "emoji"
+  },
+  {
+    "id": "emoji-024",
+    "direction": "ru_to_tm",
+    "source": "ответь когда сможешь 🙂",
+    "reference": "wagtyn bolanda jogap ber 🙂",
+    "style": "casual",
+    "category": "emoji"
+  },
+  {
+    "id": "emoji-025",
+    "direction": "ru_to_tm",
+    "source": "отправь сюда 🙂",
+    "reference": "suna ugrat 🙂",
+    "style": "casual",
+    "category": "emoji"
+  },
+  {
+    "id": "context-166",
+    "direction": "ru_to_tm",
+    "source": "а завтра",
+    "reference": "ertir name",
+    "style": "casual",
+    "category": "very_short",
+    "context": [
+      "он сегодня будет"
+    ]
+  },
+  {
+    "id": "context-167",
+    "direction": "ru_to_tm",
+    "source": "а сейчас",
+    "reference": "hazir name",
+    "style": "casual",
+    "category": "very_short",
+    "context": [
+      "деньги еще не пришли"
+    ]
+  },
+  {
+    "id": "context-168",
+    "direction": "ru_to_tm",
+    "source": "еще один",
+    "reference": "yene birini",
+    "style": "casual",
+    "category": "very_short",
+    "context": [
+      "скинь скрин"
+    ]
+  },
+  {
+    "id": "context-169",
+    "direction": "ru_to_tm",
+    "source": "а она",
+    "reference": "ol gyz name",
+    "style": "casual",
+    "category": "very_short",
+    "context": [
+      "он ответил"
+    ]
+  },
+  {
+    "id": "context-170",
+    "direction": "ru_to_tm",
+    "source": "точно",
+    "reference": "anykmy",
+    "style": "casual",
+    "category": "very_short",
+    "context": [
+      "перевод будет завтра"
+    ]
+  },
+  {
+    "id": "context-171",
+    "direction": "tm_to_ru",
+    "source": "ertir name",
+    "reference": "а завтра",
+    "style": "casual",
+    "category": "very_short",
+    "context": [
+      "ol su gun geler"
+    ]
+  },
+  {
+    "id": "context-172",
+    "direction": "tm_to_ru",
+    "source": "nace",
+    "reference": "сколько",
+    "style": "casual",
+    "category": "one_word",
+    "context": [
+      "pul geldi"
+    ]
+  },
+  {
+    "id": "context-173",
+    "direction": "tm_to_ru",
+    "source": "yene",
+    "reference": "еще",
+    "style": "casual",
+    "category": "one_word",
+    "context": [
+      "skrin ugrat"
+    ]
+  },
+  {
+    "id": "context-174",
+    "direction": "tm_to_ru",
+    "source": "baskasy barmy",
+    "reference": "есть другая",
+    "style": "casual",
+    "category": "questions",
+    "context": [
+      "bu karta bolanok"
+    ]
+  },
+  {
+    "id": "context-175",
+    "direction": "tm_to_ru",
+    "source": "bolya",
+    "reference": "ладно",
+    "style": "casual",
+    "category": "one_word",
+    "context": [
+      "hazir barlaryn"
+    ]
+  },
+  {
+    "id": "typo-176",
+    "direction": "ru_to_tm",
+    "source": "скин скрин",
+    "reference": "skrin ugrat",
+    "style": "casual",
+    "category": "typos"
+  },
+  {
+    "id": "typo-177",
+    "direction": "ru_to_tm",
+    "source": "денги пришли",
+    "reference": "pul geldimi",
+    "style": "casual",
+    "category": "typos"
+  },
+  {
+    "id": "typo-178",
+    "direction": "ru_to_tm",
+    "source": "щас проверюю",
+    "reference": "hazir barlaryn",
+    "style": "casual",
+    "category": "typos"
+  },
+  {
+    "id": "typo-179",
+    "direction": "ru_to_tm",
+    "source": "прив брат",
+    "reference": "salam brat",
+    "style": "casual",
+    "category": "typos"
+  },
+  {
+    "id": "typo-180",
+    "direction": "ru_to_tm",
+    "source": "атправь сюда",
+    "reference": "suna ugrat",
+    "style": "casual",
+    "category": "typos"
+  },
+  {
+    "id": "typo-181",
+    "direction": "tm_to_ru",
+    "source": "pul geldmy",
+    "reference": "деньги пришли",
+    "style": "casual",
+    "category": "typos"
+  },
+  {
+    "id": "typo-182",
+    "direction": "tm_to_ru",
+    "source": "hazr barlaryn",
+    "reference": "сейчас проверю",
+    "style": "casual",
+    "category": "typos"
+  },
+  {
+    "id": "typo-183",
+    "direction": "tm_to_ru",
+    "source": "ugrat br",
+    "reference": "отправь брат",
+    "style": "casual",
+    "category": "typos"
+  },
+  {
+    "id": "typo-184",
+    "direction": "tm_to_ru",
+    "source": "sen nerde",
+    "reference": "ты где",
+    "style": "casual",
+    "category": "typos"
+  },
+  {
+    "id": "typo-185",
+    "direction": "tm_to_ru",
+    "source": "dusnmedim",
+    "reference": "не понял",
+    "style": "casual",
+    "category": "typos"
+  },
+  {
+    "id": "nopunct-186",
+    "direction": "ru_to_tm",
+    "source": "привет брат как дела",
+    "reference": "salam brat nadip yagsymy",
+    "style": "casual",
+    "category": "no_punctuation"
+  },
+  {
+    "id": "nopunct-187",
+    "direction": "ru_to_tm",
+    "source": "деньги еще не пришли",
+    "reference": "pul entek gelenok",
+    "style": "casual",
+    "category": "no_punctuation"
+  },
+  {
+    "id": "nopunct-188",
+    "direction": "ru_to_tm",
+    "source": "по промокоду получите 35%",
+    "reference": "promokod bilen 35% alarsynyz",
+    "style": "casual",
+    "category": "no_punctuation"
+  },
+  {
+    "id": "nopunct-189",
+    "direction": "ru_to_tm",
+    "source": "можно на эту карту",
+    "reference": "su karta bolarmy",
+    "style": "casual",
+    "category": "no_punctuation"
+  },
+  {
+    "id": "nopunct-190",
+    "direction": "ru_to_tm",
+    "source": "у меня нет доступа",
+    "reference": "mende dostup yok",
+    "style": "casual",
+    "category": "no_punctuation"
+  },
+  {
+    "id": "nopunct-191",
+    "direction": "ru_to_tm",
+    "source": "дай знать когда будет готово",
+    "reference": "tayyar bolanda habar ber",
+    "style": "casual",
+    "category": "no_punctuation"
+  },
+  {
+    "id": "nopunct-192",
+    "direction": "ru_to_tm",
+    "source": "есть знакомые которые играют",
+    "reference": "oynayan tanyslaryn barmy",
+    "style": "casual",
+    "category": "no_punctuation"
+  },
+  {
+    "id": "nopunct-193",
+    "direction": "ru_to_tm",
+    "source": "хочу предложить вам работу",
+    "reference": "size is teklif etmek isleyan",
+    "style": "casual",
+    "category": "no_punctuation"
+  },
+  {
+    "id": "nopunct-194",
+    "direction": "ru_to_tm",
+    "source": "вы хотите стать агентом",
+    "reference": "agent bolmak isleyanizmi",
+    "style": "casual",
+    "category": "no_punctuation"
+  },
+  {
+    "id": "nopunct-195",
+    "direction": "ru_to_tm",
+    "source": "можете написать в telegram",
+    "reference": "telegramdan yazyp bilersiniz",
+    "style": "casual",
+    "category": "no_punctuation"
+  },
+  {
+    "id": "nopunct-196",
+    "direction": "ru_to_tm",
+    "source": "скинь @manager 25 usdt",
+    "reference": "@manager 25 usdt ugrat",
+    "style": "casual",
+    "category": "no_punctuation"
+  },
+  {
+    "id": "nopunct-197",
+    "direction": "ru_to_tm",
+    "source": "здравствуйте можете объяснить подробнее",
+    "reference": "salam has ginisleyin dusundirip bilersinizmi",
+    "style": "casual",
+    "category": "no_punctuation"
+  },
+  {
+    "id": "nopunct-198",
+    "direction": "ru_to_tm",
+    "source": "пожалуйста отправьте правильные реквизиты",
+    "reference": "hayys dogry rekvizitleri ugradyn",
+    "style": "casual",
+    "category": "no_punctuation"
+  },
+  {
+    "id": "nopunct-199",
+    "direction": "ru_to_tm",
+    "source": "я проверю информацию и напишу вам",
+    "reference": "maglumaty barlap size yazaryn",
+    "style": "casual",
+    "category": "no_punctuation"
+  },
+  {
+    "id": "nopunct-200",
+    "direction": "ru_to_tm",
+    "source": "ваша заявка находится на проверке",
+    "reference": "sizin arzanyz barlagda",
+    "style": "casual",
+    "category": "no_punctuation"
+  },
+  {
+    "id": "required-201",
+    "direction": "ru_to_tm",
+    "source": "отправь ровно 350 TMT",
+    "reference": "350 TMT ugrat",
+    "style": "casual",
+    "category": "money"
+  },
+  {
+    "id": "required-202",
+    "direction": "tm_to_ru",
+    "source": "350 TMT ugratdym",
+    "reference": "отправил 350 TMT",
+    "style": "casual",
+    "category": "money"
+  },
+  {
+    "id": "required-203",
+    "direction": "ru_to_tm",
+    "source": "комиссия 8% и вывод 2%",
+    "reference": "komissiya 8% we cykarys 2%",
+    "style": "casual",
+    "category": "money"
+  },
+  {
+    "id": "required-204",
+    "direction": "tm_to_ru",
+    "source": "depozit 8% cykarys 2%",
+    "reference": "депозит 8% вывод 2%",
+    "style": "casual",
+    "category": "money"
+  },
+  {
+    "id": "required-205",
+    "direction": "ru_to_tm",
+    "source": "напиши @manager",
+    "reference": "@manager yaz",
+    "style": "casual",
+    "category": "Telegram"
+  },
+  {
+    "id": "required-206",
+    "direction": "tm_to_ru",
+    "source": "https://t.me/example ac",
+    "reference": "открой https://t.me/example",
+    "style": "casual",
+    "category": "Telegram"
+  },
+  {
+    "id": "required-207",
+    "direction": "ru_to_tm",
+    "source": "пришли скрин из VPN",
+    "reference": "VPN den skrin ugrat",
+    "style": "casual",
+    "category": "screenshots"
+  },
+  {
+    "id": "required-208",
+    "direction": "tm_to_ru",
+    "source": "promo kod A7K92",
+    "reference": "промокод A7K92",
+    "style": "casual",
+    "category": "promo"
+  },
+  {
+    "id": "required-209",
+    "direction": "ru_to_tm",
+    "source": "игрок выиграет",
+    "reference": "oyuncy utar",
+    "style": "casual",
+    "category": "casino"
+  },
+  {
+    "id": "required-210",
+    "direction": "tm_to_ru",
+    "source": "oyuncym utan yagdaynda",
+    "reference": "когда мой игрок выиграет",
+    "style": "casual",
+    "category": "casino"
+  },
+  {
+    "id": "holdout-ru-211",
+    "direction": "ru_to_tm",
+    "source": "ты сейчас дома",
+    "reference": "sen hazir oyde",
+    "style": "casual",
+    "category": "questions",
+    "holdout": true
+  },
+  {
+    "id": "holdout-tm-212",
+    "direction": "tm_to_ru",
+    "source": "sen hazir oyde",
+    "reference": "ты сейчас дома",
+    "style": "casual",
+    "category": "questions",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-213",
+    "direction": "ru_to_tm",
+    "source": "я через 10 минут приду",
+    "reference": "10 minutdan bararyn",
+    "style": "casual",
+    "category": "numbers",
+    "holdout": true
+  },
+  {
+    "id": "holdout-tm-214",
+    "direction": "tm_to_ru",
+    "source": "10 minutdan bararyn",
+    "reference": "я через 10 минут приду",
+    "style": "casual",
+    "category": "numbers",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-215",
+    "direction": "ru_to_tm",
+    "source": "ему уже написал",
+    "reference": "ona yazdynmy",
+    "style": "casual",
+    "category": "questions",
+    "holdout": true
+  },
+  {
+    "id": "holdout-tm-216",
+    "direction": "tm_to_ru",
+    "source": "ona yazdynmy",
+    "reference": "ему уже написал",
+    "style": "casual",
+    "category": "questions",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-217",
+    "direction": "ru_to_tm",
+    "source": "пусть немного подождет",
+    "reference": "azajyk garassyn",
+    "style": "casual",
+    "category": "requests",
+    "holdout": true
+  },
+  {
+    "id": "holdout-tm-218",
+    "direction": "tm_to_ru",
+    "source": "azajyk garassyn",
+    "reference": "пусть немного подождет",
+    "style": "casual",
+    "category": "requests",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-219",
+    "direction": "ru_to_tm",
+    "source": "у тебя есть другая карта",
+    "reference": "sende baska karta barmy",
+    "style": "casual",
+    "category": "questions",
+    "holdout": true
+  },
+  {
+    "id": "holdout-tm-220",
+    "direction": "tm_to_ru",
+    "source": "sende baska karta barmy",
+    "reference": "у тебя есть другая карта",
+    "style": "casual",
+    "category": "questions",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-221",
+    "direction": "ru_to_tm",
+    "source": "скинь номер карты",
+    "reference": "karta nomerini ugrat",
+    "style": "casual",
+    "category": "requests",
+    "holdout": true
+  },
+  {
+    "id": "holdout-tm-222",
+    "direction": "tm_to_ru",
+    "source": "karta nomerini ugrat",
+    "reference": "скинь номер карты",
+    "style": "casual",
+    "category": "requests",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-223",
+    "direction": "ru_to_tm",
+    "source": "пока не отправляй",
+    "reference": "hazirlikce ugratma",
+    "style": "casual",
+    "category": "negative",
+    "holdout": true
+  },
+  {
+    "id": "holdout-tm-224",
+    "direction": "tm_to_ru",
+    "source": "hazirlikce ugratma",
+    "reference": "пока не отправляй",
+    "style": "casual",
+    "category": "negative",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-225",
+    "direction": "ru_to_tm",
+    "source": "я сам проверю",
+    "reference": "ozum barlaryn",
+    "style": "casual",
+    "category": "casual",
+    "holdout": true
+  },
+  {
+    "id": "holdout-tm-226",
+    "direction": "tm_to_ru",
+    "source": "ozum barlaryn",
+    "reference": "я сам проверю",
+    "style": "casual",
+    "category": "casual",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-227",
+    "direction": "ru_to_tm",
+    "source": "потом поговорим",
+    "reference": "son gurrun ederis",
+    "style": "casual",
+    "category": "casual",
+    "holdout": true
+  },
+  {
+    "id": "holdout-tm-228",
+    "direction": "tm_to_ru",
+    "source": "son gurrun ederis",
+    "reference": "потом поговорим",
+    "style": "casual",
+    "category": "casual",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-229",
+    "direction": "ru_to_tm",
+    "source": "ответ еще не пришел",
+    "reference": "jogap entek gelenok",
+    "style": "casual",
+    "category": "negative",
+    "holdout": true
+  },
+  {
+    "id": "holdout-tm-230",
+    "direction": "tm_to_ru",
+    "source": "jogap entek gelenok",
+    "reference": "ответ еще не пришел",
+    "style": "casual",
+    "category": "negative",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-231",
+    "direction": "ru_to_tm",
+    "source": "сколько времени займет",
+    "reference": "nace wagt gerek",
+    "style": "casual",
+    "category": "questions",
+    "holdout": true
+  },
+  {
+    "id": "holdout-tm-232",
+    "direction": "tm_to_ru",
+    "source": "nace wagt gerek",
+    "reference": "сколько времени займет",
+    "style": "casual",
+    "category": "questions",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-233",
+    "direction": "ru_to_tm",
+    "source": "можно сегодня сделать",
+    "reference": "su gun edip bolarmy",
+    "style": "casual",
+    "category": "questions",
+    "holdout": true
+  },
+  {
+    "id": "holdout-tm-234",
+    "direction": "tm_to_ru",
+    "source": "su gun edip bolarmy",
+    "reference": "можно сегодня сделать",
+    "style": "casual",
+    "category": "questions",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-235",
+    "direction": "ru_to_tm",
+    "source": "он точно согласен",
+    "reference": "ol anyk razymy",
+    "style": "casual",
+    "category": "questions",
+    "holdout": true
+  },
+  {
+    "id": "holdout-tm-236",
+    "direction": "tm_to_ru",
+    "source": "ol anyk razymy",
+    "reference": "он точно согласен",
+    "style": "casual",
+    "category": "questions",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-237",
+    "direction": "ru_to_tm",
+    "source": "ничего не понял брат",
+    "reference": "hic zat dusunmedim brat",
+    "style": "casual",
+    "category": "slang",
+    "holdout": true
+  },
+  {
+    "id": "holdout-tm-238",
+    "direction": "tm_to_ru",
+    "source": "hic zat dusunmedim brat",
+    "reference": "ничего не понял брат",
+    "style": "casual",
+    "category": "slang",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-239",
+    "direction": "ru_to_tm",
+    "source": "сначала отправь скрин",
+    "reference": "ilki skrin ugrat",
+    "style": "casual",
+    "category": "screenshots",
+    "holdout": true
+  },
+  {
+    "id": "holdout-tm-240",
+    "direction": "tm_to_ru",
+    "source": "ilki skrin ugrat",
+    "reference": "сначала отправь скрин",
+    "style": "casual",
+    "category": "screenshots",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-241",
+    "direction": "ru_to_tm",
+    "source": "деньги вернутся на карту",
+    "reference": "pul karta gaydyp geler",
+    "style": "casual",
+    "category": "money",
+    "holdout": true
+  },
+  {
+    "id": "holdout-tm-242",
+    "direction": "tm_to_ru",
+    "source": "pul karta gaydyp geler",
+    "reference": "деньги вернутся на карту",
+    "style": "casual",
+    "category": "money",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-243",
+    "direction": "ru_to_tm",
+    "source": "с баланса сняли 8%",
+    "reference": "balansdan 8% alyndy",
+    "style": "casual",
+    "category": "money",
+    "holdout": true
+  },
+  {
+    "id": "holdout-tm-244",
+    "direction": "tm_to_ru",
+    "source": "balansdan 8% alyndy",
+    "reference": "с баланса сняли 8%",
+    "style": "casual",
+    "category": "money",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-245",
+    "direction": "ru_to_tm",
+    "source": "отправь ровно 1200 TMT",
+    "reference": "1200 TMT ugrat",
+    "style": "casual",
+    "category": "money",
+    "holdout": true
+  },
+  {
+    "id": "holdout-tm-246",
+    "direction": "tm_to_ru",
+    "source": "1200 TMT ugrat",
+    "reference": "отправь ровно 1200 TMT",
+    "style": "casual",
+    "category": "money",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-247",
+    "direction": "ru_to_tm",
+    "source": "мой ID 483920",
+    "reference": "menin ID im 483920",
+    "style": "casual",
+    "category": "numbers",
+    "holdout": true
+  },
+  {
+    "id": "holdout-tm-248",
+    "direction": "tm_to_ru",
+    "source": "menin ID im 483920",
+    "reference": "мой ID 483920",
+    "style": "casual",
+    "category": "numbers",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-249",
+    "direction": "ru_to_tm",
+    "source": "напиши @manager сейчас",
+    "reference": "hazir @manager yaz",
+    "style": "casual",
+    "category": "Telegram",
+    "holdout": true
+  },
+  {
+    "id": "holdout-tm-250",
+    "direction": "tm_to_ru",
+    "source": "hazir @manager yaz",
+    "reference": "напиши @manager сейчас",
+    "style": "casual",
+    "category": "Telegram",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-251",
+    "direction": "ru_to_tm",
+    "source": "открой https://t.me/example",
+    "reference": "https://t.me/example ac",
+    "style": "casual",
+    "category": "Telegram",
+    "holdout": true
+  },
+  {
+    "id": "holdout-tm-252",
+    "direction": "tm_to_ru",
+    "source": "https://t.me/example ac",
+    "reference": "открой https://t.me/example",
+    "style": "casual",
+    "category": "Telegram",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-253",
+    "direction": "ru_to_tm",
+    "source": "завтра утром напомни",
+    "reference": "ertir irden yatlat",
+    "style": "casual",
+    "category": "requests",
+    "holdout": true
+  },
+  {
+    "id": "holdout-tm-254",
+    "direction": "tm_to_ru",
+    "source": "ertir irden yatlat",
+    "reference": "завтра утром напомни",
+    "style": "casual",
+    "category": "requests",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-255",
+    "direction": "ru_to_tm",
+    "source": "ща уточню у него",
+    "reference": "hazir ondan soraryn",
+    "style": "casual",
+    "category": "slang",
+    "holdout": true
+  },
+  {
+    "id": "holdout-tm-256",
+    "direction": "tm_to_ru",
+    "source": "hazir ondan soraryn",
+    "reference": "ща уточню у него",
+    "style": "casual",
+    "category": "slang",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-257",
+    "direction": "ru_to_tm",
+    "source": "да брат все нормально",
+    "reference": "howwa brat hemme zat normal",
+    "style": "casual",
+    "category": "slang",
+    "holdout": true
+  },
+  {
+    "id": "holdout-tm-258",
+    "direction": "tm_to_ru",
+    "source": "howwa brat hemme zat normal",
+    "reference": "да брат все нормально",
+    "style": "casual",
+    "category": "slang",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-259",
+    "direction": "ru_to_tm",
+    "source": "не бери трубку",
+    "reference": "telefony alma",
+    "style": "casual",
+    "category": "negative",
+    "holdout": true
+  },
+  {
+    "id": "holdout-tm-260",
+    "direction": "tm_to_ru",
+    "source": "telefony alma",
+    "reference": "не бери трубку",
+    "style": "casual",
+    "category": "negative",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-261",
+    "direction": "ru_to_tm",
+    "source": "он что сказал",
+    "reference": "ol name diydi",
+    "style": "casual",
+    "category": "questions",
+    "holdout": true
+  },
+  {
+    "id": "holdout-tm-262",
+    "direction": "tm_to_ru",
+    "source": "ol name diydi",
+    "reference": "он что сказал",
+    "style": "casual",
+    "category": "questions",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-263",
+    "direction": "ru_to_tm",
+    "source": "просто жди",
+    "reference": "garas",
+    "style": "casual",
+    "category": "very_short",
+    "holdout": true
+  },
+  {
+    "id": "holdout-tm-264",
+    "direction": "tm_to_ru",
+    "source": "garas",
+    "reference": "просто жди",
+    "style": "casual",
+    "category": "very_short",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-265",
+    "direction": "ru_to_tm",
+    "source": "это твой промокод A7K92",
+    "reference": "bu senin promokodyn A7K92",
+    "style": "casual",
+    "category": "promo",
+    "holdout": true
+  },
+  {
+    "id": "holdout-tm-266",
+    "direction": "tm_to_ru",
+    "source": "bu senin promokodyn A7K92",
+    "reference": "это твой промокод A7K92",
+    "style": "casual",
+    "category": "promo",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-267",
+    "direction": "ru_to_tm",
+    "source": "заявка на 25 USDT готова",
+    "reference": "25 USDT arza tayyar",
+    "style": "casual",
+    "category": "money",
+    "holdout": true
+  },
+  {
+    "id": "holdout-tm-268",
+    "direction": "tm_to_ru",
+    "source": "25 USDT arza tayyar",
+    "reference": "заявка на 25 USDT готова",
+    "style": "casual",
+    "category": "money",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-269",
+    "direction": "ru_to_tm",
+    "source": "пожалуйста не меняйте пароль",
+    "reference": "hayys paroly uytgetman",
+    "style": "casual",
+    "category": "formal",
+    "holdout": true
+  },
+  {
+    "id": "holdout-tm-270",
+    "direction": "tm_to_ru",
+    "source": "hayys paroly uytgetman",
+    "reference": "пожалуйста не меняйте пароль",
+    "style": "casual",
+    "category": "formal",
+    "holdout": true
+  }
+]

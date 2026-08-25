@@ -4,3 +4,4 @@ __pycache__/
 *.pyc
 result1.json
 data/kg_conversational_corpus.jsonl
+data/tm_conversational_corpus.jsonl

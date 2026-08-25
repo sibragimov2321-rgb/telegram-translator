@@ -1,0 +1,37 @@
+{
+  "source": "privacy-safe filtered Telegram corpus",
+  "message_count": 1636,
+  "language_distribution": {
+    "tm_ascii": 1153,
+    "tm_standard": 312,
+    "mixed_tm_en": 103,
+    "mixed_ru_tm": 68
+  },
+  "style_distribution": {
+    "very_casual": 668,
+    "casual": 807,
+    "neutral": 22,
+    "slang": 139
+  },
+  "average_characters": 24.37,
+  "median_characters": 20.0,
+  "average_tokens": 4.44,
+  "median_tokens": 4.0,
+  "punctuation_per_message": {
+    "!": 0.0067,
+    ".": 0.0171,
+    ",": 0.0092,
+    "?": 0.0306
+  },
+  "emoji_message_ratio": 0.0403,
+  "standard_latin_ratio": 0.1907,
+  "ascii_latin_ratio": 0.7048,
+  "mixed_ru_tm_ratio": 0.0416,
+  "mixed_tm_en_ratio": 0.063,
+  "guidance": [
+    "Mirror the source formality instead of maximizing slang",
+    "Keep short messages short",
+    "Allow natural Russian/Turkmen and English/Turkmen code switching",
+    "Corpus messages are style references, not translations"
+  ]
+}

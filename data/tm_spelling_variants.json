@@ -1,0 +1,331 @@
+{
+  "usage": "AI context hints only; never apply with blind string replacement",
+  "minimum_frequency": 2,
+  "variants": [
+    {
+      "standard": "bolýa",
+      "ascii": "bolya",
+      "frequency": 11
+    },
+    {
+      "standard": "maňa",
+      "ascii": "mana",
+      "frequency": 10
+    },
+    {
+      "standard": "şu",
+      "ascii": "su",
+      "frequency": 8
+    },
+    {
+      "standard": "blä",
+      "ascii": "bla",
+      "frequency": 7
+    },
+    {
+      "standard": "ýok",
+      "ascii": "yok",
+      "frequency": 6
+    },
+    {
+      "standard": "näme",
+      "ascii": "name",
+      "frequency": 6
+    },
+    {
+      "standard": "näçe",
+      "ascii": "nace",
+      "frequency": 5
+    },
+    {
+      "standard": "saňa",
+      "ascii": "sana",
+      "frequency": 5
+    },
+    {
+      "standard": "aç",
+      "ascii": "ac",
+      "frequency": 5
+    },
+    {
+      "standard": "hiç",
+      "ascii": "hic",
+      "frequency": 5
+    },
+    {
+      "standard": "şul",
+      "ascii": "sul",
+      "frequency": 5
+    },
+    {
+      "standard": "öz",
+      "ascii": "oz",
+      "frequency": 5
+    },
+    {
+      "standard": "ýaz",
+      "ascii": "yaz",
+      "frequency": 5
+    },
+    {
+      "standard": "üçin",
+      "ascii": "ucin",
+      "frequency": 4
+    },
+    {
+      "standard": "uže",
+      "ascii": "uje",
+      "frequency": 4
+    },
+    {
+      "standard": "çek",
+      "ascii": "cek",
+      "frequency": 4
+    },
+    {
+      "standard": "özüm",
+      "ascii": "ozum",
+      "frequency": 4
+    },
+    {
+      "standard": "gün",
+      "ascii": "gun",
+      "frequency": 4
+    },
+    {
+      "standard": "bolýar",
+      "ascii": "bolyar",
+      "frequency": 3
+    },
+    {
+      "standard": "köp",
+      "ascii": "kop",
+      "frequency": 3
+    },
+    {
+      "standard": "şol",
+      "ascii": "sol",
+      "frequency": 3
+    },
+    {
+      "standard": "ýaly",
+      "ascii": "yaly",
+      "frequency": 3
+    },
+    {
+      "standard": "boş",
+      "ascii": "bos",
+      "frequency": 3
+    },
+    {
+      "standard": "şükür",
+      "ascii": "sukur",
+      "frequency": 3
+    },
+    {
+      "standard": "diýip",
+      "ascii": "diyip",
+      "frequency": 3
+    },
+    {
+      "standard": "şo",
+      "ascii": "so",
+      "frequency": 3
+    },
+    {
+      "standard": "şuňa",
+      "ascii": "suna",
+      "frequency": 3
+    },
+    {
+      "standard": "goý",
+      "ascii": "goy",
+      "frequency": 3
+    },
+    {
+      "standard": "ç",
+      "ascii": "c",
+      "frequency": 3
+    },
+    {
+      "standard": "için",
+      "ascii": "icin",
+      "frequency": 2
+    },
+    {
+      "standard": "siziň",
+      "ascii": "sizin",
+      "frequency": 2
+    },
+    {
+      "standard": "kiçi",
+      "ascii": "kici",
+      "frequency": 2
+    },
+    {
+      "standard": "haçan",
+      "ascii": "hacan",
+      "frequency": 2
+    },
+    {
+      "standard": "bomž",
+      "ascii": "bomj",
+      "frequency": 2
+    },
+    {
+      "standard": "hemmä",
+      "ascii": "hemma",
+      "frequency": 2
+    },
+    {
+      "standard": "muňa",
+      "ascii": "muna",
+      "frequency": 2
+    },
+    {
+      "standard": "gör",
+      "ascii": "gor",
+      "frequency": 2
+    },
+    {
+      "standard": "häzir",
+      "ascii": "hazir",
+      "frequency": 2
+    },
+    {
+      "standard": "nähili",
+      "ascii": "nahili",
+      "frequency": 2
+    },
+    {
+      "standard": "dawaý",
+      "ascii": "daway",
+      "frequency": 2
+    },
+    {
+      "standard": "däli",
+      "ascii": "dali",
+      "frequency": 2
+    },
+    {
+      "standard": "onça",
+      "ascii": "onca",
+      "frequency": 2
+    },
+    {
+      "standard": "soňam",
+      "ascii": "sonam",
+      "frequency": 2
+    },
+    {
+      "standard": "garaş",
+      "ascii": "garas",
+      "frequency": 2
+    },
+    {
+      "standard": "beýleki",
+      "ascii": "beyleki",
+      "frequency": 2
+    },
+    {
+      "standard": "diyseň",
+      "ascii": "diysen",
+      "frequency": 2
+    },
+    {
+      "standard": "haýsy",
+      "ascii": "haysy",
+      "frequency": 2
+    },
+    {
+      "standard": "bolýalaý",
+      "ascii": "bolyalay",
+      "frequency": 2
+    },
+    {
+      "standard": "meň",
+      "ascii": "men",
+      "frequency": 2
+    },
+    {
+      "standard": "ýazan",
+      "ascii": "yazan",
+      "frequency": 2
+    },
+    {
+      "standard": "çykýar",
+      "ascii": "cykyar",
+      "frequency": 2
+    },
+    {
+      "standard": "ň",
+      "ascii": "n",
+      "frequency": 2
+    },
+    {
+      "standard": "ýene",
+      "ascii": "yene",
+      "frequency": 2
+    },
+    {
+      "standard": "geçip",
+      "ascii": "gecip",
+      "frequency": 2
+    },
+    {
+      "standard": "oňa",
+      "ascii": "ona",
+      "frequency": 2
+    },
+    {
+      "standard": "şatlyk",
+      "ascii": "satlyk",
+      "frequency": 2
+    },
+    {
+      "standard": "yöne",
+      "ascii": "yone",
+      "frequency": 2
+    },
+    {
+      "standard": "çenli",
+      "ascii": "cenli",
+      "frequency": 2
+    },
+    {
+      "standard": "arkaýyn",
+      "ascii": "arkayyn",
+      "frequency": 2
+    },
+    {
+      "standard": "başga",
+      "ascii": "basga",
+      "frequency": 2
+    },
+    {
+      "standard": "goç",
+      "ascii": "goc",
+      "frequency": 2
+    },
+    {
+      "standard": "adamyň",
+      "ascii": "adamyn",
+      "frequency": 2
+    },
+    {
+      "standard": "soň",
+      "ascii": "son",
+      "frequency": 2
+    },
+    {
+      "standard": "göni",
+      "ascii": "goni",
+      "frequency": 2
+    },
+    {
+      "standard": "züp",
+      "ascii": "zup",
+      "frequency": 2
+    }
+  ]
+}

@@ -77,6 +77,29 @@ python tools/build_kg_test_cases.py
 python tools/evaluate_kg_translation.py --limit 50
 ```
 
+## Разговорный туркменский режим
+
+Turkmen V1 изолирован от кыргызского и остальных языков. Для включения добавьте
+в Railway:
+
+```env
+TM_CONVERSATIONAL_MODE=true
+TM_OUTPUT_STYLE=tm_ascii_chat
+```
+
+`tm_ascii_chat` всегда выдаёт обычную латиницу без туркменских букв с диакритикой
+и без лишней пунктуации. `tm_native` разрешает стандартные буквы, а `chat_native`
+выбирает стиль по формальности сообщения. При `TM_CONVERSATIONAL_MODE=false`
+используется прежний переводчик.
+
+Исходный Telegram export обрабатывается только локально и не входит в Docker-образ:
+
+```powershell
+python tools/build_tm_style_corpus.py "C:\path\to\result (туркмен.json" --output-dir data
+python tools/build_tm_test_cases.py
+python tools/evaluate_tm_translation.py --limit 50
+```
+
 ## Notes
 
 - Telegram allows one connected Business bot per account.

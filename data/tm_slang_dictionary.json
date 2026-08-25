@@ -1,0 +1,1089 @@
+{
+  "usage": "Context hints only. Never apply these entries with direct word replacement.",
+  "curated_hints": [
+    {
+      "form": "bolya",
+      "meaning_ru": "хорошо / ладно",
+      "note": "короткий ответ значение зависит от контекста"
+    },
+    {
+      "form": "howwa",
+      "meaning_ru": "да",
+      "note": "частая ASCII форма"
+    },
+    {
+      "form": "yok",
+      "meaning_ru": "нет / отсутствует",
+      "note": "ASCII форма ýok"
+    },
+    {
+      "form": "yokmy",
+      "meaning_ru": "нет? / разве нет?",
+      "note": "короткий вопрос"
+    },
+    {
+      "form": "hazir",
+      "meaning_ru": "сейчас",
+      "note": "ASCII форма häzir"
+    },
+    {
+      "form": "ertir",
+      "meaning_ru": "завтра",
+      "note": "обычная чат форма"
+    },
+    {
+      "form": "name",
+      "meaning_ru": "что / какой",
+      "note": "ASCII форма näme зависит от контекста"
+    },
+    {
+      "form": "nahili",
+      "meaning_ru": "как / какой",
+      "note": "ASCII форма nähili"
+    },
+    {
+      "form": "gowy",
+      "meaning_ru": "хорошо / хороший",
+      "note": "обычная форма"
+    },
+    {
+      "form": "utan",
+      "meaning_ru": "выиграет / победит",
+      "note": "в контексте игрока от utmak не стыд"
+    },
+    {
+      "form": "utsa",
+      "meaning_ru": "если выиграет",
+      "note": "ставки и игроки"
+    },
+    {
+      "form": "utanda",
+      "meaning_ru": "когда выиграет",
+      "note": "ставки и игроки"
+    },
+    {
+      "form": "cykar",
+      "meaning_ru": "выведи / снять",
+      "note": "обычно о деньгах"
+    },
+    {
+      "form": "ugrat",
+      "meaning_ru": "отправь / скинь",
+      "note": "разговорная просьба"
+    },
+    {
+      "form": "skrin",
+      "meaning_ru": "скриншот",
+      "note": "естественное заимствование"
+    },
+    {
+      "form": "akkaunt",
+      "meaning_ru": "аккаунт",
+      "note": "естественное заимствование"
+    }
+  ],
+  "frequent_casual_forms": [
+    {
+      "form": "men",
+      "frequency": 163,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "mana",
+      "frequency": 129,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "sen",
+      "frequency": 125,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "adam",
+      "frequency": 97,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "bar",
+      "frequency": 89,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "yok",
+      "frequency": 87,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "plus",
+      "frequency": 87,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "ber",
+      "frequency": 70,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "brat",
+      "frequency": 69,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "kim",
+      "frequency": 69,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "name",
+      "frequency": 62,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "bolya",
+      "frequency": 62,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "menem",
+      "frequency": 56,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "gerek",
+      "frequency": 50,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "yaz",
+      "frequency": 46,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "ol",
+      "frequency": 46,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "go",
+      "frequency": 45,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "admin",
+      "frequency": 45,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "top",
+      "frequency": 44,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "son",
+      "frequency": 44,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "dos",
+      "frequency": 42,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "yene",
+      "frequency": 41,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "gowy",
+      "frequency": 39,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "boldy",
+      "frequency": 39,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "diyip",
+      "frequency": 35,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "guzym",
+      "frequency": 31,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "pul",
+      "frequency": 31,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "jemal",
+      "frequency": 29,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "promo",
+      "frequency": 29,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "bolsa",
+      "frequency": 28,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "yone",
+      "frequency": 28,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "ucin",
+      "frequency": 27,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "yokmy",
+      "frequency": 25,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "nm",
+      "frequency": 23,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "edip",
+      "frequency": 23,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "spam",
+      "frequency": 22,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "et",
+      "frequency": 22,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "bla",
+      "frequency": 21,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "salam",
+      "frequency": 21,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "salyp",
+      "frequency": 21,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "bilen",
+      "frequency": 21,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "dal",
+      "frequency": 21,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "vpn",
+      "frequency": 19,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "gowmy",
+      "frequency": 19,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "bilyan",
+      "frequency": 18,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "kime",
+      "frequency": 16,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "ba",
+      "frequency": 16,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "eday",
+      "frequency": 16,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "hazir",
+      "frequency": 16,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "lic",
+      "frequency": 16,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "10",
+      "frequency": 16,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "berjek",
+      "frequency": 16,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "ay",
+      "frequency": 16,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "aljak",
+      "frequency": 16,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "yaly",
+      "frequency": 15,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "sana",
+      "frequency": 15,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "onda",
+      "frequency": 15,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "kassa",
+      "frequency": 15,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "id",
+      "frequency": 15,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "bir",
+      "frequency": 15,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "indi",
+      "frequency": 14,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "how",
+      "frequency": 14,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "barmy",
+      "frequency": 14,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "bu",
+      "frequency": 13,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "nahili",
+      "frequency": 13,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "da",
+      "frequency": 13,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "nace",
+      "frequency": 13,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "siz",
+      "frequency": 12,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "diyyan",
+      "frequency": 12,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "basga",
+      "frequency": 12,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "zat",
+      "frequency": 12,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "bolýa",
+      "frequency": 11,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "sn",
+      "frequency": 11,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "meni",
+      "frequency": 11,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "nc",
+      "frequency": 11,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "dep",
+      "frequency": 11,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "alyp",
+      "frequency": 11,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "goreli",
+      "frequency": 11,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "gel",
+      "frequency": 10,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "bolar",
+      "frequency": 10,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "senem",
+      "frequency": 10,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "username",
+      "frequency": 10,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "maňa",
+      "frequency": 10,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "bot",
+      "frequency": 10,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "ya",
+      "frequency": 10,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "to",
+      "frequency": 10,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "50",
+      "frequency": 10,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "30",
+      "frequency": 10,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "proma",
+      "frequency": 10,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "okla",
+      "frequency": 10,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "manat",
+      "frequency": 9,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "sol",
+      "frequency": 9,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "de",
+      "frequency": 9,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "al",
+      "frequency": 9,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "tmt",
+      "frequency": 9,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "mn",
+      "frequency": 9,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "acc",
+      "frequency": 9,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "payok",
+      "frequency": 9,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "nadip",
+      "frequency": 9,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "ejen",
+      "frequency": 9,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "100",
+      "frequency": 9,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "beray",
+      "frequency": 9,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "sikdir",
+      "frequency": 9,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "chada",
+      "frequency": 8,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "diydim",
+      "frequency": 8,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "mende",
+      "frequency": 8,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "chat",
+      "frequency": 8,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "bas",
+      "frequency": 8,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "bolsan",
+      "frequency": 8,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "top1",
+      "frequency": 8,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "agam",
+      "frequency": 8,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "hacan",
+      "frequency": 8,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "hey",
+      "frequency": 8,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "there",
+      "frequency": 8,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "and",
+      "frequency": 8,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "welcome",
+      "frequency": 8,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "are",
+      "frequency": 8,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "you",
+      "frequency": 8,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "hany",
+      "frequency": 8,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "bamy",
+      "frequency": 8,
+      "kind": "corpus_frequency_candidate"
+    }
+  ],
+  "frequent_phrases": [
+    {
+      "form": "mana plus",
+      "frequency": 31,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "plus ber",
+      "frequency": 14,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "go mana",
+      "frequency": 12,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "top 1",
+      "frequency": 11,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "mana ber",
+      "frequency": 10,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "adam salyp",
+      "frequency": 9,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "hey there",
+      "frequency": 8,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "and welcome",
+      "frequency": 8,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "welcome to",
+      "frequency": 8,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "to how",
+      "frequency": 8,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "how are",
+      "frequency": 8,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "are you",
+      "frequency": 8,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "kime gerek",
+      "frequency": 7,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "plus eday",
+      "frequency": 7,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "bar sikdir",
+      "frequency": 7,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "gowy sen",
+      "frequency": 6,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "plus et",
+      "frequency": 6,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "gerek dal",
+      "frequency": 6,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "2 k",
+      "frequency": 5,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "adam gerek",
+      "frequency": 5,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "nm boldy",
+      "frequency": 5,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "jemal kassa",
+      "frequency": 5,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "bolsa lic",
+      "frequency": 5,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "kim saldy",
+      "frequency": 5,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "plus bas",
+      "frequency": 4,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "maňa plus",
+      "frequency": 4,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "adam salp",
+      "frequency": 4,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "chada adam",
+      "frequency": 4,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "mesele yok",
+      "frequency": 4,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "adam saljak",
+      "frequency": 4,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "salyp berjek",
+      "frequency": 4,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "go dos",
+      "frequency": 4,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "name ucin",
+      "frequency": 4,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "bilyan bami",
+      "frequency": 4,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "go plus",
+      "frequency": 4,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "kim ol",
+      "frequency": 4,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "ber dos",
+      "frequency": 4,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "plus edip",
+      "frequency": 4,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "kim salya",
+      "frequency": 4,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "gerek bolsa",
+      "frequency": 4,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "top goreli",
+      "frequency": 4,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "200 manat",
+      "frequency": 3,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "gerek bolar",
+      "frequency": 3,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "brat plus",
+      "frequency": 3,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "plus eda",
+      "frequency": 3,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "go maňa",
+      "frequency": 3,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "mana admin",
+      "frequency": 3,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "yok men",
+      "frequency": 3,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "10 manat",
+      "frequency": 3,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "bas mana",
+      "frequency": 3,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "eday brat",
+      "frequency": 3,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "10 tmt",
+      "frequency": 3,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "eday doss",
+      "frequency": 3,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "spam men",
+      "frequency": 3,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "2k da",
+      "frequency": 3,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "off men",
+      "frequency": 3,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "payok yokmy",
+      "frequency": 3,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "gowmy dos",
+      "frequency": 3,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "salyp ber",
+      "frequency": 3,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "menem salyp",
+      "frequency": 3,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "dip yaz",
+      "frequency": 3,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "dos mana",
+      "frequency": 3,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "men etdim",
+      "frequency": 3,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "1 x",
+      "frequency": 3,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "top aç",
+      "frequency": 3,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "lic gelin",
+      "frequency": 3,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "gowy alla",
+      "frequency": 3,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "alla sukur",
+      "frequency": 3,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "sen gowmy",
+      "frequency": 3,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "bot top",
+      "frequency": 3,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "top arasalap",
+      "frequency": 3,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "arasalap bilyan",
+      "frequency": 3,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "top 10",
+      "frequency": 3,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "admin yokmy",
+      "frequency": 3,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "7 24",
+      "frequency": 3,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "men spam",
+      "frequency": 3,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "mana eday",
+      "frequency": 3,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "kop adam",
+      "frequency": 3,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "şu wagt",
+      "frequency": 3,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "mana okla",
+      "frequency": 3,
+      "kind": "frequent_chat_phrase"
+    }
+  ]
+}

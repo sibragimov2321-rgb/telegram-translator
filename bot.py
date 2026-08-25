@@ -14,6 +14,7 @@ from typing import Final
 
 import httpx
 import kg_translation as kg
+import tm_translation as tm
 from dotenv import load_dotenv
 from openai import AsyncOpenAI
 from telegram import (
@@ -63,6 +64,7 @@ MODEL: Final = (
     or ("openai/gpt-4.1-mini" if OPENROUTER_API_KEY else "gpt-4.1-mini")
 )
 KYRGYZ_CONVERSATIONAL_MODE: Final = kg.env_flag("KYRGYZ_CONVERSATIONAL_MODE", False)
+TURKMEN_CONVERSATIONAL_MODE: Final = tm.env_flag("TM_CONVERSATIONAL_MODE", False)
 DB_PATH: Final = Path(os.getenv("DATABASE_PATH", str(Path(__file__).with_name("translator.sqlite3"))))
 BOOTSTRAP_ADMIN_IDS: Final = tuple(
     int(value) for value in os.getenv("BOOTSTRAP_ADMIN_IDS", "").split(",") if value.strip().isdigit()
@@ -609,6 +611,43 @@ async def translate_kyrgyz_conversational(
     return result
 
 
+async def translate_turkmen_conversational(
+    text: str,
+    direction: str,
+    history: list[sqlite3.Row] | None = None,
+) -> str:
+    """Translate through the isolated Turkmen profile and privacy-safe style assets."""
+    style = tm.classify_style(text)
+    instructions = tm.build_instructions(text, direction, style)
+    model_input = tm.build_input(text, history)
+    response = await client.responses.create(
+        model=MODEL,
+        instructions=instructions,
+        input=model_input,
+        temperature=0.2,
+        max_output_tokens=400,
+    )
+    result = response.output_text.strip()
+    if direction == "ru_to_tm" and result:
+        result = tm.normalize_output(result, style)
+    problems = tm.translation_needs_retry(text, result, direction, style)
+    if problems:
+        retry = await client.responses.create(
+            model=MODEL,
+            instructions=instructions + "\n\n" + tm.retry_instruction(problems, direction, style),
+            input=model_input,
+            temperature=0.1,
+            max_output_tokens=400,
+        )
+        corrected = retry.output_text.strip()
+        if corrected:
+            result = tm.normalize_output(corrected, style) if direction == "ru_to_tm" else corrected
+        problems = tm.translation_needs_retry(text, result, direction, style)
+    if problems:
+        raise RuntimeError("Turkmen translation validation failed: " + ", ".join(problems))
+    return result
+
+
 async def translate_text(
     text: str, target: str, tone: str = "clear", history: list[sqlite3.Row] | None = None
 ) -> str:
@@ -617,6 +656,11 @@ async def translate_text(
             return await translate_kyrgyz_conversational(text, "ru_to_ky", history)
         except Exception:
             logger.exception("Conversational Kyrgyz translation failed; using legacy translator")
+    if TURKMEN_CONVERSATIONAL_MODE and tm.is_turkmen_language(target):
+        try:
+            return await translate_turkmen_conversational(text, "ru_to_tm", history)
+        except Exception:
+            logger.exception("Conversational Turkmen translation failed; using legacy translator")
     return await _translate_text_legacy(text, target, tone, history)
 
 
@@ -633,6 +677,12 @@ async def translate_manual_chat(
             return await translate_kyrgyz_conversational(text, direction, history)
         except Exception:
             logger.exception("Manual conversational Kyrgyz translation failed; using legacy translator")
+    if TURKMEN_CONVERSATIONAL_MODE and tm.is_turkmen_language(selected_language):
+        direction = tm.choose_direction(text)
+        try:
+            return await translate_turkmen_conversational(text, direction, history)
+        except Exception:
+            logger.exception("Manual conversational Turkmen translation failed; using legacy translator")
     turkmen_note = ""
     if is_turkmen_language(selected_language):
         turkmen_note = (
@@ -704,6 +754,12 @@ async def translate_incoming(
     normalized = text.casefold().strip(" .,!?:;…")
     if target == "Русский" and normalized in TURKMEN_RUSSIAN_PHRASES:
         return "Turkmen", TURKMEN_RUSSIAN_PHRASES[normalized]
+    if TURKMEN_CONVERSATIONAL_MODE and tm.is_turkmen_language(target) and contains_cyrillic(text):
+        try:
+            translated = await translate_turkmen_conversational(text, "ru_to_tm", history)
+            return "Russian", translated
+        except Exception:
+            logger.exception("Incoming Russian to conversational Turkmen translation failed; using language detection")
     if (
         KYRGYZ_CONVERSATIONAL_MODE
         and target == "Русский"
@@ -714,6 +770,16 @@ async def translate_incoming(
             return "Kyrgyz", translated
         except Exception:
             logger.exception("Incoming conversational Kyrgyz translation failed; using language detection")
+    if (
+        TURKMEN_CONVERSATIONAL_MODE
+        and target == "Русский"
+        and (tm.is_turkmen_language(known_language) or tm.looks_turkmen(text))
+    ):
+        try:
+            translated = await translate_turkmen_conversational(text, "tm_to_ru", history)
+            return "Turkmen", translated
+        except Exception:
+            logger.exception("Incoming conversational Turkmen translation failed; using language detection")
     hint = f" The sender's previous messages were in {known_language}; use that as a strong hint." if known_language else ""
     response = await client.responses.create(
         model=MODEL,
@@ -1567,10 +1633,12 @@ def main() -> None:
     app.add_handler(MessageHandler(filters.StatusUpdate.USERS_SHARED, add_selected_admin))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, private_text))
     logger.info(
-        "Bot started with provider %s, model %s, Kyrgyz conversational mode %s",
+        "Bot started with provider %s, model %s, Kyrgyz mode %s, Turkmen mode %s, Turkmen style %s",
         AI_PROVIDER,
         MODEL,
         KYRGYZ_CONVERSATIONAL_MODE,
+        TURKMEN_CONVERSATIONAL_MODE,
+        os.getenv("TM_OUTPUT_STYLE", "tm_ascii_chat"),
     )
     app.run_polling(allowed_updates=Update.ALL_TYPES)
 
