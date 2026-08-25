@@ -1,0 +1,1964 @@
+[
+  {
+    "id": "base-001",
+    "direction": "ru_to_ky",
+    "source": "привет",
+    "reference": "салам",
+    "style": "casual",
+    "category": "one_word"
+  },
+  {
+    "id": "base-002",
+    "direction": "ru_to_ky",
+    "source": "привет брат как дела",
+    "reference": "салам брат кандайсың",
+    "style": "casual",
+    "category": "slang"
+  },
+  {
+    "id": "base-003",
+    "direction": "ru_to_ky",
+    "source": "ты где",
+    "reference": "кайдасың",
+    "style": "very_casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-004",
+    "direction": "ru_to_ky",
+    "source": "щас буду",
+    "reference": "азыр барам",
+    "style": "very_casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-005",
+    "direction": "ru_to_ky",
+    "source": "подожди немного",
+    "reference": "бир аз күтүп тур",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-006",
+    "direction": "ru_to_ky",
+    "source": "скинь скрин",
+    "reference": "скрин жиберчи",
+    "style": "very_casual",
+    "category": "screenshots"
+  },
+  {
+    "id": "base-007",
+    "direction": "ru_to_ky",
+    "source": "сколько",
+    "reference": "канча",
+    "style": "very_casual",
+    "category": "questions"
+  },
+  {
+    "id": "base-008",
+    "direction": "ru_to_ky",
+    "source": "сколько стоит",
+    "reference": "канча турат",
+    "style": "casual",
+    "category": "questions"
+  },
+  {
+    "id": "base-009",
+    "direction": "ru_to_ky",
+    "source": "деньги пришли?",
+    "reference": "акча түштүбү?",
+    "style": "casual",
+    "category": "questions"
+  },
+  {
+    "id": "base-010",
+    "direction": "ru_to_ky",
+    "source": "деньги еще не пришли",
+    "reference": "акча али түшө элек",
+    "style": "casual",
+    "category": "negative_statements"
+  },
+  {
+    "id": "base-011",
+    "direction": "ru_to_ky",
+    "source": "сейчас проверю",
+    "reference": "азыр текшерем",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-012",
+    "direction": "ru_to_ky",
+    "source": "да норм",
+    "reference": "ооба норм",
+    "style": "very_casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-013",
+    "direction": "ru_to_ky",
+    "source": "не надо уже",
+    "reference": "эми кереги жок",
+    "style": "very_casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-014",
+    "direction": "ru_to_ky",
+    "source": "сделал?",
+    "reference": "кылдыңбы?",
+    "style": "very_casual",
+    "category": "questions"
+  },
+  {
+    "id": "base-015",
+    "direction": "ru_to_ky",
+    "source": "отправил",
+    "reference": "жибердим",
+    "style": "very_casual",
+    "category": "one_word"
+  },
+  {
+    "id": "base-016",
+    "direction": "ru_to_ky",
+    "source": "отправь сюда",
+    "reference": "ушул жакка жибер",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-017",
+    "direction": "ru_to_ky",
+    "source": "можешь помочь",
+    "reference": "жардам бере аласыңбы",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-018",
+    "direction": "ru_to_ky",
+    "source": "я не понял",
+    "reference": "түшүнгөн жокмун",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-019",
+    "direction": "ru_to_ky",
+    "source": "еще раз напиши",
+    "reference": "дагы бир жолу жазчы",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-020",
+    "direction": "ru_to_ky",
+    "source": "завтра будет",
+    "reference": "эртең болот",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-021",
+    "direction": "ru_to_ky",
+    "source": "сегодня не получится",
+    "reference": "бүгүн болбойт",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-022",
+    "direction": "ru_to_ky",
+    "source": "жди ответ",
+    "reference": "жооп күтүп тур",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-023",
+    "direction": "ru_to_ky",
+    "source": "брат сейчас скинешь деньги?",
+    "reference": "брат азыр акчаны скинешьби?",
+    "style": "very_casual",
+    "category": "questions"
+  },
+  {
+    "id": "base-024",
+    "direction": "ru_to_ky",
+    "source": "переведи 500 сом",
+    "reference": "500 сом котор",
+    "style": "very_casual",
+    "category": "money"
+  },
+  {
+    "id": "base-025",
+    "direction": "ru_to_ky",
+    "source": "скинь 3500 сом",
+    "reference": "3500 сом салып жибер",
+    "style": "very_casual",
+    "category": "money"
+  },
+  {
+    "id": "base-026",
+    "direction": "ru_to_ky",
+    "source": "комиссия сколько",
+    "reference": "комиссия канча",
+    "style": "very_casual",
+    "category": "questions"
+  },
+  {
+    "id": "base-027",
+    "direction": "ru_to_ky",
+    "source": "какой процент",
+    "reference": "процент канча",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-028",
+    "direction": "ru_to_ky",
+    "source": "открой аккаунт",
+    "reference": "аккаунт ач",
+    "style": "very_casual",
+    "category": "Telegram"
+  },
+  {
+    "id": "base-029",
+    "direction": "ru_to_ky",
+    "source": "зарегистрируйся по ссылке",
+    "reference": "ссылка менен каттал",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-030",
+    "direction": "ru_to_ky",
+    "source": "отправь ID аккаунта",
+    "reference": "аккаунттун IDсин жибер",
+    "style": "casual",
+    "category": "Telegram"
+  },
+  {
+    "id": "base-031",
+    "direction": "ru_to_ky",
+    "source": "пополни баланс",
+    "reference": "баланс толукта",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-032",
+    "direction": "ru_to_ky",
+    "source": "выведи деньги",
+    "reference": "акчаны чыгарып ал",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-033",
+    "direction": "ru_to_ky",
+    "source": "заявка готова",
+    "reference": "заявка даяр",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-034",
+    "direction": "ru_to_ky",
+    "source": "перевод отменили",
+    "reference": "переводду отмена кылышты",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-035",
+    "direction": "ru_to_ky",
+    "source": "карта твоя?",
+    "reference": "карта сеникиби?",
+    "style": "casual",
+    "category": "questions"
+  },
+  {
+    "id": "base-036",
+    "direction": "ru_to_ky",
+    "source": "реквизиты правильные?",
+    "reference": "реквизиттер туурабы?",
+    "style": "neutral",
+    "category": "questions"
+  },
+  {
+    "id": "base-037",
+    "direction": "ru_to_ky",
+    "source": "можно на эту карту",
+    "reference": "ушул картага болобу",
+    "style": "casual",
+    "category": "casual"
+  },
+  {
+    "id": "base-038",
+    "direction": "ru_to_ky",
+    "source": "когда придут деньги",
+    "reference": "акча качан түшөт",
+    "style": "casual",
+    "category": "questions"
+  },
+  {
+    "id": "base-039",
+    "direction": "ru_to_ky",
+    "source": "почему не отвечает",
+    "reference": "эмнеге жооп бербей жатат",
+    "style": "casual",
+    "category": "questions"
+  },
+  {
+    "id": "base-040",
+    "direction": "ru_to_ky",
+    "source": "он скоро придет",
+    "reference": "ал азыр келет",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-041",
+    "direction": "ru_to_ky",
+    "source": "они уже ушли",
+    "reference": "алар кетип калышты",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-042",
+    "direction": "ru_to_ky",
+    "source": "напиши ему",
+    "reference": "ага жаз",
+    "style": "very_casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-043",
+    "direction": "ru_to_ky",
+    "source": "пусть сам напишет",
+    "reference": "өзү жазсын",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-044",
+    "direction": "ru_to_ky",
+    "source": "я потом объясню",
+    "reference": "кийин түшүндүрүп берем",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-045",
+    "direction": "ru_to_ky",
+    "source": "ничего не меняй",
+    "reference": "эч нерсе өзгөртпө",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-046",
+    "direction": "ru_to_ky",
+    "source": "это не мой аккаунт",
+    "reference": "бул менин аккаунтум эмес",
+    "style": "casual",
+    "category": "Telegram"
+  },
+  {
+    "id": "base-047",
+    "direction": "ru_to_ky",
+    "source": "у меня нет доступа",
+    "reference": "менде доступ жок",
+    "style": "casual",
+    "category": "casual"
+  },
+  {
+    "id": "base-048",
+    "direction": "ru_to_ky",
+    "source": "проверь еще раз",
+    "reference": "дагы бир текшерчи",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-049",
+    "direction": "ru_to_ky",
+    "source": "спасибо брат",
+    "reference": "рахмат брат",
+    "style": "very_casual",
+    "category": "slang"
+  },
+  {
+    "id": "base-050",
+    "direction": "ru_to_ky",
+    "source": "хорошо договорились",
+    "reference": "болду сүйлөштүк",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-051",
+    "direction": "ru_to_ky",
+    "source": "Здравствуйте подскажите пожалуйста когда будет перевод",
+    "reference": "Саламатсызбы айтып коёсузбу перевод качан болот",
+    "style": "formal",
+    "category": "questions"
+  },
+  {
+    "id": "base-052",
+    "direction": "ru_to_ky",
+    "source": "Отправьте пожалуйста правильные реквизиты",
+    "reference": "Туура реквизиттерди жиберип коюңузчу",
+    "style": "formal",
+    "category": "formal"
+  },
+  {
+    "id": "base-053",
+    "direction": "ru_to_ky",
+    "source": "Я проверю информацию и напишу вам",
+    "reference": "Маалыматты текшерип сизге жазам",
+    "style": "neutral",
+    "category": "casual"
+  },
+  {
+    "id": "base-054",
+    "direction": "ru_to_ky",
+    "source": "Ваша заявка находится на проверке",
+    "reference": "Сиздин заявка текшерилип жатат",
+    "style": "neutral",
+    "category": "casual"
+  },
+  {
+    "id": "base-055",
+    "direction": "ru_to_ky",
+    "source": "не переживай все будет нормально",
+    "reference": "капа болбо баары жакшы болот",
+    "style": "casual",
+    "category": "negative_statements"
+  },
+  {
+    "id": "base-056",
+    "direction": "ru_to_ky",
+    "source": "брат азыр 500 сом скинешь",
+    "reference": "брат азыр 500 сом скинешьби",
+    "style": "very_casual",
+    "category": "mixed_ru_ky"
+  },
+  {
+    "id": "base-057",
+    "direction": "ru_to_ky",
+    "source": "дай знать когда будет готово",
+    "reference": "даяр болгондо айтып кой",
+    "style": "casual",
+    "category": "questions"
+  },
+  {
+    "id": "base-058",
+    "direction": "ru_to_ky",
+    "source": "ответь как сможешь",
+    "reference": "колуң бошогондо жооп бер",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-059",
+    "direction": "ru_to_ky",
+    "source": "я уже отправил ссылку",
+    "reference": "ссылканы жибергем",
+    "style": "casual",
+    "category": "casual"
+  },
+  {
+    "id": "base-060",
+    "direction": "ru_to_ky",
+    "source": "не открывается",
+    "reference": "ачылбай жатат",
+    "style": "very_casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-061",
+    "direction": "ky_to_ru",
+    "source": "салам",
+    "reference": "привет",
+    "style": "casual",
+    "category": "one_word"
+  },
+  {
+    "id": "base-062",
+    "direction": "ky_to_ru",
+    "source": "азыр",
+    "reference": "сейчас",
+    "style": "very_casual",
+    "category": "one_word"
+  },
+  {
+    "id": "base-063",
+    "direction": "ky_to_ru",
+    "source": "болду",
+    "reference": "ладно",
+    "style": "very_casual",
+    "category": "one_word"
+  },
+  {
+    "id": "base-064",
+    "direction": "ky_to_ru",
+    "source": "барбы?",
+    "reference": "есть?",
+    "style": "very_casual",
+    "category": "questions"
+  },
+  {
+    "id": "base-065",
+    "direction": "ky_to_ru",
+    "source": "акча түштүбү?",
+    "reference": "деньги пришли?",
+    "style": "casual",
+    "category": "questions"
+  },
+  {
+    "id": "base-066",
+    "direction": "ky_to_ru",
+    "source": "жиберчи",
+    "reference": "скинь пожалуйста",
+    "style": "very_casual",
+    "category": "one_word"
+  },
+  {
+    "id": "base-067",
+    "direction": "ky_to_ru",
+    "source": "кайдасың",
+    "reference": "ты где",
+    "style": "very_casual",
+    "category": "one_word"
+  },
+  {
+    "id": "base-068",
+    "direction": "ky_to_ru",
+    "source": "түшүнбөдүм",
+    "reference": "не понял",
+    "style": "very_casual",
+    "category": "one_word"
+  },
+  {
+    "id": "base-069",
+    "direction": "ky_to_ru",
+    "source": "күтүп тур",
+    "reference": "подожди",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-070",
+    "direction": "ky_to_ru",
+    "source": "канча болот",
+    "reference": "сколько будет",
+    "style": "casual",
+    "category": "questions"
+  },
+  {
+    "id": "base-071",
+    "direction": "ky_to_ru",
+    "source": "эртең сүйлөшөбүз",
+    "reference": "завтра поговорим",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-072",
+    "direction": "ky_to_ru",
+    "source": "бүгүн болбойт",
+    "reference": "сегодня не получится",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-073",
+    "direction": "ky_to_ru",
+    "source": "дагы бир жолу жазчы",
+    "reference": "напиши еще раз",
+    "style": "casual",
+    "category": "casual"
+  },
+  {
+    "id": "base-074",
+    "direction": "ky_to_ru",
+    "source": "эмне болду",
+    "reference": "что случилось",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-075",
+    "direction": "ky_to_ru",
+    "source": "акча али түшө элек",
+    "reference": "деньги еще не пришли",
+    "style": "casual",
+    "category": "negative_statements"
+  },
+  {
+    "id": "base-076",
+    "direction": "ky_to_ru",
+    "source": "500 сом котор",
+    "reference": "переведи 500 сом",
+    "style": "very_casual",
+    "category": "money"
+  },
+  {
+    "id": "base-077",
+    "direction": "ky_to_ru",
+    "source": "3500 сом салып жибер",
+    "reference": "скинь 3500 сом",
+    "style": "very_casual",
+    "category": "money"
+  },
+  {
+    "id": "base-078",
+    "direction": "ky_to_ru",
+    "source": "комиссия канча",
+    "reference": "сколько комиссия",
+    "style": "very_casual",
+    "category": "mixed_ru_ky"
+  },
+  {
+    "id": "base-079",
+    "direction": "ky_to_ru",
+    "source": "процент канча",
+    "reference": "какой процент",
+    "style": "very_casual",
+    "category": "mixed_ru_ky"
+  },
+  {
+    "id": "base-080",
+    "direction": "ky_to_ru",
+    "source": "аккаунт ач",
+    "reference": "открой аккаунт",
+    "style": "very_casual",
+    "category": "mixed_ru_ky"
+  },
+  {
+    "id": "base-081",
+    "direction": "ky_to_ru",
+    "source": "баланс толукта",
+    "reference": "пополни баланс",
+    "style": "casual",
+    "category": "mixed_ru_ky"
+  },
+  {
+    "id": "base-082",
+    "direction": "ky_to_ru",
+    "source": "акчаны чыгарып ал",
+    "reference": "выведи деньги",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-083",
+    "direction": "ky_to_ru",
+    "source": "заявка даяр",
+    "reference": "заявка готова",
+    "style": "casual",
+    "category": "mixed_ru_ky"
+  },
+  {
+    "id": "base-084",
+    "direction": "ky_to_ru",
+    "source": "карта сеникиби",
+    "reference": "карта твоя?",
+    "style": "casual",
+    "category": "mixed_ru_ky"
+  },
+  {
+    "id": "base-085",
+    "direction": "ky_to_ru",
+    "source": "реквизиттер туурабы",
+    "reference": "реквизиты правильные?",
+    "style": "neutral",
+    "category": "mixed_ru_ky"
+  },
+  {
+    "id": "base-086",
+    "direction": "ky_to_ru",
+    "source": "ушул картага болобу",
+    "reference": "можно на эту карту?",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-087",
+    "direction": "ky_to_ru",
+    "source": "акча качан түшөт",
+    "reference": "когда придут деньги",
+    "style": "casual",
+    "category": "questions"
+  },
+  {
+    "id": "base-088",
+    "direction": "ky_to_ru",
+    "source": "эмнеге жооп бербей жатат",
+    "reference": "почему не отвечает",
+    "style": "casual",
+    "category": "questions"
+  },
+  {
+    "id": "base-089",
+    "direction": "ky_to_ru",
+    "source": "ал азыр келет",
+    "reference": "он скоро придет",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-090",
+    "direction": "ky_to_ru",
+    "source": "алар кетип калышты",
+    "reference": "они уже ушли",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-091",
+    "direction": "ky_to_ru",
+    "source": "ага жаз",
+    "reference": "напиши ему",
+    "style": "very_casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-092",
+    "direction": "ky_to_ru",
+    "source": "өзү жазсын",
+    "reference": "пусть сам напишет",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-093",
+    "direction": "ky_to_ru",
+    "source": "кийин түшүндүрүп берем",
+    "reference": "потом объясню",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-094",
+    "direction": "ky_to_ru",
+    "source": "эч нерсе өзгөртпө",
+    "reference": "ничего не меняй",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-095",
+    "direction": "ky_to_ru",
+    "source": "бул менин аккаунтум эмес",
+    "reference": "это не мой аккаунт",
+    "style": "casual",
+    "category": "mixed_ru_ky"
+  },
+  {
+    "id": "base-096",
+    "direction": "ky_to_ru",
+    "source": "менде доступ жок",
+    "reference": "у меня нет доступа",
+    "style": "casual",
+    "category": "mixed_ru_ky"
+  },
+  {
+    "id": "base-097",
+    "direction": "ky_to_ru",
+    "source": "дагы бир текшерчи",
+    "reference": "проверь еще раз",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-098",
+    "direction": "ky_to_ru",
+    "source": "рахмат брат",
+    "reference": "спасибо брат",
+    "style": "very_casual",
+    "category": "mixed_ru_ky"
+  },
+  {
+    "id": "base-099",
+    "direction": "ky_to_ru",
+    "source": "болду сүйлөштүк",
+    "reference": "хорошо договорились",
+    "style": "casual",
+    "category": "very_short"
+  },
+  {
+    "id": "base-100",
+    "direction": "ky_to_ru",
+    "source": "Саламатсызбы перевод качан болот айтып коёсузбу",
+    "reference": "Здравствуйте, подскажите, когда будет перевод",
+    "style": "formal",
+    "category": "mixed_ru_ky"
+  },
+  {
+    "id": "base-101",
+    "direction": "ky_to_ru",
+    "source": "Туура реквизиттерди жиберип коюңузчу",
+    "reference": "Отправьте пожалуйста правильные реквизиты",
+    "style": "formal",
+    "category": "formal"
+  },
+  {
+    "id": "base-102",
+    "direction": "ky_to_ru",
+    "source": "Маалыматты текшерип сизге жазам",
+    "reference": "Я проверю информацию и напишу вам",
+    "style": "neutral",
+    "category": "casual"
+  },
+  {
+    "id": "base-103",
+    "direction": "ky_to_ru",
+    "source": "Сиздин заявка текшерилип жатат",
+    "reference": "Ваша заявка находится на проверке",
+    "style": "neutral",
+    "category": "mixed_ru_ky"
+  },
+  {
+    "id": "base-104",
+    "direction": "ky_to_ru",
+    "source": "капа болбо баары жакшы болот",
+    "reference": "не переживай, все будет нормально",
+    "style": "casual",
+    "category": "casual"
+  },
+  {
+    "id": "base-105",
+    "direction": "ky_to_ru",
+    "source": "брат азыр 500 сом скинешьби",
+    "reference": "брат, сейчас скинешь 500 сом?",
+    "style": "very_casual",
+    "category": "mixed_ru_ky"
+  },
+  {
+    "id": "base-106",
+    "direction": "ky_to_ru",
+    "source": "даяр болгондо айтып кой",
+    "reference": "дай знать когда будет готово",
+    "style": "casual",
+    "category": "casual"
+  },
+  {
+    "id": "base-107",
+    "direction": "ky_to_ru",
+    "source": "колуң бошогондо жооп бер",
+    "reference": "ответь как сможешь",
+    "style": "casual",
+    "category": "casual"
+  },
+  {
+    "id": "base-108",
+    "direction": "ky_to_ru",
+    "source": "ссылканы жибергем",
+    "reference": "я уже отправил ссылку",
+    "style": "casual",
+    "category": "mixed_ru_ky"
+  },
+  {
+    "id": "base-109",
+    "direction": "ky_to_ru",
+    "source": "ачылбай жатат",
+    "reference": "не открывается",
+    "style": "very_casual",
+    "category": "very_short"
+  },
+  {
+    "id": "emoji-001",
+    "direction": "ru_to_ky",
+    "source": "привет 🙂",
+    "reference": "салам 🙂",
+    "style": "casual",
+    "category": "emoji"
+  },
+  {
+    "id": "emoji-002",
+    "direction": "ru_to_ky",
+    "source": "привет брат как дела 🙂",
+    "reference": "салам брат кандайсың 🙂",
+    "style": "casual",
+    "category": "emoji"
+  },
+  {
+    "id": "emoji-003",
+    "direction": "ru_to_ky",
+    "source": "ты где 🙂",
+    "reference": "кайдасың 🙂",
+    "style": "very_casual",
+    "category": "emoji"
+  },
+  {
+    "id": "emoji-004",
+    "direction": "ru_to_ky",
+    "source": "щас буду 🙂",
+    "reference": "азыр барам 🙂",
+    "style": "very_casual",
+    "category": "emoji"
+  },
+  {
+    "id": "emoji-005",
+    "direction": "ru_to_ky",
+    "source": "подожди немного 🙂",
+    "reference": "бир аз күтүп тур 🙂",
+    "style": "casual",
+    "category": "emoji"
+  },
+  {
+    "id": "emoji-006",
+    "direction": "ru_to_ky",
+    "source": "скинь скрин 🙂",
+    "reference": "скрин жиберчи 🙂",
+    "style": "very_casual",
+    "category": "emoji"
+  },
+  {
+    "id": "emoji-007",
+    "direction": "ru_to_ky",
+    "source": "сколько 🙂",
+    "reference": "канча 🙂",
+    "style": "very_casual",
+    "category": "emoji"
+  },
+  {
+    "id": "emoji-008",
+    "direction": "ru_to_ky",
+    "source": "сколько стоит 🙂",
+    "reference": "канча турат 🙂",
+    "style": "casual",
+    "category": "emoji"
+  },
+  {
+    "id": "emoji-009",
+    "direction": "ru_to_ky",
+    "source": "деньги пришли 🙂",
+    "reference": "акча түштүбү 🙂",
+    "style": "casual",
+    "category": "emoji"
+  },
+  {
+    "id": "emoji-010",
+    "direction": "ru_to_ky",
+    "source": "деньги еще не пришли 🙂",
+    "reference": "акча али түшө элек 🙂",
+    "style": "casual",
+    "category": "emoji"
+  },
+  {
+    "id": "emoji-011",
+    "direction": "ru_to_ky",
+    "source": "сейчас проверю 🙂",
+    "reference": "азыр текшерем 🙂",
+    "style": "casual",
+    "category": "emoji"
+  },
+  {
+    "id": "emoji-012",
+    "direction": "ru_to_ky",
+    "source": "да норм 🙂",
+    "reference": "ооба норм 🙂",
+    "style": "very_casual",
+    "category": "emoji"
+  },
+  {
+    "id": "emoji-013",
+    "direction": "ru_to_ky",
+    "source": "не надо уже 🙂",
+    "reference": "эми кереги жок 🙂",
+    "style": "very_casual",
+    "category": "emoji"
+  },
+  {
+    "id": "emoji-014",
+    "direction": "ru_to_ky",
+    "source": "сделал 🙂",
+    "reference": "кылдыңбы 🙂",
+    "style": "very_casual",
+    "category": "emoji"
+  },
+  {
+    "id": "emoji-015",
+    "direction": "ru_to_ky",
+    "source": "отправил 🙂",
+    "reference": "жибердим 🙂",
+    "style": "very_casual",
+    "category": "emoji"
+  },
+  {
+    "id": "emoji-016",
+    "direction": "ru_to_ky",
+    "source": "отправь сюда 🙂",
+    "reference": "ушул жакка жибер 🙂",
+    "style": "casual",
+    "category": "emoji"
+  },
+  {
+    "id": "emoji-017",
+    "direction": "ru_to_ky",
+    "source": "можешь помочь 🙂",
+    "reference": "жардам бере аласыңбы 🙂",
+    "style": "casual",
+    "category": "emoji"
+  },
+  {
+    "id": "emoji-018",
+    "direction": "ru_to_ky",
+    "source": "я не понял 🙂",
+    "reference": "түшүнгөн жокмун 🙂",
+    "style": "casual",
+    "category": "emoji"
+  },
+  {
+    "id": "emoji-019",
+    "direction": "ru_to_ky",
+    "source": "еще раз напиши 🙂",
+    "reference": "дагы бир жолу жазчы 🙂",
+    "style": "casual",
+    "category": "emoji"
+  },
+  {
+    "id": "emoji-020",
+    "direction": "ru_to_ky",
+    "source": "завтра будет 🙂",
+    "reference": "эртең болот 🙂",
+    "style": "casual",
+    "category": "emoji"
+  },
+  {
+    "id": "emoji-021",
+    "direction": "ru_to_ky",
+    "source": "сегодня не получится 🙂",
+    "reference": "бүгүн болбойт 🙂",
+    "style": "casual",
+    "category": "emoji"
+  },
+  {
+    "id": "emoji-022",
+    "direction": "ru_to_ky",
+    "source": "жди ответ 🙂",
+    "reference": "жооп күтүп тур 🙂",
+    "style": "casual",
+    "category": "emoji"
+  },
+  {
+    "id": "emoji-023",
+    "direction": "ru_to_ky",
+    "source": "брат сейчас скинешь деньги 🙂",
+    "reference": "брат азыр акчаны скинешьби 🙂",
+    "style": "very_casual",
+    "category": "emoji"
+  },
+  {
+    "id": "emoji-024",
+    "direction": "ru_to_ky",
+    "source": "переведи 500 сом 🙂",
+    "reference": "500 сом котор 🙂",
+    "style": "very_casual",
+    "category": "emoji"
+  },
+  {
+    "id": "emoji-025",
+    "direction": "ru_to_ky",
+    "source": "скинь 3500 сом 🙂",
+    "reference": "3500 сом салып жибер 🙂",
+    "style": "very_casual",
+    "category": "emoji"
+  },
+  {
+    "id": "context-001",
+    "direction": "ru_to_ky",
+    "source": "а завтра",
+    "reference": "эртеңчи",
+    "style": "very_casual",
+    "category": "very_short",
+    "context": [
+      "он сегодня будет?"
+    ]
+  },
+  {
+    "id": "context-002",
+    "direction": "ru_to_ky",
+    "source": "а сейчас",
+    "reference": "азырчы",
+    "style": "very_casual",
+    "category": "very_short",
+    "context": [
+      "деньги еще не пришли"
+    ]
+  },
+  {
+    "id": "context-003",
+    "direction": "ru_to_ky",
+    "source": "еще один",
+    "reference": "дагы бирөө",
+    "style": "very_casual",
+    "category": "very_short",
+    "context": [
+      "скинь скрин"
+    ]
+  },
+  {
+    "id": "context-004",
+    "direction": "ru_to_ky",
+    "source": "а она",
+    "reference": "алчы",
+    "style": "very_casual",
+    "category": "very_short",
+    "context": [
+      "он ответил"
+    ]
+  },
+  {
+    "id": "context-005",
+    "direction": "ru_to_ky",
+    "source": "точно?",
+    "reference": "точнобу?",
+    "style": "very_casual",
+    "category": "questions",
+    "context": [
+      "перевод будет завтра"
+    ]
+  },
+  {
+    "id": "context-006",
+    "direction": "ky_to_ru",
+    "source": "эртеңчи",
+    "reference": "а завтра?",
+    "style": "very_casual",
+    "category": "very_short",
+    "context": [
+      "ал бүгүн келет"
+    ]
+  },
+  {
+    "id": "context-007",
+    "direction": "ky_to_ru",
+    "source": "канча",
+    "reference": "сколько",
+    "style": "very_casual",
+    "category": "one_word",
+    "context": [
+      "акча түштү"
+    ]
+  },
+  {
+    "id": "context-008",
+    "direction": "ky_to_ru",
+    "source": "дагы",
+    "reference": "еще",
+    "style": "very_casual",
+    "category": "one_word",
+    "context": [
+      "скрин жибер"
+    ]
+  },
+  {
+    "id": "context-009",
+    "direction": "ky_to_ru",
+    "source": "башкасы барбы",
+    "reference": "есть другая?",
+    "style": "very_casual",
+    "category": "questions",
+    "context": [
+      "бул карта иштебейт"
+    ]
+  },
+  {
+    "id": "context-010",
+    "direction": "ky_to_ru",
+    "source": "болду",
+    "reference": "ладно",
+    "style": "very_casual",
+    "category": "one_word",
+    "context": [
+      "азыр текшерем"
+    ]
+  },
+  {
+    "id": "typo-001",
+    "direction": "ru_to_ky",
+    "source": "скин скрин",
+    "reference": "скрин жибер",
+    "style": "very_casual",
+    "category": "typos"
+  },
+  {
+    "id": "typo-002",
+    "direction": "ru_to_ky",
+    "source": "денги пришли",
+    "reference": "акча түштүбү",
+    "style": "very_casual",
+    "category": "typos"
+  },
+  {
+    "id": "typo-003",
+    "direction": "ru_to_ky",
+    "source": "щас проверюю",
+    "reference": "азыр текшерем",
+    "style": "very_casual",
+    "category": "typos"
+  },
+  {
+    "id": "typo-004",
+    "direction": "ru_to_ky",
+    "source": "прив брат",
+    "reference": "салам брат",
+    "style": "very_casual",
+    "category": "typos"
+  },
+  {
+    "id": "typo-005",
+    "direction": "ru_to_ky",
+    "source": "атправь сюда",
+    "reference": "ушул жакка жибер",
+    "style": "very_casual",
+    "category": "typos"
+  },
+  {
+    "id": "typo-006",
+    "direction": "ky_to_ru",
+    "source": "акча туштубу",
+    "reference": "деньги пришли?",
+    "style": "very_casual",
+    "category": "typos"
+  },
+  {
+    "id": "typo-007",
+    "direction": "ky_to_ru",
+    "source": "азр текшерем",
+    "reference": "сейчас проверю",
+    "style": "very_casual",
+    "category": "typos"
+  },
+  {
+    "id": "typo-008",
+    "direction": "ky_to_ru",
+    "source": "жиберч",
+    "reference": "скинь пожалуйста",
+    "style": "very_casual",
+    "category": "typos"
+  },
+  {
+    "id": "typo-009",
+    "direction": "ky_to_ru",
+    "source": "кайдасын",
+    "reference": "ты где",
+    "style": "very_casual",
+    "category": "typos"
+  },
+  {
+    "id": "typo-010",
+    "direction": "ky_to_ru",
+    "source": "тушунбодум",
+    "reference": "не понял",
+    "style": "very_casual",
+    "category": "typos"
+  },
+  {
+    "id": "nopunct-001",
+    "direction": "ru_to_ky",
+    "source": "привет брат как дела",
+    "reference": "салам брат кандайсың",
+    "style": "casual",
+    "category": "no_punctuation"
+  },
+  {
+    "id": "nopunct-002",
+    "direction": "ru_to_ky",
+    "source": "деньги еще не пришли",
+    "reference": "акча али түшө элек",
+    "style": "casual",
+    "category": "no_punctuation"
+  },
+  {
+    "id": "nopunct-003",
+    "direction": "ru_to_ky",
+    "source": "брат сейчас скинешь деньги",
+    "reference": "брат азыр акчаны скинешьби",
+    "style": "very_casual",
+    "category": "no_punctuation"
+  },
+  {
+    "id": "nopunct-004",
+    "direction": "ru_to_ky",
+    "source": "можно на эту карту",
+    "reference": "ушул картага болобу",
+    "style": "casual",
+    "category": "no_punctuation"
+  },
+  {
+    "id": "nopunct-005",
+    "direction": "ru_to_ky",
+    "source": "это не мой аккаунт",
+    "reference": "бул менин аккаунтум эмес",
+    "style": "casual",
+    "category": "no_punctuation"
+  },
+  {
+    "id": "nopunct-006",
+    "direction": "ru_to_ky",
+    "source": "у меня нет доступа",
+    "reference": "менде доступ жок",
+    "style": "casual",
+    "category": "no_punctuation"
+  },
+  {
+    "id": "nopunct-007",
+    "direction": "ru_to_ky",
+    "source": "здравствуйте подскажите пожалуйста когда будет перевод",
+    "reference": "саламатсызбы айтып коёсузбу перевод качан болот",
+    "style": "formal",
+    "category": "no_punctuation"
+  },
+  {
+    "id": "nopunct-008",
+    "direction": "ru_to_ky",
+    "source": "отправьте пожалуйста правильные реквизиты",
+    "reference": "туура реквизиттерди жиберип коюңузчу",
+    "style": "formal",
+    "category": "no_punctuation"
+  },
+  {
+    "id": "nopunct-009",
+    "direction": "ru_to_ky",
+    "source": "я проверю информацию и напишу вам",
+    "reference": "маалыматты текшерип сизге жазам",
+    "style": "neutral",
+    "category": "no_punctuation"
+  },
+  {
+    "id": "nopunct-010",
+    "direction": "ru_to_ky",
+    "source": "ваша заявка находится на проверке",
+    "reference": "сиздин заявка текшерилип жатат",
+    "style": "neutral",
+    "category": "no_punctuation"
+  },
+  {
+    "id": "nopunct-011",
+    "direction": "ru_to_ky",
+    "source": "не переживай все будет нормально",
+    "reference": "капа болбо баары жакшы болот",
+    "style": "casual",
+    "category": "no_punctuation"
+  },
+  {
+    "id": "nopunct-012",
+    "direction": "ru_to_ky",
+    "source": "брат азыр 500 сом скинешь",
+    "reference": "брат азыр 500 сом скинешьби",
+    "style": "very_casual",
+    "category": "no_punctuation"
+  },
+  {
+    "id": "required-001",
+    "direction": "ru_to_ky",
+    "source": "перевод уже отправил",
+    "reference": "переводду жибергем",
+    "style": "casual",
+    "category": "transfers"
+  },
+  {
+    "id": "required-002",
+    "direction": "ky_to_ru",
+    "source": "500 сом котордум",
+    "reference": "перевел 500 сом",
+    "style": "casual",
+    "category": "transfers"
+  },
+  {
+    "id": "required-003",
+    "direction": "ru_to_ky",
+    "source": "код 847291",
+    "reference": "код 847291",
+    "style": "casual",
+    "category": "numbers"
+  },
+  {
+    "id": "required-004",
+    "direction": "ky_to_ru",
+    "source": "ID 739105 даяр",
+    "reference": "ID 739105 готов",
+    "style": "casual",
+    "category": "numbers"
+  },
+  {
+    "id": "required-005",
+    "direction": "ru_to_ky",
+    "source": "отправь пожалуйста ссылку",
+    "reference": "ссылканы жиберчи",
+    "style": "casual",
+    "category": "requests"
+  },
+  {
+    "id": "required-006",
+    "direction": "ky_to_ru",
+    "source": "скрин жиберчи",
+    "reference": "скинь скрин пожалуйста",
+    "style": "casual",
+    "category": "requests"
+  },
+  {
+    "id": "required-007",
+    "direction": "ru_to_ky",
+    "source": "да уже готово",
+    "reference": "ооба даяр",
+    "style": "casual",
+    "category": "answers"
+  },
+  {
+    "id": "required-008",
+    "direction": "ky_to_ru",
+    "source": "ооба болот",
+    "reference": "да будет",
+    "style": "casual",
+    "category": "answers"
+  },
+  {
+    "id": "holdout-ru-001",
+    "direction": "ru_to_ky",
+    "source": "ты сейчас дома?",
+    "reference": "азыр үйдөсүңбү?",
+    "style": "casual",
+    "category": "questions",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ky-001",
+    "direction": "ky_to_ru",
+    "source": "азыр үйдөсүңбү?",
+    "reference": "ты сейчас дома?",
+    "style": "casual",
+    "category": "questions",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-002",
+    "direction": "ru_to_ky",
+    "source": "я через 10 минут приду",
+    "reference": "10 мүнөттөн кийин барам",
+    "style": "casual",
+    "category": "numbers",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ky-002",
+    "direction": "ky_to_ru",
+    "source": "10 мүнөттөн кийин барам",
+    "reference": "я через 10 минут приду",
+    "style": "casual",
+    "category": "numbers",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-003",
+    "direction": "ru_to_ky",
+    "source": "ему уже написал?",
+    "reference": "ага жаздыңбы?",
+    "style": "casual",
+    "category": "questions",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ky-003",
+    "direction": "ky_to_ru",
+    "source": "ага жаздыңбы?",
+    "reference": "ему уже написал?",
+    "style": "casual",
+    "category": "questions",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-004",
+    "direction": "ru_to_ky",
+    "source": "пусть подождет немного",
+    "reference": "бир аз күтүп турсун",
+    "style": "casual",
+    "category": "requests",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ky-004",
+    "direction": "ky_to_ru",
+    "source": "бир аз күтүп турсун",
+    "reference": "пусть подождет немного",
+    "style": "casual",
+    "category": "requests",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-005",
+    "direction": "ru_to_ky",
+    "source": "у тебя есть другая карта?",
+    "reference": "башка картаң барбы?",
+    "style": "casual",
+    "category": "questions",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ky-005",
+    "direction": "ky_to_ru",
+    "source": "башка картаң барбы?",
+    "reference": "у тебя есть другая карта?",
+    "style": "casual",
+    "category": "questions",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-006",
+    "direction": "ru_to_ky",
+    "source": "скинь номер карты",
+    "reference": "карта номерин жиберчи",
+    "style": "casual",
+    "category": "requests",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ky-006",
+    "direction": "ky_to_ru",
+    "source": "карта номерин жиберчи",
+    "reference": "скинь номер карты",
+    "style": "casual",
+    "category": "requests",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-007",
+    "direction": "ru_to_ky",
+    "source": "не отправляй пока",
+    "reference": "азырынча жибербе",
+    "style": "casual",
+    "category": "negative_statements",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ky-007",
+    "direction": "ky_to_ru",
+    "source": "азырынча жибербе",
+    "reference": "не отправляй пока",
+    "style": "casual",
+    "category": "negative_statements",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-008",
+    "direction": "ru_to_ky",
+    "source": "я сам проверю",
+    "reference": "өзүм текшерем",
+    "style": "casual",
+    "category": "casual",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ky-008",
+    "direction": "ky_to_ru",
+    "source": "өзүм текшерем",
+    "reference": "я сам проверю",
+    "style": "casual",
+    "category": "casual",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-009",
+    "direction": "ru_to_ky",
+    "source": "потом созвонимся",
+    "reference": "кийин сүйлөшөбүз",
+    "style": "casual",
+    "category": "casual",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ky-009",
+    "direction": "ky_to_ru",
+    "source": "кийин сүйлөшөбүз",
+    "reference": "потом созвонимся",
+    "style": "casual",
+    "category": "casual",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-010",
+    "direction": "ru_to_ky",
+    "source": "ответ пока не пришел",
+    "reference": "жооп али келе элек",
+    "style": "casual",
+    "category": "negative_statements",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ky-010",
+    "direction": "ky_to_ru",
+    "source": "жооп али келе элек",
+    "reference": "ответ пока не пришел",
+    "style": "casual",
+    "category": "negative_statements",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-011",
+    "direction": "ru_to_ky",
+    "source": "сколько времени займет",
+    "reference": "канча убакыт кетет",
+    "style": "casual",
+    "category": "questions",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ky-011",
+    "direction": "ky_to_ru",
+    "source": "канча убакыт кетет",
+    "reference": "сколько времени займет",
+    "style": "casual",
+    "category": "questions",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-012",
+    "direction": "ru_to_ky",
+    "source": "можно сегодня сделать?",
+    "reference": "бүгүн кылса болобу?",
+    "style": "casual",
+    "category": "questions",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ky-012",
+    "direction": "ky_to_ru",
+    "source": "бүгүн кылса болобу?",
+    "reference": "можно сегодня сделать?",
+    "style": "casual",
+    "category": "questions",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-013",
+    "direction": "ru_to_ky",
+    "source": "он точно согласен?",
+    "reference": "ал точно макулбу?",
+    "style": "casual",
+    "category": "mixed_ru_ky",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ky-013",
+    "direction": "ky_to_ru",
+    "source": "ал точно макулбу?",
+    "reference": "он точно согласен?",
+    "style": "casual",
+    "category": "mixed_ru_ky",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-014",
+    "direction": "ru_to_ky",
+    "source": "ничего не понял брат",
+    "reference": "эч нерсе түшүнгөн жокмун брат",
+    "style": "casual",
+    "category": "slang",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ky-014",
+    "direction": "ky_to_ru",
+    "source": "эч нерсе түшүнгөн жокмун брат",
+    "reference": "ничего не понял брат",
+    "style": "casual",
+    "category": "slang",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-015",
+    "direction": "ru_to_ky",
+    "source": "сначала отправь скрин",
+    "reference": "биринчи скрин жибер",
+    "style": "casual",
+    "category": "screenshots",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ky-015",
+    "direction": "ky_to_ru",
+    "source": "биринчи скрин жибер",
+    "reference": "сначала отправь скрин",
+    "style": "casual",
+    "category": "screenshots",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-016",
+    "direction": "ru_to_ky",
+    "source": "деньги вернутся на карту",
+    "reference": "акча картага кайра түшөт",
+    "style": "casual",
+    "category": "money",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ky-016",
+    "direction": "ky_to_ru",
+    "source": "акча картага кайра түшөт",
+    "reference": "деньги вернутся на карту",
+    "style": "casual",
+    "category": "money",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-017",
+    "direction": "ru_to_ky",
+    "source": "с баланса сняли 8%",
+    "reference": "баланстан 8% алышты",
+    "style": "casual",
+    "category": "money",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ky-017",
+    "direction": "ky_to_ru",
+    "source": "баланстан 8% алышты",
+    "reference": "с баланса сняли 8%",
+    "style": "casual",
+    "category": "money",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-018",
+    "direction": "ru_to_ky",
+    "source": "отправь ровно 1200 сом",
+    "reference": "точно 1200 сом жибер",
+    "style": "casual",
+    "category": "money",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ky-018",
+    "direction": "ky_to_ru",
+    "source": "точно 1200 сом жибер",
+    "reference": "отправь ровно 1200 сом",
+    "style": "casual",
+    "category": "money",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-019",
+    "direction": "ru_to_ky",
+    "source": "мой ID 483920",
+    "reference": "менин ID 483920",
+    "style": "casual",
+    "category": "numbers",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ky-019",
+    "direction": "ky_to_ru",
+    "source": "менин ID 483920",
+    "reference": "мой ID 483920",
+    "style": "casual",
+    "category": "numbers",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-020",
+    "direction": "ru_to_ky",
+    "source": "напиши @manager сейчас",
+    "reference": "@manager ге азыр жаз",
+    "style": "casual",
+    "category": "Telegram",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ky-020",
+    "direction": "ky_to_ru",
+    "source": "@manager ге азыр жаз",
+    "reference": "напиши @manager сейчас",
+    "style": "casual",
+    "category": "Telegram",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-021",
+    "direction": "ru_to_ky",
+    "source": "открой https://t.me/example",
+    "reference": "https://t.me/example ач",
+    "style": "casual",
+    "category": "Telegram",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ky-021",
+    "direction": "ky_to_ru",
+    "source": "https://t.me/example ач",
+    "reference": "открой https://t.me/example",
+    "style": "casual",
+    "category": "Telegram",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-022",
+    "direction": "ru_to_ky",
+    "source": "завтра утром напомни",
+    "reference": "эртең менен эскертип кой",
+    "style": "casual",
+    "category": "requests",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ky-022",
+    "direction": "ky_to_ru",
+    "source": "эртең менен эскертип кой",
+    "reference": "завтра утром напомни",
+    "style": "casual",
+    "category": "requests",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-023",
+    "direction": "ru_to_ky",
+    "source": "ща уточню у него",
+    "reference": "азыр андан тактап алам",
+    "style": "casual",
+    "category": "slang",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ky-023",
+    "direction": "ky_to_ru",
+    "source": "азыр андан тактап алам",
+    "reference": "ща уточню у него",
+    "style": "casual",
+    "category": "slang",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-024",
+    "direction": "ru_to_ky",
+    "source": "да брат все четко",
+    "reference": "ооба брат баары норм",
+    "style": "casual",
+    "category": "slang",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ky-024",
+    "direction": "ky_to_ru",
+    "source": "ооба брат баары норм",
+    "reference": "да брат все четко",
+    "style": "casual",
+    "category": "slang",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-025",
+    "direction": "ru_to_ky",
+    "source": "не бери трубку",
+    "reference": "трубканы алба",
+    "style": "casual",
+    "category": "negative_statements",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ky-025",
+    "direction": "ky_to_ru",
+    "source": "трубканы алба",
+    "reference": "не бери трубку",
+    "style": "casual",
+    "category": "negative_statements",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-026",
+    "direction": "ru_to_ky",
+    "source": "он че сказал",
+    "reference": "ал эмне деди",
+    "style": "casual",
+    "category": "slang",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ky-026",
+    "direction": "ky_to_ru",
+    "source": "ал эмне деди",
+    "reference": "он че сказал",
+    "style": "casual",
+    "category": "slang",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-027",
+    "direction": "ru_to_ky",
+    "source": "просто жди",
+    "reference": "жөн эле күт",
+    "style": "casual",
+    "category": "very_short",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ky-027",
+    "direction": "ky_to_ru",
+    "source": "жөн эле күт",
+    "reference": "просто жди",
+    "style": "casual",
+    "category": "very_short",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-028",
+    "direction": "ru_to_ky",
+    "source": "это твой промокод A7K92",
+    "reference": "бул сенин промокодуң A7K92",
+    "style": "casual",
+    "category": "Telegram",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ky-028",
+    "direction": "ky_to_ru",
+    "source": "бул сенин промокодуң A7K92",
+    "reference": "это твой промокод A7K92",
+    "style": "casual",
+    "category": "Telegram",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-029",
+    "direction": "ru_to_ky",
+    "source": "заявка на 25 USDT готова",
+    "reference": "25 USDT заявка даяр",
+    "style": "casual",
+    "category": "money",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ky-029",
+    "direction": "ky_to_ru",
+    "source": "25 USDT заявка даяр",
+    "reference": "заявка на 25 USDT готова",
+    "style": "casual",
+    "category": "money",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ru-030",
+    "direction": "ru_to_ky",
+    "source": "пожалуйста не меняйте пароль",
+    "reference": "парольду өзгөртпөй туруңузчу",
+    "style": "formal",
+    "category": "formal",
+    "holdout": true
+  },
+  {
+    "id": "holdout-ky-030",
+    "direction": "ky_to_ru",
+    "source": "парольду өзгөртпөй туруңузчу",
+    "reference": "пожалуйста не меняйте пароль",
+    "style": "formal",
+    "category": "formal",
+    "holdout": true
+  }
+]

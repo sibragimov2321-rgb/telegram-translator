@@ -13,6 +13,7 @@ from pathlib import Path
 from typing import Final
 
 import httpx
+import kg_translation as kg
 from dotenv import load_dotenv
 from openai import AsyncOpenAI
 from telegram import (
@@ -61,6 +62,7 @@ MODEL: Final = (
     or os.getenv("OPENAI_MODEL")
     or ("openai/gpt-4.1-mini" if OPENROUTER_API_KEY else "gpt-4.1-mini")
 )
+KYRGYZ_CONVERSATIONAL_MODE: Final = kg.env_flag("KYRGYZ_CONVERSATIONAL_MODE", False)
 DB_PATH: Final = Path(os.getenv("DATABASE_PATH", str(Path(__file__).with_name("translator.sqlite3"))))
 BOOTSTRAP_ADMIN_IDS: Final = tuple(
     int(value) for value in os.getenv("BOOTSTRAP_ADMIN_IDS", "").split(",") if value.strip().isdigit()
@@ -540,7 +542,7 @@ def strict_turkmen_output(text: str) -> str:
     return result
 
 
-async def translate_text(
+async def _translate_text_legacy(
     text: str, target: str, tone: str = "clear", history: list[sqlite3.Row] | None = None
 ) -> str:
     normalized = " ".join(text.casefold().strip(" .,!?:;…").split())
@@ -572,6 +574,52 @@ async def translate_text(
     return result
 
 
+async def translate_kyrgyz_conversational(
+    text: str,
+    direction: str,
+    history: list[sqlite3.Row] | None = None,
+) -> str:
+    """Use the small, privacy-safe Kyrgyz style assets without loading the raw export."""
+    style = kg.classify_style(text)
+    instructions = kg.build_instructions(text, direction, style)
+    model_input = kg.build_input(text, history[-kg.CONTEXT_LIMIT:] if history else None)
+    response = await client.responses.create(
+        model=MODEL,
+        instructions=instructions,
+        input=model_input,
+        temperature=0.2,
+        max_output_tokens=400,
+    )
+    result = response.output_text.strip()
+    problems = kg.translation_needs_retry(text, result, direction)
+    if problems:
+        retry = await client.responses.create(
+            model=MODEL,
+            instructions=instructions + "\n\n" + kg.retry_instruction(problems, direction),
+            input=model_input,
+            temperature=0.1,
+            max_output_tokens=400,
+        )
+        corrected = retry.output_text.strip()
+        if corrected:
+            result = corrected
+        problems = kg.translation_needs_retry(text, result, direction)
+    if problems:
+        raise RuntimeError("Kyrgyz translation validation failed: " + ", ".join(problems))
+    return result
+
+
+async def translate_text(
+    text: str, target: str, tone: str = "clear", history: list[sqlite3.Row] | None = None
+) -> str:
+    if KYRGYZ_CONVERSATIONAL_MODE and kg.is_kyrgyz_language(target):
+        try:
+            return await translate_kyrgyz_conversational(text, "ru_to_ky", history)
+        except Exception:
+            logger.exception("Conversational Kyrgyz translation failed; using legacy translator")
+    return await _translate_text_legacy(text, target, tone, history)
+
+
 async def translate_manual_chat(
     text: str, selected_language: str, tone: str = "clear", history: list[sqlite3.Row] | None = None
 ) -> str:
@@ -579,6 +627,12 @@ async def translate_manual_chat(
     normalized = " ".join(text.casefold().strip(" .,!?:;…").split())
     if normalized in TURKMEN_RUSSIAN_PHRASES:
         return TURKMEN_RUSSIAN_PHRASES[normalized]
+    if KYRGYZ_CONVERSATIONAL_MODE and kg.is_kyrgyz_language(selected_language):
+        direction = kg.choose_direction(text)
+        try:
+            return await translate_kyrgyz_conversational(text, direction, history)
+        except Exception:
+            logger.exception("Manual conversational Kyrgyz translation failed; using legacy translator")
     turkmen_note = ""
     if is_turkmen_language(selected_language):
         turkmen_note = (
@@ -650,6 +704,16 @@ async def translate_incoming(
     normalized = text.casefold().strip(" .,!?:;…")
     if target == "Русский" and normalized in TURKMEN_RUSSIAN_PHRASES:
         return "Turkmen", TURKMEN_RUSSIAN_PHRASES[normalized]
+    if (
+        KYRGYZ_CONVERSATIONAL_MODE
+        and target == "Русский"
+        and (kg.is_kyrgyz_language(known_language) or kg.looks_kyrgyz(text))
+    ):
+        try:
+            translated = await translate_kyrgyz_conversational(text, "ky_to_ru", history)
+            return "Kyrgyz", translated
+        except Exception:
+            logger.exception("Incoming conversational Kyrgyz translation failed; using language detection")
     hint = f" The sender's previous messages were in {known_language}; use that as a strong hint." if known_language else ""
     response = await client.responses.create(
         model=MODEL,
@@ -1502,7 +1566,12 @@ def main() -> None:
     app.add_handler(CallbackQueryHandler(callback))
     app.add_handler(MessageHandler(filters.StatusUpdate.USERS_SHARED, add_selected_admin))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, private_text))
-    logger.info("Bot started with provider %s and model %s", AI_PROVIDER, MODEL)
+    logger.info(
+        "Bot started with provider %s, model %s, Kyrgyz conversational mode %s",
+        AI_PROVIDER,
+        MODEL,
+        KYRGYZ_CONVERSATIONAL_MODE,
+    )
     app.run_polling(allowed_updates=Update.ALL_TYPES)
 
 

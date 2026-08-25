@@ -49,6 +49,34 @@ Keep `.env` private. Do not commit it or send its contents to anyone.
 Если `OPENROUTER_API_KEY` не задан, бот продолжит использовать `OPENAI_API_KEY`
 как резервный вариант. Для OpenRouter адрес API выбирается автоматически.
 
+## Разговорный кыргызский режим
+
+Для изолированного разговорного перевода Russian ↔ Kyrgyz добавьте в Railway:
+
+```env
+KYRGYZ_CONVERSATIONAL_MODE=true
+```
+
+При `false` бот мгновенно возвращается к прежнему переводчику. Режим использует
+только небольшие анонимные файлы из `data/`: профиль стиля, словарь-подсказку,
+curated-примеры и до 6 подходящих стилевых сообщений. Исходный Telegram export
+`result1.json` не входит в приложение, не загружается на Railway и не отправляется
+в AI API.
+
+Для повторной офлайн-сборки корпуса:
+
+```powershell
+python tools/build_kg_style_corpus.py C:\path\to\result1.json --output-dir data
+python tools/build_kg_test_cases.py
+```
+
+Для сравнения 50 переводов старого и нового режимов (использует API и расходует
+небольшое количество баланса):
+
+```powershell
+python tools/evaluate_kg_translation.py --limit 50
+```
+
 ## Notes
 
 - Telegram allows one connected Business bot per account.

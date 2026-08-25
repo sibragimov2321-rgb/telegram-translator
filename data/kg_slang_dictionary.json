@@ -1,0 +1,1079 @@
+{
+  "usage": "Context hints only. Never apply these entries with direct word replacement.",
+  "curated_hints": [
+    {
+      "form": "азыр",
+      "meaning_ru": "сейчас",
+      "note": "обычная короткая форма"
+    },
+    {
+      "form": "болду",
+      "meaning_ru": "ладно / готово / хватит",
+      "note": "значение зависит от контекста"
+    },
+    {
+      "form": "барбы",
+      "meaning_ru": "есть? / имеется?",
+      "note": "короткий вопрос"
+    },
+    {
+      "form": "жок",
+      "meaning_ru": "нет",
+      "note": "разговорная базовая форма"
+    },
+    {
+      "form": "канча",
+      "meaning_ru": "сколько",
+      "note": "часто про цену или сумму"
+    },
+    {
+      "form": "котор",
+      "meaning_ru": "переведи / отправь перевод",
+      "note": "смотреть контекст денег"
+    },
+    {
+      "form": "жиберчи",
+      "meaning_ru": "скинь пожалуйста",
+      "note": "разговорная просьба"
+    },
+    {
+      "form": "күтүп тур",
+      "meaning_ru": "подожди",
+      "note": "обычная чат-фраза"
+    },
+    {
+      "form": "эмне болду",
+      "meaning_ru": "что случилось / что такое",
+      "note": "смотреть контекст"
+    },
+    {
+      "form": "норм",
+      "meaning_ru": "нормально",
+      "note": "русское слово в mixed RU/KY"
+    },
+    {
+      "form": "скинь скрин",
+      "meaning_ru": "пришли скриншот",
+      "note": "естественное переключение кода"
+    },
+    {
+      "form": "аккаунт ач",
+      "meaning_ru": "открой аккаунт",
+      "note": "mixed RU/KY"
+    },
+    {
+      "form": "баланс толукта",
+      "meaning_ru": "пополни баланс",
+      "note": "mixed RU/KY"
+    },
+    {
+      "form": "картага түшөт",
+      "meaning_ru": "поступит на карту",
+      "note": "mixed RU/KY"
+    }
+  ],
+  "frequent_casual_forms": [
+    {
+      "form": "эле",
+      "frequency": 3636,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "сом",
+      "frequency": 3161,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "деп",
+      "frequency": 2537,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "мен",
+      "frequency": 2364,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "керек",
+      "frequency": 2265,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "не",
+      "frequency": 2169,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "жок",
+      "frequency": 2166,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "мага",
+      "frequency": 2040,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "бар",
+      "frequency": 1952,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "дагы",
+      "frequency": 1668,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "бля",
+      "frequency": 1509,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "болот",
+      "frequency": 1447,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "сен",
+      "frequency": 1434,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "чотр",
+      "frequency": 1314,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "болду",
+      "frequency": 1247,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "канча",
+      "frequency": 1225,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "менен",
+      "frequency": 1137,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "кылып",
+      "frequency": 1120,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "берем",
+      "frequency": 1110,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "экен",
+      "frequency": 1064,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "болсо",
+      "frequency": 989,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "эми",
+      "frequency": 980,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "ал",
+      "frequency": 978,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "сага",
+      "frequency": 962,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "кой",
+      "frequency": 922,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "гол",
+      "frequency": 912,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "жакшы",
+      "frequency": 898,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "бер",
+      "frequency": 819,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "азыр",
+      "frequency": 814,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "барбы",
+      "frequency": 789,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "анан",
+      "frequency": 766,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "бул",
+      "frequency": 736,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "50",
+      "frequency": 730,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "бир",
+      "frequency": 727,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "жиги",
+      "frequency": 668,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "алып",
+      "frequency": 648,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "дос",
+      "frequency": 643,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "отсо",
+      "frequency": 635,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "рек",
+      "frequency": 629,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "болуп",
+      "frequency": 625,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "100",
+      "frequency": 603,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "ушул",
+      "frequency": 599,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "берчи",
+      "frequency": 565,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "анда",
+      "frequency": 554,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "берип",
+      "frequency": 548,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "дейм",
+      "frequency": 548,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "ким",
+      "frequency": 525,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "деген",
+      "frequency": 512,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "кандай",
+      "frequency": 492,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "да",
+      "frequency": 477,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "ака",
+      "frequency": 472,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "пп",
+      "frequency": 461,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "акча",
+      "frequency": 454,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "жб",
+      "frequency": 427,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "лс",
+      "frequency": 411,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "вв",
+      "frequency": 403,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "берет",
+      "frequency": 397,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "атат",
+      "frequency": 390,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "качан",
+      "frequency": 377,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "же",
+      "frequency": 374,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "котогум",
+      "frequency": 367,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "ошол",
+      "frequency": 359,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "го",
+      "frequency": 357,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "кимде",
+      "frequency": 345,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "которуп",
+      "frequency": 332,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "деле",
+      "frequency": 331,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "чыгат",
+      "frequency": 329,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "калды",
+      "frequency": 325,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "10",
+      "frequency": 314,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "ошондо",
+      "frequency": 314,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "салып",
+      "frequency": 310,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "ставка",
+      "frequency": 306,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "ука",
+      "frequency": 302,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "кот",
+      "frequency": 302,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "адам",
+      "frequency": 296,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "бирок",
+      "frequency": 293,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "койчу",
+      "frequency": 289,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "20",
+      "frequency": 289,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "пиздец",
+      "frequency": 287,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "брат",
+      "frequency": 282,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "тур",
+      "frequency": 278,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "карап",
+      "frequency": 275,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "азр",
+      "frequency": 274,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "экс",
+      "frequency": 266,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "радной",
+      "frequency": 263,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "турчу",
+      "frequency": 261,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "болтат",
+      "frequency": 253,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "отот",
+      "frequency": 251,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "бугун",
+      "frequency": 251,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "кеф",
+      "frequency": 250,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "болобу",
+      "frequency": 247,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "еле",
+      "frequency": 247,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "эмне",
+      "frequency": 244,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "500",
+      "frequency": 243,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "оа",
+      "frequency": 241,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "реал",
+      "frequency": 238,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "кылам",
+      "frequency": 233,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "200",
+      "frequency": 230,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "атам",
+      "frequency": 230,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "родной",
+      "frequency": 229,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "аа",
+      "frequency": 229,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "зайбал",
+      "frequency": 229,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "озу",
+      "frequency": 228,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "утса",
+      "frequency": 222,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "пул",
+      "frequency": 221,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "победа",
+      "frequency": 219,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "тургулачы",
+      "frequency": 215,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "досум",
+      "frequency": 210,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "нахуй",
+      "frequency": 208,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "отуп",
+      "frequency": 207,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "15",
+      "frequency": 206,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "похуй",
+      "frequency": 204,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "эмес",
+      "frequency": 202,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "бала",
+      "frequency": 200,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "башка",
+      "frequency": 200,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "коток",
+      "frequency": 196,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "ошо",
+      "frequency": 190,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "бот",
+      "frequency": 186,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "кайтат",
+      "frequency": 184,
+      "kind": "corpus_frequency_candidate"
+    },
+    {
+      "form": "тез",
+      "frequency": 183,
+      "kind": "corpus_frequency_candidate"
+    }
+  ],
+  "frequent_phrases": [
+    {
+      "form": "50 сом",
+      "frequency": 293,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "гол керек",
+      "frequency": 249,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "100 сом",
+      "frequency": 226,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "не болду",
+      "frequency": 180,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "рек деп",
+      "frequency": 150,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "сом жок",
+      "frequency": 142,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "сом берип",
+      "frequency": 138,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "деп кой",
+      "frequency": 137,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "сом бар",
+      "frequency": 131,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "20 сом",
+      "frequency": 131,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "керек эле",
+      "frequency": 125,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "1 гол",
+      "frequency": 105,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "вв кылып",
+      "frequency": 102,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "жок болуп",
+      "frequency": 101,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "10 сом",
+      "frequency": 97,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "пп кылып",
+      "frequency": 97,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "15 сом",
+      "frequency": 96,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "берем деп",
+      "frequency": 92,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "1 сом",
+      "frequency": 90,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "5 сом",
+      "frequency": 88,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "жон эле",
+      "frequency": 88,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "чотр болот",
+      "frequency": 87,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "отсо чотр",
+      "frequency": 86,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "кимде бар",
+      "frequency": 85,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "мага чотр",
+      "frequency": 84,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "чотр берем",
+      "frequency": 84,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "кылыш керек",
+      "frequency": 81,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "2 гол",
+      "frequency": 81,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "мен дагы",
+      "frequency": 79,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "1 тайм",
+      "frequency": 77,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "чотр бар",
+      "frequency": 76,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "керек болтат",
+      "frequency": 72,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "деп атам",
+      "frequency": 70,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "от души",
+      "frequency": 69,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "которуп тургулачы",
+      "frequency": 69,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "сом ташап",
+      "frequency": 68,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "сом салып",
+      "frequency": 67,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "болуш керек",
+      "frequency": 67,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "1 1",
+      "frequency": 67,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "бир гол",
+      "frequency": 66,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "сом которуп",
+      "frequency": 65,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "болот эле",
+      "frequency": 65,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "канча сом",
+      "frequency": 64,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "дагы бир",
+      "frequency": 64,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "бар эле",
+      "frequency": 64,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "чотр болобу",
+      "frequency": 63,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "не болтат",
+      "frequency": 63,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "берип турчу",
+      "frequency": 63,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "берип тургулачы",
+      "frequency": 62,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "35 сом",
+      "frequency": 62,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "сом чотр",
+      "frequency": 61,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "сом болсо",
+      "frequency": 61,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "ташап тур",
+      "frequency": 60,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "бар экен",
+      "frequency": 60,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "болуп атат",
+      "frequency": 59,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "дагы 1",
+      "frequency": 59,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "30 сом",
+      "frequency": 58,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "мага да",
+      "frequency": 57,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "алыш керек",
+      "frequency": 57,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "сом менен",
+      "frequency": 57,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "чотр берчи",
+      "frequency": 55,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "чотр барбы",
+      "frequency": 54,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "болсо керек",
+      "frequency": 54,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "мага дагы",
+      "frequency": 54,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "мен сага",
+      "frequency": 54,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "сом рек",
+      "frequency": 54,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "шанс бар",
+      "frequency": 53,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "1000 сом",
+      "frequency": 52,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "бля мен",
+      "frequency": 52,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "керек болуп",
+      "frequency": 52,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "жиги кимде",
+      "frequency": 51,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "2 1",
+      "frequency": 51,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "болуп калды",
+      "frequency": 48,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "мага канча",
+      "frequency": 48,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "2 3",
+      "frequency": 48,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "сом чыгабы",
+      "frequency": 47,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "сом барбы",
+      "frequency": 47,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "жок экен",
+      "frequency": 47,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "чотр бер",
+      "frequency": 47,
+      "kind": "frequent_chat_phrase"
+    },
+    {
+      "form": "сом таша",
+      "frequency": 47,
+      "kind": "frequent_chat_phrase"
+    }
+  ]
+}

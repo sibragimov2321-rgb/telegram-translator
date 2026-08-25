@@ -1,6 +1,6 @@
 .env
-.venv/
+*.sqlite3
 __pycache__/
-*.py[cod]
-translator.sqlite3
-*.log
+*.pyc
+result1.json
+data/kg_conversational_corpus.jsonl
