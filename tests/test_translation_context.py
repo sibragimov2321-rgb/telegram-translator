@@ -20,6 +20,16 @@ class FakeResponses:
         return SimpleNamespace(output_text=self.output_text)
 
 
+class SequenceResponses:
+    def __init__(self, *outputs):
+        self.calls = []
+        self.outputs = iter(outputs)
+
+    async def create(self, **kwargs):
+        self.calls.append(kwargs)
+        return SimpleNamespace(output_text=next(self.outputs))
+
+
 class TranslationContextTests(unittest.TestCase):
     def setUp(self):
         self.temp_dir = tempfile.TemporaryDirectory()
@@ -83,6 +93,8 @@ class TranslationContextTests(unittest.TestCase):
             self.assertNotIn("overly correct", instructions)
         turkmen_instructions = bot.translation_instruction("Türkmençe (туркменский)", "casual")
         self.assertIn(bot.TURKMEN_OUTPUT_RULES, turkmen_instructions)
+        self.assertIn(bot.TURKMEN_INPUT_HINTS, turkmen_instructions)
+        self.assertIn("utmak", turkmen_instructions)
         self.assertIn("Never use Cyrillic", turkmen_instructions)
         self.assertIn("Do not use full stops, commas, question marks", turkmen_instructions)
         self.assertEqual("salam cay gowy", bot.plain_turkmen_latin("salam, cäy gowy."))
@@ -156,6 +168,36 @@ class TranslationContextTests(unittest.TestCase):
             self.assertEqual(expected, translated)
         finally:
             bot.client = previous_client
+
+    def test_manual_turkmen_input_returns_russian_cyrillic(self):
+        fake_responses = SequenceResponses(
+            "Obyasnyu potom skolko uyde v takom sluchae",
+            "Объясню потом, сколько уйдёт в таком случае",
+        )
+        previous_client = bot.client
+        bot.client = SimpleNamespace(responses=fake_responses)
+        try:
+            result = asyncio.run(
+                bot.translate_manual_chat(
+                    "Men oyuncym utan yagdaynda nace % gitya sonam dusundirip berayin",
+                    "Türkmençe (туркменский)",
+                )
+            )
+        finally:
+            bot.client = previous_client
+
+        self.assertEqual("Объясню потом, сколько уйдёт в таком случае", result)
+        self.assertEqual(2, len(fake_responses.calls))
+        self.assertIn("Russian only in Cyrillic", fake_responses.calls[1]["instructions"])
+
+    def test_russian_output_validation_rejects_transliteration_and_other_scripts(self):
+        source = "Men MelBet akkaunty barada name diyjek"
+        self.assertTrue(bot.is_valid_russian_output("Что сказать про аккаунт MelBet", source))
+        self.assertFalse(bot.is_valid_russian_output("Chto skazat pro akkaunt", source))
+        self.assertFalse(bot.is_valid_russian_output("Я объясню потом शर्मливости", source))
+        self.assertTrue(bot.preserves_numeric_values("depozit 8% cykarys 2%", "депозит 8% вывод 2%"))
+        self.assertFalse(bot.preserves_numeric_values("nace % gitya", "сначала доведу до 100%"))
+        self.assertFalse(bot.preserves_numeric_values("depozit 8%", "депозит"))
 
 
 if __name__ == "__main__":
