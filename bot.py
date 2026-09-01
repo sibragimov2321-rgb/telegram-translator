@@ -132,8 +132,8 @@ TURKMEN_INPUT_HINTS: Final = (
 TURKMEN_OUTPUT_RULES: Final = (
     "STRICT TURKMEN OUTPUT RULES: When the output language is Turkmen, always write Turkmen only with basic "
     "Latin letters. Never use Cyrillic. Never use Turkmen or Turkish letters with marks, including ä, ç, ň, ö, "
-    "ş, ü, ý or ž; write their plain chat equivalents instead. Do not use full stops, commas, question marks, "
-    "exclamation marks or other complex punctuation in ordinary text. Keep protected data such as links, "
+    "ş, ü, ý or ž; write their plain chat equivalents instead. Preserve question marks, full stops, commas, "
+    "exclamation marks and percent signs when they belong to the source message, but do not invent extra punctuation. Keep protected data such as links, "
     "@usernames, phone numbers, numbers, percentages and promo codes unchanged. Always preserve the percent sign "
     "when it belongs to a number, for example 8%, 2% or 35%. Preserve the exact source meaning first, then "
     "write naturally like an ordinary person in Telegram. Do not sound literary or overly formal. Keep short "
@@ -572,7 +572,13 @@ async def _translate_text_legacy(
         if corrected:
             result = corrected
     if is_turkmen_language(target):
-        result = strict_turkmen_output(result)
+        if TURKMEN_CONVERSATIONAL_MODE:
+            result = tm.normalize_output(result, tm.classify_style(text))
+            problems = tm.missing_or_changed_entities(text, result)
+            if problems:
+                raise RuntimeError("Turkmen fallback lost protected data: " + ", ".join(problems))
+        else:
+            result = strict_turkmen_output(result)
     return result
 
 
@@ -740,7 +746,7 @@ async def translate_manual_chat(
         ):
             raise RuntimeError("The reverse Turkmen translation is not Russian Cyrillic")
         if contains_cyrillic(text) and not contains_cyrillic(result):
-            result = strict_turkmen_output(result)
+            result = tm.normalize_output(result, tm.classify_style(text)) if TURKMEN_CONVERSATIONAL_MODE else strict_turkmen_output(result)
     return result
 
 
@@ -820,7 +826,13 @@ async def translate_incoming(
             corrected = retry.output_text.strip()
             if corrected:
                 result = corrected
-        result = strict_turkmen_output(result)
+        if TURKMEN_CONVERSATIONAL_MODE:
+            result = tm.normalize_output(result, tm.classify_style(text))
+            problems = tm.missing_or_changed_entities(text, result)
+            if problems:
+                raise RuntimeError("Incoming Turkmen translation lost protected data: " + ", ".join(problems))
+        else:
+            result = strict_turkmen_output(result)
     return language.strip(), result
 
 

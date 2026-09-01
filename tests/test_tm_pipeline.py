@@ -58,9 +58,9 @@ class TurkmenPipelineTests(unittest.TestCase):
         self.assertIn("pul 3 geldi", built)
         self.assertIn("Translate ONLY this message:\na ertir", built)
 
-    def test_ascii_output_removes_marks_and_punctuation_but_keeps_entities(self):
+    def test_ascii_output_removes_marks_but_keeps_source_punctuation_and_entities(self):
         source = "Salam, nähili ýagdaýlaryň? 8%, 2% @manager https://t.me/example"
-        expected = "Salam nahili yagdaylaryn 8% 2% @manager https://t.me/example"
+        expected = "Salam, nahili yagdaylaryn? 8%, 2% @manager https://t.me/example"
         with patch.dict(os.environ, {"TM_OUTPUT_STYLE": "tm_ascii_chat"}):
             self.assertEqual(expected, tm.normalize_output(source, "casual"))
 
@@ -84,7 +84,7 @@ class TurkmenPipelineTests(unittest.TestCase):
                 result = asyncio.run(bot.translate_turkmen_conversational("привет брат как дела", "ru_to_tm"))
         finally:
             bot.client = previous
-        self.assertEqual("Salam brat nahili yagdaylaryn", result)
+        self.assertEqual("Salam, brat, nahili yagdaylaryn?", result)
         self.assertEqual(1, len(fake.calls))
 
     def test_changed_number_causes_retry(self):

@@ -252,7 +252,8 @@ def build_instructions(text: str, direction: str, style: str | None = None) -> s
         reference_lines = "\n".join(f"- {value}" for value in references)
         alphabet_rule = (
             "Use only basic ASCII Latin letters a-z. Never use Cyrillic or letters ä ç ň ö ş ü ý ž. "
-            "For normal chat omit dots commas and complex punctuation."
+            "Preserve the source punctuation such as ? ! . , and % when it is present; do not invent punctuation "
+            "that is absent from the source."
             if output_style(style) == "tm_ascii_chat"
             else "Use standard Turkmen Latin spelling when natural."
         )
@@ -303,16 +304,10 @@ def ascii_turkmen_chat(text: str) -> str:
         "ş": "s", "Ş": "S", "ü": "u", "Ü": "U", "ý": "y", "Ý": "Y", "ž": "j", "Ž": "J",
     }))
     text = "".join(ch for ch in unicodedata.normalize("NFKD", text) if not unicodedata.combining(ch))
-    protected: list[str] = []
-    pattern = re.compile(r"https?://[^\s,]+|www\.[^\s,]+|@\w+|\+?\d[\d() -]{5,}\d|\b\d+(?:[.,]\d+)?\s*%|\b\d+(?:[.,]\d+)+\b|\b(?=[A-Za-z0-9_-]*[A-Za-z])(?=[A-Za-z0-9_-]*\d)[A-Za-z0-9_-]+\b")
-    def protect(match: re.Match[str]) -> str:
-        protected.append(match.group(0))
-        return f"\uFFF0{len(protected)-1}\uFFF1"
-    text = pattern.sub(protect, text)
-    text = "".join(" " if unicodedata.category(ch).startswith("P") else ch for ch in text)
+    # Punctuation is meaningful in a question or a money amount. Keep it as
+    # returned by the model; the prompt tells the model not to invent it.
     text = re.sub(r"[ \t]+", " ", text)
-    text = re.sub(r" *\n *", "\n", text).strip()
-    return re.sub(r"\uFFF0(\d+)\uFFF1", lambda m: protected[int(m.group(1))], text)
+    return re.sub(r" *\n *", "\n", text).strip()
 
 
 def normalize_output(text: str, style: str) -> str:

@@ -96,7 +96,7 @@ class TranslationContextTests(unittest.TestCase):
         self.assertIn(bot.TURKMEN_INPUT_HINTS, turkmen_instructions)
         self.assertIn("utmak", turkmen_instructions)
         self.assertIn("Never use Cyrillic", turkmen_instructions)
-        self.assertIn("Do not use full stops, commas, question marks", turkmen_instructions)
+        self.assertIn("Preserve question marks, full stops, commas", turkmen_instructions)
         self.assertEqual("salam cay gowy", bot.plain_turkmen_latin("salam, cäy gowy."))
         self.assertEqual("Seyle", bot.plain_turkmen_latin("Şeýle"))
         self.assertEqual(
