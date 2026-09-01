@@ -212,7 +212,7 @@ def filter_history(history: Sequence[Mapping[str, object]] | None) -> list[Mappi
         return []
     relevant = []
     for item in history:
-        value = str(item.get("text", ""))
+        value = str(item["text"])
         if CYRILLIC_RE.search(value) or looks_turkmen(value):
             relevant.append(item)
     return relevant[-CONTEXT_LIMIT:]
