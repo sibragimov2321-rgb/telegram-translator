@@ -14,6 +14,7 @@ from typing import Final
 
 import httpx
 import kg_translation as kg
+import mo_translation as mo
 import tm_translation as tm
 from dotenv import load_dotenv
 from openai import AsyncOpenAI
@@ -65,6 +66,7 @@ MODEL: Final = (
 )
 KYRGYZ_CONVERSATIONAL_MODE: Final = kg.env_flag("KYRGYZ_CONVERSATIONAL_MODE", False)
 TURKMEN_CONVERSATIONAL_MODE: Final = tm.env_flag("TM_CONVERSATIONAL_MODE", False)
+MOLDOVAN_CONVERSATIONAL_MODE: Final = mo.env_flag("MOLDOVAN_CONVERSATIONAL_MODE", False)
 DB_PATH: Final = Path(os.getenv("DATABASE_PATH", str(Path(__file__).with_name("translator.sqlite3"))))
 BOOTSTRAP_ADMIN_IDS: Final = tuple(
     int(value) for value in os.getenv("BOOTSTRAP_ADMIN_IDS", "").split(",") if value.strip().isdigit()
@@ -88,6 +90,7 @@ LANGUAGES = {
     "ky": "Кыргызча (кыргызский)",
     "uz": "O‘zbekcha (lotin)",
     "uz_cyr": "Ўзбекча (кирилл)",
+    "mo": "Moldovenească (молдавский)",
 }
 TONES = {
     "formal": "Официально",
@@ -654,6 +657,41 @@ async def translate_turkmen_conversational(
     return result
 
 
+async def translate_moldovan_conversational(
+    text: str,
+    direction: str,
+    history: list[sqlite3.Row] | None = None,
+) -> str:
+    """Translate with the isolated everyday Moldovan/Romanian profile."""
+    style = mo.classify_style(text)
+    instructions = mo.build_instructions(text, direction, style)
+    model_input = mo.build_input(text, history)
+    response = await client.responses.create(
+        model=MODEL,
+        instructions=instructions,
+        input=model_input,
+        temperature=0.2,
+        max_output_tokens=400,
+    )
+    result = response.output_text.strip()
+    problems = mo.translation_needs_retry(text, result, direction)
+    if problems:
+        retry = await client.responses.create(
+            model=MODEL,
+            instructions=instructions + "\n\n" + mo.retry_instruction(problems, direction),
+            input=model_input,
+            temperature=0.1,
+            max_output_tokens=400,
+        )
+        corrected = retry.output_text.strip()
+        if corrected:
+            result = corrected
+        problems = mo.translation_needs_retry(text, result, direction)
+    if problems:
+        raise RuntimeError("Moldovan translation validation failed: " + ", ".join(problems))
+    return result
+
+
 async def translate_text(
     text: str, target: str, tone: str = "clear", history: list[sqlite3.Row] | None = None
 ) -> str:
@@ -667,6 +705,11 @@ async def translate_text(
             return await translate_turkmen_conversational(text, "ru_to_tm", history)
         except Exception:
             logger.exception("Conversational Turkmen translation failed; using legacy translator")
+    if MOLDOVAN_CONVERSATIONAL_MODE and mo.is_moldovan_language(target):
+        try:
+            return await translate_moldovan_conversational(text, "ru_to_mo", history)
+        except Exception:
+            logger.exception("Conversational Moldovan translation failed; using legacy translator")
     return await _translate_text_legacy(text, target, tone, history)
 
 
@@ -689,6 +732,12 @@ async def translate_manual_chat(
             return await translate_turkmen_conversational(text, direction, history)
         except Exception:
             logger.exception("Manual conversational Turkmen translation failed; using legacy translator")
+    if MOLDOVAN_CONVERSATIONAL_MODE and mo.is_moldovan_language(selected_language):
+        direction = mo.choose_direction(text)
+        try:
+            return await translate_moldovan_conversational(text, direction, history)
+        except Exception:
+            logger.exception("Manual conversational Moldovan translation failed; using legacy translator")
     turkmen_note = ""
     if is_turkmen_language(selected_language):
         turkmen_note = (
@@ -766,6 +815,12 @@ async def translate_incoming(
             return "Russian", translated
         except Exception:
             logger.exception("Incoming Russian to conversational Turkmen translation failed; using language detection")
+    if MOLDOVAN_CONVERSATIONAL_MODE and mo.is_moldovan_language(target) and contains_cyrillic(text):
+        try:
+            translated = await translate_moldovan_conversational(text, "ru_to_mo", history)
+            return "Russian", translated
+        except Exception:
+            logger.exception("Incoming Russian to conversational Moldovan translation failed; using language detection")
     if (
         KYRGYZ_CONVERSATIONAL_MODE
         and target == "Русский"
@@ -786,6 +841,20 @@ async def translate_incoming(
             return "Turkmen", translated
         except Exception:
             logger.exception("Incoming conversational Turkmen translation failed; using language detection")
+    if (
+        MOLDOVAN_CONVERSATIONAL_MODE
+        and mo.is_moldovan_language(known_language)
+        and target == "Русский"
+    ) or (
+        MOLDOVAN_CONVERSATIONAL_MODE
+        and target == "Русский"
+        and mo.looks_moldovan(text)
+    ):
+        try:
+            translated = await translate_moldovan_conversational(text, "mo_to_ru", history)
+            return "Moldovan", translated
+        except Exception:
+            logger.exception("Incoming conversational Moldovan translation failed; using language detection")
     hint = f" The sender's previous messages were in {known_language}; use that as a strong hint." if known_language else ""
     response = await client.responses.create(
         model=MODEL,
@@ -1645,11 +1714,12 @@ def main() -> None:
     app.add_handler(MessageHandler(filters.StatusUpdate.USERS_SHARED, add_selected_admin))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, private_text))
     logger.info(
-        "Bot started with provider %s, model %s, Kyrgyz mode %s, Turkmen mode %s, Turkmen style %s",
+        "Bot started with provider %s, model %s, Kyrgyz mode %s, Turkmen mode %s, Moldovan mode %s, Turkmen style %s",
         AI_PROVIDER,
         MODEL,
         KYRGYZ_CONVERSATIONAL_MODE,
         TURKMEN_CONVERSATIONAL_MODE,
+        MOLDOVAN_CONVERSATIONAL_MODE,
         os.getenv("TM_OUTPUT_STYLE", "tm_ascii_chat"),
     )
     app.run_polling(allowed_updates=Update.ALL_TYPES)

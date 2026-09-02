@@ -100,6 +100,19 @@ python tools/build_tm_test_cases.py
 python tools/evaluate_tm_translation.py --limit 50
 ```
 
+## Разговорный молдавский режим
+
+Для отдельного естественного перевода Russian ↔ Moldovan/Romanian добавьте в Railway:
+
+```env
+MOLDOVAN_CONVERSATIONAL_MODE=true
+```
+
+Молдавский добавляется отдельным языком в существующий выбор. Режим использует
+короткие проверенные примеры и контекст только для понимания коротких фраз; остальные
+языки и настройки не изменяются. Перевод остаётся точным, но звучит как обычная
+дружеская переписка, без книжных формулировок. Миграция базы данных не нужна.
+
 ## Notes
 
 - Telegram allows one connected Business bot per account.
